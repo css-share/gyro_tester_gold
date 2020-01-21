@@ -1,0 +1,163 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Jan 18 01:30:55 2020
+| Host         : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_axis_stream_txfifo_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_2_axis_stream_txfifo_0_2 (user.org:user:axis_stream_txfifo:2.0 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Oct  9 19:40:53 2019
+| Host         : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_RxFIFO_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_RxFIFO_0 (xilinx.com:user:axis_stream_fifo:1.0) from (Rev. 36) to (Rev. 37)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Oct  9 19:37:32 2019
+| Host         : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_RxFIFO_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_RxFIFO_0 (xilinx.com:user:axis_stream_fifo:1.0) from (Rev. 36) to (Rev. 37)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Oct  9 19:36:38 2019
+| Host         : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_RxFIFO_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_RxFIFO_0 (xilinx.com:user:axis_stream_fifo:1.0) from (Rev. 36) to (Rev. 37)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Oct  9 19:36:18 2019
+| Host         : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_RxFIFO_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_RxFIFO_0 (xilinx.com:user:axis_stream_fifo:1.0) from (Rev. 36) to (Rev. 37)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Oct  9 19:35:51 2019
+| Host         : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_RxFIFO_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_RxFIFO_0 (xilinx.com:user:axis_stream_fifo:1.0) from (Rev. 36) to (Rev. 37)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Oct  9 19:35:25 2019
+| Host         : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_RxFIFO_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_RxFIFO_0 (xilinx.com:user:axis_stream_fifo:1.0) from (Rev. 36) to (Rev. 37)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Oct  9 19:34:53 2019
+| Host         : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_RxFIFO_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_2_RxFIFO_0 (xilinx.com:user:axis_stream_fifo:1.0) from (Rev. 36) to (Rev. 37)
+

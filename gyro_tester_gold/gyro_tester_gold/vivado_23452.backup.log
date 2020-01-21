@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Jan  1 01:49:02 2020
+# Process ID: 23452
+# Current directory: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20432 C:\Docs\gyro_tester_gold\gyro_tester_gold\gyro_tester_gold\gyro_tester_gold.xpr
+# Log file: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/vivado.log
+# Journal file: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/axis_stream_txfifo_2.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/Handler_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Docs/gyro_tester_gold/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:36 ; elapsed = 00:00:58 . Memory (MB): peak = 761.238 ; gain = 135.258
+update_compile_order -fileset sources_1
+open_bd_design {C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/design_2.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:user:axi4_pl_interrupt_generator:1.0 - axi4_pl_interrupt_ge_0
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:user:axi4_pl_SPI_ip:1.0 - SPI_ip_0
+Adding cell -- xilinx.com:user:Handler:1.0 - Handler_0
+Adding cell -- xilinx.com:user:axis_stream_fifo:1.0 - RxFIFO
+Adding cell -- xilinx.com:user:BiDirChannels:1.0 - BiDirChannels_0
+Adding cell -- user.org:user:axis_stream_txfifo:2.0 - axis_stream_txfifo_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_2> from BD file <C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/design_2.bd>
+open_bd_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 892.695 ; gain = 114.102
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 16 20:38:11 2020...

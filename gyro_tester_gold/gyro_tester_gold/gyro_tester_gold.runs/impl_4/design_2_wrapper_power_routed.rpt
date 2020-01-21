@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed Aug 14 23:41:46 2019
+| Date             : Wed Oct  9 20:39:00 2019
 | Host             : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
 | Command          : report_power -file design_2_wrapper_power_routed.rpt -pb design_2_wrapper_power_summary_routed.pb -rpx design_2_wrapper_power_routed.rpx
 | Design           : design_2_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.813        |
+| Total On-Chip Power (W)  | 1.814        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.661        |
@@ -54,20 +54,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.029 |        3 |       --- |             --- |
-| Slice Logic              |     0.011 |    18911 |       --- |             --- |
-|   LUT as Logic           |     0.009 |     5606 |     53200 |           10.54 |
+| Slice Logic              |     0.011 |    19008 |       --- |             --- |
+|   LUT as Logic           |     0.009 |     5597 |     53200 |           10.52 |
 |   LUT as Distributed RAM |     0.001 |      632 |     17400 |            3.63 |
-|   Register               |    <0.001 |     9492 |    106400 |            8.92 |
-|   CARRY4                 |    <0.001 |      108 |     13300 |            0.81 |
+|   Register               |    <0.001 |     9621 |    106400 |            9.04 |
+|   CARRY4                 |    <0.001 |      103 |     13300 |            0.77 |
 |   LUT as Shift Register  |    <0.001 |      206 |     17400 |            1.18 |
 |   F7/F8 Muxes            |    <0.001 |       15 |     53200 |            0.03 |
-|   Others                 |     0.000 |      814 |       --- |             --- |
-| Signals                  |     0.015 |    13092 |       --- |             --- |
-| Block RAM                |     0.024 |       26 |       140 |           18.57 |
-| I/O                      |     0.048 |       30 |       200 |           15.00 |
+|   Others                 |     0.000 |      818 |       --- |             --- |
+| Signals                  |     0.014 |    13226 |       --- |             --- |
+| Block RAM                |     0.024 |       30 |       140 |           21.43 |
+| I/O                      |     0.048 |       32 |       200 |           16.00 |
 | PS7                      |     1.533 |        1 |       --- |             --- |
 | Static Power             |     0.153 |          |           |                 |
-| Total                    |     1.813 |          |           |                 |
+| Total                    |     1.814 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.093 |       0.077 |      0.017 |
+| Vccint    |       1.000 |     0.094 |       0.077 |      0.017 |
 | Vccaux    |       1.800 |     0.016 |       0.000 |      0.016 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.020 |       0.019 |      0.001 |
@@ -155,8 +155,8 @@ Table of Contents
 +---------------------------------------------------------------------------------------------------+-----------+
 | design_2_wrapper                                                                                  |     1.661 |
 |   design_2_i                                                                                      |     1.659 |
-|     BiDirChannels_0                                                                               |     0.048 |
-|       inst                                                                                        |     0.048 |
+|     BiDirChannels_0                                                                               |     0.049 |
+|       inst                                                                                        |     0.049 |
 |         BiDirChannels_v1_0_S00_AXI_inst                                                           |    <0.001 |
 |         X1                                                                                        |     0.001 |
 |           CLK_DIV2                                                                                |    <0.001 |
@@ -164,6 +164,8 @@ Table of Contents
 |           CLK_DIV4                                                                                |    <0.001 |
 |             ff0                                                                                   |    <0.001 |
 |           CLK_DIV_CNTR                                                                            |    <0.001 |
+|           IN_SHIFT_REG                                                                            |    <0.001 |
+|           LAST_CNTR                                                                               |    <0.001 |
 |           MASK_HSCK                                                                               |    <0.001 |
 |             ff0                                                                                   |    <0.001 |
 |             ff1                                                                                   |    <0.001 |
@@ -178,13 +180,14 @@ Table of Contents
 |           X1                                                                                      |    <0.001 |
 |             X0                                                                                    |    <0.001 |
 |             X1                                                                                    |    <0.001 |
+|           X10                                                                                     |    <0.001 |
+|           X20                                                                                     |     0.000 |
 |     Handler_0                                                                                     |    <0.001 |
 |       inst                                                                                        |    <0.001 |
 |         Handler_v1_0_S00_AXI_inst                                                                 |    <0.001 |
-|     RxFIFO                                                                                        |    <0.001 |
-|       inst                                                                                        |    <0.001 |
+|     RxFIFO                                                                                        |     0.001 |
+|       inst                                                                                        |     0.001 |
 |         axis_stream_fifo_v1_0_S00_AXI_inst                                                        |    <0.001 |
-|         u_sinwave                                                                                 |    <0.001 |
 |     SPI_ip_0                                                                                      |     0.001 |
 |       inst                                                                                        |     0.001 |
 |         SPI_ip_v1_0_S00_AXI_inst                                                                  |     0.001 |
@@ -238,8 +241,8 @@ Table of Contents
 |     axi4_pl_interrupt_ge_0                                                                        |    <0.001 |
 |       inst                                                                                        |    <0.001 |
 |         axi4_pl_interrupt_generator_v1_0_S00_AXI_inst                                             |    <0.001 |
-|     axi_dma_0                                                                                     |     0.013 |
-|       U0                                                                                          |     0.013 |
+|     axi_dma_0                                                                                     |     0.014 |
+|       U0                                                                                          |     0.014 |
 |         GEN_SG_ENGINE.I_SG_ENGINE                                                                 |     0.004 |
 |           GEN_DESC_UPDATE.I_SG_UPDATE_MNGR                                                        |    <0.001 |
 |             I_UPDT_CMDSTS_IF                                                                      |    <0.001 |
@@ -746,7 +749,7 @@ Table of Contents
 |                 inst_arb_stall_late                                                               |    <0.001 |
 |           s00_b_node                                                                              |     0.001 |
 |             inst                                                                                  |     0.001 |
-|               inst_mi_handler                                                                     |    <0.001 |
+|               inst_mi_handler                                                                     |     0.001 |
 |                 gen_normal_area.gen_node_prog_full.inst_node_prog_full                            |    <0.001 |
 |                   gen_xpm_memory_fifo.inst_fifo                                                   |    <0.001 |
 |                     gen_mem_rep[0].inst_rd_addrb                                                  |    <0.001 |

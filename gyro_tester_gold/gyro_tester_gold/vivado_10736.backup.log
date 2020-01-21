@@ -1,0 +1,97 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Oct  9 19:41:32 2019
+# Process ID: 10736
+# Current directory: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2220 C:\Docs\gyro_tester_gold\gyro_tester_gold\gyro_tester_gold\gyro_tester_gold.xpr
+# Log file: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/vivado.log
+# Journal file: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/axis_stream_txfifo_2.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/Handler_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Docs/gyro_tester_gold/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:59 . Memory (MB): peak = 752.797 ; gain = 106.609
+update_compile_order -fileset sources_1
+lexit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 20:29:34 2019...
+ design 'design_2.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v
+VHDL Output written to : C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/sim/design_2.v
+VHDL Output written to : C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1982] Skipping generation for the cell rst_ps7_0_100M, which is locked by user.
+INFO: [BD 41-1982] Skipping generation for the cell xlconcat_0, which is locked by user.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi4_pl_interrupt_ge_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SPI_ip_0 .
+INFO: [BD 41-1982] Skipping generation for the cell axi_dma_0, which is locked by user.
+Exporting to file c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_axi_smc_0/bd_0/hw_handoff/design_2_axi_smc_0.hwh
+Generated Block Design Tcl file c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_axi_smc_0/bd_0/hw_handoff/design_2_axi_smc_0_bd.tcl
+Generated Hardware Definition File c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_axi_smc_0/bd_0/synth/design_2_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RxFIFO .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BiDirChannels_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Switch_Fabric/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Handler_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_stream_txfifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Switch_Fabric/s00_couplers/auto_pc .
+Exporting to file C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/hw_handoff/design_2.hwh
+Generated Block Design Tcl file C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/hw_handoff/design_2_bd.tcl
+Generated Hardware Definition File C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_2_RxFIFO_0, cache-ID = c1d9de6bacf90d81; cache size = 2.781 MB.
+[Wed Oct  9 20:28:05 2019] Launched synth_2...
+Run output will be captured here: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/runme.log
+[Wed Oct  9 20:28:05 2019] Launched impl_4...
+Run output will be captured here: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/impl_4/runme.log
+launch_runs: Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 1051.738 ; gain = 250.059
+reset_run synth_2
+launch_runs impl_4 -to_step write_bitstream -jobs 2
+[Wed Oct  9 20:31:21 2019] Launched synth_2...
+Run output will be captured here: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/runme.log
+[Wed Oct  9 20:31:21 2019] Launched impl_4...
+Run output will be captured here: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/impl_4/runme.log
+file copy -force C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/impl_4/design_2_wrapper.sysdef C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.sdk/design_2_wrapper.hdf
+
+launch_sdk -workspace C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.sdk -hwspec C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.sdk/design_2_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.sdk -hwspec C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.sdk/design_2_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/design_2.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:user:axi4_pl_interrupt_generator:1.0 - axi4_pl_interrupt_ge_0
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:user:axi4_pl_SPI_ip:1.0 - SPI_ip_0
+Adding cell -- xilinx.com:user:Handler:1.0 - Handler_0
+Adding cell -- xilinx.com:user:axis_stream_fifo:1.0 - RxFIFO
+Adding cell -- xilinx.com:user:BiDirChannels:1.0 - BiDirChannels_0
+Adding cell -- user.org:user:axis_stream_txfifo:2.0 - axis_stream_txfifo_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_2> from BD file <C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/design_2.bd>
+open_bd_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1122.078 ; gain = 66.820
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 23:49:10 2019...
+ontained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/Handler_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Docs/gyro_tester_gold/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 1119.707 ; gain = 12.746
+update_compile_order -fileset sources_1
+ipx::unload_core c:/Docs/gyro_tester_gold/ip_repo/axis_stream_fifo_1.0/component.xml
+close_project
+reset_run synth_2
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Couldn't access process for termination
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 20:30:06 2019...
