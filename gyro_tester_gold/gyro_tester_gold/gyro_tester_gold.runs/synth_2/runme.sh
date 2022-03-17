@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2'
+HD_PWD='Q:/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

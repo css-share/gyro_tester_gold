@@ -31,8 +31,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports LED2]
 set_property PACKAGE_PIN U14 [get_ports LED7]
 set_property IOSTANDARD LVCMOS33 [get_ports LED7]
 
-set_property IOSTANDARD LVDS_25 [get_ports MCK_P]
-set_property IOSTANDARD LVDS_25 [get_ports MCK_N]
+set_property IOSTANDARD LVDS_18 [get_ports MCK_P]
+set_property IOSTANDARD LVDS_18 [get_ports MCK_N]
 set_property PACKAGE_PIN M19 [get_ports MCK_P]
 
 
