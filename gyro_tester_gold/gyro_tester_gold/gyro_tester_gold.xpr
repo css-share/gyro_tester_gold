@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.xpr">
+<Project Version="7" Minor="38" Path="C:/Xilinx_projects/Vivado/projects/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="adfb1baf9638417a928b3cdfb80291a9"/>

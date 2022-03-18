@@ -1,10 +1,11 @@
 set_property PACKAGE_PIN W12 [get_ports HSI_A0]
-set_property PACKAGE_PIN V12 [get_ports HSI_A1]
 set_property IOSTANDARD LVCMOS33 [get_ports HSI_A0]
+set_property PACKAGE_PIN V12 [get_ports HSI_A1]
 set_property IOSTANDARD LVCMOS33 [get_ports HSI_A1]
-
-set_property PACKAGE_PIN AA11 [get_ports HSICK]
-set_property IOSTANDARD LVCMOS33 [get_ports HSICK]
+#set_property PACKAGE_PIN AA11 [get_ports HSICK]
+#set_property IOSTANDARD LVCMOS33 [get_ports HSICK]
+set_property PACKAGE_PIN N20 [get_ports HSICK]
+set_property IOSTANDARD LVCMOS25 [get_ports HSICK]
 
 set_property PACKAGE_PIN J20 [get_ports SYNC_CK]
 set_property IOSTANDARD LVCMOS25 [get_ports SYNC_CK]

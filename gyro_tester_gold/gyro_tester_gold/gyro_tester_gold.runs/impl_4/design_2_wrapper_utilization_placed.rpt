@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Aug 14 23:39:26 2019
-| Host         : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
+| Date         : Thu Mar 17 23:38:41 2022
+| Host         : AsusP8 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_2_wrapper_utilization_placed.rpt -pb design_2_wrapper_utilization_placed.pb
 | Design       : design_2_wrapper
 | Device       : 7z020clg484-1
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs                 | 6444 |     0 |     53200 | 12.11 |
-|   LUT as Logic             | 5606 |     0 |     53200 | 10.54 |
+| Slice LUTs                 | 6439 |     0 |     53200 | 12.10 |
+|   LUT as Logic             | 5601 |     0 |     53200 | 10.53 |
 |   LUT as Memory            |  838 |     0 |     17400 |  4.82 |
 |     LUT as Distributed RAM |  632 |     0 |           |       |
 |     LUT as Shift Register  |  206 |     0 |           |       |
@@ -69,13 +69,13 @@ Table of Contents
 +-------------------------------------------+------+-------+-----------+-------+
 |                 Site Type                 | Used | Fixed | Available | Util% |
 +-------------------------------------------+------+-------+-----------+-------+
-| Slice                                     | 3059 |     0 |     13300 | 23.00 |
-|   SLICEL                                  | 2136 |     0 |           |       |
-|   SLICEM                                  |  923 |     0 |           |       |
-| LUT as Logic                              | 5606 |     0 |     53200 | 10.54 |
+| Slice                                     | 3060 |     0 |     13300 | 23.01 |
+|   SLICEL                                  | 2120 |     0 |           |       |
+|   SLICEM                                  |  940 |     0 |           |       |
+| LUT as Logic                              | 5601 |     0 |     53200 | 10.53 |
 |   using O5 output only                    |    0 |       |           |       |
-|   using O6 output only                    | 4274 |       |           |       |
-|   using O5 and O6                         | 1332 |       |           |       |
+|   using O6 output only                    | 4264 |       |           |       |
+|   using O5 and O6                         | 1337 |       |           |       |
 | LUT as Memory                             |  838 |     0 |     17400 |  4.82 |
 |   LUT as Distributed RAM                  |  632 |     0 |           |       |
 |     using O5 output only                  |    0 |       |           |       |
@@ -85,10 +85,10 @@ Table of Contents
 |     using O5 output only                  |    2 |       |           |       |
 |     using O6 output only                  |  126 |       |           |       |
 |     using O5 and O6                       |   78 |       |           |       |
-| LUT Flip Flop Pairs                       | 3810 |     0 |     53200 |  7.16 |
+| LUT Flip Flop Pairs                       | 3798 |     0 |     53200 |  7.14 |
 |   fully used LUT-FF pairs                 | 1214 |       |           |       |
-|   LUT-FF pairs with one unused LUT output | 2351 |       |           |       |
-|   LUT-FF pairs with one unused Flip Flop  | 2393 |       |           |       |
+|   LUT-FF pairs with one unused LUT output | 2353 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  | 2380 |       |           |       |
 | Unique Control Sets                       |  821 |       |           |       |
 +-------------------------------------------+------+-------+-----------+-------+
 * Note: Review the Control Sets Report for more information regarding control sets.
@@ -125,8 +125,8 @@ Table of Contents
 |          Site Type          | Used | Fixed | Available |  Util% |
 +-----------------------------+------+-------+-----------+--------+
 | Bonded IOB                  |   30 |    30 |       200 |  15.00 |
-|   IOB Master Pads           |   14 |       |           |        |
-|   IOB Slave Pads            |   13 |       |           |        |
+|   IOB Master Pads           |   13 |       |           |        |
+|   IOB Slave Pads            |   14 |       |           |        |
 | Bonded IPADs                |    0 |     0 |         2 |   0.00 |
 | Bonded IOPADs               |  130 |   130 |       130 | 100.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |   0.00 |

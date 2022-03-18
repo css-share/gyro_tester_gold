@@ -69,22 +69,22 @@ set rc [catch {
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.cache/wt [current_project]
-  set_property parent.project_path C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.xpr [current_project]
+  set_property webtalk.parent_dir C:/Xilinx_projects/Vivado/projects/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.cache/wt [current_project]
+  set_property parent.project_path C:/Xilinx_projects/Vivado/projects/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.xpr [current_project]
   set_property ip_repo_paths {
-  C:/Docs/gyro_tester_gold/ip_repo/axis_stream_txfifo_2.0
-  C:/Docs/gyro_tester_gold/ip_repo/Handler_1.0
-  C:/Docs/gyro_tester_gold/ip_repo
+  C:/Xilinx_projects/Vivado/projects/gyro_tester_gold/ip_repo/axis_stream_txfifo_2.0
+  C:/Xilinx_projects/Vivado/projects/gyro_tester_gold/ip_repo/Handler_1.0
+  C:/Xilinx_projects/Vivado/projects/gyro_tester_gold/ip_repo
 } [current_project]
-  set_property ip_output_repo C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.cache/ip [current_project]
+  set_property ip_output_repo C:/Xilinx_projects/Vivado/projects/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/design_2_wrapper.dcp
+  add_files -quiet C:/Xilinx_projects/Vivado/projects/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/design_2_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/design_2.bd
+  add_files C:/Xilinx_projects/Vivado/projects/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/design_2.bd
   set_param project.isImplRun false
-  read_xdc C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc
+  read_xdc C:/Xilinx_projects/Vivado/projects/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc
   set_param project.isImplRun true
   link_design -top design_2_wrapper -part xc7z020clg484-1
   set_param project.isImplRun false
