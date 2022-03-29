@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Oct  9 20:31:26 2019
-# Process ID: 8128
+# Start of session at: Mon Mar 28 22:02:59 2022
+# Process ID: 10064
 # Current directory: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2
 # Command line: vivado.exe -log design_2_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_2_wrapper.tcl
 # Log file: C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/design_2_wrapper.vds
@@ -15,68 +15,65 @@ WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_
 WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/Handler_1.0'. The path is contained within another repository.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Docs/gyro_tester_gold/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 318.813 ; gain = 75.676
+add_files: Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 317.473 ; gain = 73.535
 Command: synth_design -top design_2_wrapper -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4684 
+INFO: Helper process launched with PID 9884 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 428.297 ; gain = 102.586
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 428.352 ; gain = 103.961
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_2_wrapper' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_2' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_2_BiDirChannels_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_BiDirChannels_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_BiDirChannels_0_0' (1#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_BiDirChannels_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_2_Handler_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_Handler_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_Handler_0_0' (2#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_Handler_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_2_RxFIFO_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_RxFIFO_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_RxFIFO_0' (3#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_RxFIFO_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'RxFIFO' of module 'design_2_RxFIFO_0' requires 35 connections, but only 34 given [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:597]
-INFO: [Synth 8-6157] synthesizing module 'design_2_SPI_ip_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_SPI_ip_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_SPI_ip_0_0' (4#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_SPI_ip_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_2_ps7_0_axi_periph_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:1242]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_WHHFD7' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2541]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_WHHFD7' (5#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2541]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_16T025M' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2687]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_16T025M' (6#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2687]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_VA9JT4' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2833]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_VA9JT4' (7#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2833]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_189WWA1' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2979]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_189WWA1' (8#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2979]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_Z5XCEL' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3104]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_Z5XCEL' (9#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3104]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_14HOSTO' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3250]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_14HOSTO' (10#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3250]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_Y8OCJY' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3396]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_Y8OCJY' (11#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3396]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_12W2TE1' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3542]
-INFO: [Synth 8-6157] synthesizing module 'design_2_auto_pc_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_auto_pc_0' (12#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_12W2TE1' (13#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3542]
-INFO: [Synth 8-6157] synthesizing module 'design_2_xbar_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_xbar_0' (14#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_ps7_0_axi_periph_0' (15#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:1242]
-INFO: [Synth 8-6157] synthesizing module 'design_2_axi4_pl_interrupt_ge_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_axi4_pl_interrupt_ge_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_axi4_pl_interrupt_ge_0_0' (16#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_axi4_pl_interrupt_ge_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_2_axi_dma_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_dma_0_0' (17#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_axi_dma_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_dma_0' of module 'design_2_axi_dma_0_0' requires 94 connections, but only 90 given [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:876]
-INFO: [Synth 8-6157] synthesizing module 'design_2_axi_smc_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_smc_0' (18#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_2_axis_stream_txfifo_0_2' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_axis_stream_txfifo_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_axis_stream_txfifo_0_2' (19#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_axis_stream_txfifo_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_2_processing_system7_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_processing_system7_0_0' (20#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_2_processing_system7_0_0' requires 114 connections, but only 103 given [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:1121]
-INFO: [Synth 8-6157] synthesizing module 'design_2_rst_ps7_0_100M_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_rst_ps7_0_100M_0' (21#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'design_2_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:1225]
-INFO: [Synth 8-6157] synthesizing module 'design_2_xlconcat_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_xlconcat_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_xlconcat_0_0' (22#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-8128-LAPTOP-FM91H59Q/realtime/design_2_xlconcat_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2' (23#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_wrapper' (24#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_2_BiDirChannels_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_BiDirChannels_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_BiDirChannels_0_0' (1#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_BiDirChannels_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_RxFIFO_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_RxFIFO_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_RxFIFO_0' (2#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_RxFIFO_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'RxFIFO' of module 'design_2_RxFIFO_0' requires 35 connections, but only 34 given [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:451]
+INFO: [Synth 8-6157] synthesizing module 'design_2_SPI_ip_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_SPI_ip_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_SPI_ip_0_0' (3#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_SPI_ip_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_ps7_0_axi_periph_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:1044]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_WHHFD7' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2343]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_WHHFD7' (4#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2343]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_16T025M' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2489]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_16T025M' (5#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2489]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_VA9JT4' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2635]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_VA9JT4' (6#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2635]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_189WWA1' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2781]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_189WWA1' (7#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2781]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_Z5XCEL' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2906]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_Z5XCEL' (8#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:2906]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_14HOSTO' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3052]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_14HOSTO' (9#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3052]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_Y8OCJY' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3198]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_Y8OCJY' (10#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3198]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_12W2TE1' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3344]
+INFO: [Synth 8-6157] synthesizing module 'design_2_auto_pc_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_auto_pc_0' (11#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_12W2TE1' (12#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:3344]
+INFO: [Synth 8-6157] synthesizing module 'design_2_xbar_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_xbar_0' (13#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_ps7_0_axi_periph_0' (14#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:1044]
+WARNING: [Synth 8-350] instance 'Switch_Fabric' of module 'design_2_ps7_0_axi_periph_0' requires 186 connections, but only 164 given [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:513]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_dma_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_dma_0_0' (15#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_dma_0' of module 'design_2_axi_dma_0_0' requires 94 connections, but only 90 given [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:678]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_smc_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_smc_0' (16#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axis_stream_txfifo_0_2' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_axis_stream_txfifo_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axis_stream_txfifo_0_2' (17#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_axis_stream_txfifo_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_processing_system7_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_processing_system7_0_0' (18#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_2_processing_system7_0_0' requires 114 connections, but only 103 given [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:923]
+INFO: [Synth 8-6157] synthesizing module 'design_2_rst_ps7_0_100M_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_rst_ps7_0_100M_0' (19#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'design_2_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:1027]
+INFO: [Synth 8-6157] synthesizing module 'design_2_xlconcat_0_0' [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_xlconcat_0_0' (20#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/.Xil/Vivado-10064-LAPTOP-FM91H59Q/realtime/design_2_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2' (21#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/synth/design_2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_wrapper' (22#1) [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_12W2TE1 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_12W2TE1 has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m06_couplers_imp_Y8OCJY has unconnected port M_ACLK
@@ -108,7 +105,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_WHHFD7 has unconnected port M_AR
 WARNING: [Synth 8-3331] design m00_couplers_imp_WHHFD7 has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_WHHFD7 has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 483.785 ; gain = 158.074
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 483.828 ; gain = 159.438
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -121,10 +118,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 483.785 ; gain = 158.074
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 483.828 ; gain = 159.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 483.785 ; gain = 158.074
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 483.828 ; gain = 159.438
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -137,8 +134,6 @@ Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyr
 Finished Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_rst_ps7_0_100M_0/design_2_rst_ps7_0_100M_0/design_2_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_2_i/rst_ps7_0_100M'
 Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_xlconcat_0_0/design_2_xlconcat_0_0/design_1_xlconcat_0_0_in_context.xdc] for cell 'design_2_i/xlconcat_0'
 Finished Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_xlconcat_0_0/design_2_xlconcat_0_0/design_1_xlconcat_0_0_in_context.xdc] for cell 'design_2_i/xlconcat_0'
-Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_axi4_pl_interrupt_ge_0_0/design_2_axi4_pl_interrupt_ge_0_0/design_2_axi4_pl_interrupt_ge_0_0_in_context.xdc] for cell 'design_2_i/axi4_pl_interrupt_ge_0'
-Finished Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_axi4_pl_interrupt_ge_0_0/design_2_axi4_pl_interrupt_ge_0_0/design_2_axi4_pl_interrupt_ge_0_0_in_context.xdc] for cell 'design_2_i/axi4_pl_interrupt_ge_0'
 Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_SPI_ip_0_0/design_2_SPI_ip_0_0/design_2_SPI_ip_0_0_in_context.xdc] for cell 'design_2_i/SPI_ip_0'
 Finished Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_SPI_ip_0_0/design_2_SPI_ip_0_0/design_2_SPI_ip_0_0_in_context.xdc] for cell 'design_2_i/SPI_ip_0'
 Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0/design_2_axi_dma_0_0_in_context.xdc] for cell 'design_2_i/axi_dma_0'
@@ -151,14 +146,47 @@ Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyr
 Finished Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_BiDirChannels_0_0/design_2_BiDirChannels_0_0/design_2_BiDirChannels_0_0_in_context.xdc] for cell 'design_2_i/BiDirChannels_0'
 Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_xbar_0/design_2_xbar_0/design_2_xbar_0_in_context.xdc] for cell 'design_2_i/Switch_Fabric/xbar'
 Finished Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_xbar_0/design_2_xbar_0/design_2_xbar_0_in_context.xdc] for cell 'design_2_i/Switch_Fabric/xbar'
-Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_Handler_0_0/design_2_Handler_0_0/design_2_Handler_0_0_in_context.xdc] for cell 'design_2_i/Handler_0'
-Finished Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_Handler_0_0/design_2_Handler_0_0/design_2_Handler_0_0_in_context.xdc] for cell 'design_2_i/Handler_0'
 Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_axis_stream_txfifo_0_2/design_2_axis_stream_txfifo_0_2/design_2_axis_stream_txfifo_0_2_in_context.xdc] for cell 'design_2_i/axis_stream_txfifo_0'
 Finished Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_axis_stream_txfifo_0_2/design_2_axis_stream_txfifo_0_2/design_2_axis_stream_txfifo_0_2_in_context.xdc] for cell 'design_2_i/axis_stream_txfifo_0'
 Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0/design_2_auto_pc_0_in_context.xdc] for cell 'design_2_i/Switch_Fabric/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0/design_2_auto_pc_0_in_context.xdc] for cell 'design_2_i/Switch_Fabric/s00_couplers/auto_pc'
 Parsing XDC File [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'LED0'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'LED0'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'LED1'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'LED1'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'LED2'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'LED2'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'LED7'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'LED7'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'SW6'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'SW6'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'SW7'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'SW7'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'STARTB'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'STARTB'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'EOWB'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'EOWB'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'EOT'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'EOT'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'SORT0'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'SORT0'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'SORT1'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'SORT1'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'SORT2'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'SORT2'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'SORT3'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'SORT3'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'SORT4'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'SORT4'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'SORT5'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'SORT5'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'SORT6'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'SORT6'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'SORT7'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'SORT7'. [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc:72]
 Finished Parsing XDC File [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_2_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/constrs_2/new/gyro_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_2_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_2_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/dont_touch.xdc]
@@ -168,17 +196,17 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 814.383 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 806.539 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'design_2_i/Switch_Fabric/s00_couplers/auto_pc' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 814.383 ; gain = 488.672
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 806.539 ; gain = 482.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 814.383 ; gain = 488.672
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 806.539 ; gain = 482.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -452,21 +480,19 @@ Applied set_property DONT_TOUCH = true for design_2_i/processing_system7_0. (con
 Applied set_property DONT_TOUCH = true for design_2_i/Switch_Fabric. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_2_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_2_i/xlconcat_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_2_i/axi4_pl_interrupt_ge_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_2_i/SPI_ip_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_2_i/axi_dma_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_2_i/axi_smc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_2_i/RxFIFO. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_2_i/BiDirChannels_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_2_i/Switch_Fabric/xbar. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_2_i/Handler_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_2_i/axis_stream_txfifo_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_2_i/Switch_Fabric/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 814.383 ; gain = 488.672
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 806.539 ; gain = 482.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 814.383 ; gain = 488.672
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 806.539 ; gain = 482.148
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -516,7 +542,7 @@ WARNING: [Synth 8-3331] design design_2_ps7_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design design_2_ps7_0_axi_periph_0 has unconnected port M06_ACLK
 WARNING: [Synth 8-3331] design design_2_ps7_0_axi_periph_0 has unconnected port M06_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 814.383 ; gain = 488.672
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 806.539 ; gain = 482.148
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -530,13 +556,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_2_i/processing_system7_0/FCLK_CLK0' to pin 'design_2_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 831.188 ; gain = 505.477
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 826.352 ; gain = 501.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 831.559 ; gain = 505.848
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 826.723 ; gain = 502.332
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -548,7 +574,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 832.719 ; gain = 507.008
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 828.281 ; gain = 503.891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -572,7 +598,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 832.719 ; gain = 507.008
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 828.281 ; gain = 503.891
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -585,7 +611,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 832.719 ; gain = 507.008
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 828.281 ; gain = 503.891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -597,87 +623,83 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 832.719 ; gain = 507.008
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 828.281 ; gain = 503.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 832.719 ; gain = 507.008
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 828.281 ; gain = 503.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 832.719 ; gain = 507.008
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 828.281 ; gain = 503.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 832.719 ; gain = 507.008
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 828.281 ; gain = 503.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+----------------------------------+----------+
-|      |BlackBox name                     |Instances |
-+------+----------------------------------+----------+
-|1     |design_2_xbar_0                   |         1|
-|2     |design_2_auto_pc_0                |         1|
-|3     |design_2_BiDirChannels_0_0        |         1|
-|4     |design_2_Handler_0_0              |         1|
-|5     |design_2_RxFIFO_0                 |         1|
-|6     |design_2_SPI_ip_0_0               |         1|
-|7     |design_2_axi4_pl_interrupt_ge_0_0 |         1|
-|8     |design_2_axi_dma_0_0              |         1|
-|9     |design_2_axi_smc_0                |         1|
-|10    |design_2_axis_stream_txfifo_0_2   |         1|
-|11    |design_2_processing_system7_0_0   |         1|
-|12    |design_2_rst_ps7_0_100M_0         |         1|
-|13    |design_2_xlconcat_0_0             |         1|
-+------+----------------------------------+----------+
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |design_2_xbar_0                 |         1|
+|2     |design_2_auto_pc_0              |         1|
+|3     |design_2_BiDirChannels_0_0      |         1|
+|4     |design_2_RxFIFO_0               |         1|
+|5     |design_2_SPI_ip_0_0             |         1|
+|6     |design_2_axi_dma_0_0            |         1|
+|7     |design_2_axi_smc_0              |         1|
+|8     |design_2_axis_stream_txfifo_0_2 |         1|
+|9     |design_2_processing_system7_0_0 |         1|
+|10    |design_2_rst_ps7_0_100M_0       |         1|
+|11    |design_2_xlconcat_0_0           |         1|
++------+--------------------------------+----------+
 
 Report Cell Usage: 
-+------+----------------------------------+------+
-|      |Cell                              |Count |
-+------+----------------------------------+------+
-|1     |design_2_BiDirChannels_0_0        |     1|
-|2     |design_2_Handler_0_0              |     1|
-|3     |design_2_RxFIFO_0                 |     1|
-|4     |design_2_SPI_ip_0_0               |     1|
-|5     |design_2_auto_pc_0                |     1|
-|6     |design_2_axi4_pl_interrupt_ge_0_0 |     1|
-|7     |design_2_axi_dma_0_0              |     1|
-|8     |design_2_axi_smc_0                |     1|
-|9     |design_2_axis_stream_txfifo_0_2   |     1|
-|10    |design_2_processing_system7_0_0   |     1|
-|11    |design_2_rst_ps7_0_100M_0         |     1|
-|12    |design_2_xbar_0                   |     1|
-|13    |design_2_xlconcat_0_0             |     1|
-|14    |IBUF                              |     7|
-|15    |OBUF                              |    23|
-+------+----------------------------------+------+
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |design_2_BiDirChannels_0_0      |     1|
+|2     |design_2_RxFIFO_0               |     1|
+|3     |design_2_SPI_ip_0_0             |     1|
+|4     |design_2_auto_pc_0              |     1|
+|5     |design_2_axi_dma_0_0            |     1|
+|6     |design_2_axi_smc_0              |     1|
+|7     |design_2_axis_stream_txfifo_0_2 |     1|
+|8     |design_2_processing_system7_0_0 |     1|
+|9     |design_2_rst_ps7_0_100M_0       |     1|
+|10    |design_2_xbar_0                 |     1|
+|11    |design_2_xlconcat_0_0           |     1|
+|12    |IBUF                            |     2|
+|13    |OBUF                            |     9|
++------+--------------------------------+------+
 
 Report Instance Areas: 
 +------+-------------------+----------------------------+------+
 |      |Instance           |Module                      |Cells |
 +------+-------------------+----------------------------+------+
-|1     |top                |                            |  2487|
-|2     |  design_2_i       |design_2                    |  2457|
+|1     |top                |                            |  2369|
+|2     |  design_2_i       |design_2                    |  2358|
 |3     |    Switch_Fabric  |design_2_ps7_0_axi_periph_0 |   995|
 |4     |      s00_couplers |s00_couplers_imp_12W2TE1    |   177|
 +------+-------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 832.719 ; gain = 507.008
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 828.281 ; gain = 503.891
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 832.719 ; gain = 176.410
-Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 832.719 ; gain = 507.008
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 828.340 ; gain = 181.238
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 828.340 ; gain = 503.949
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -685,11 +707,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-65 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
+61 Infos, 87 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 855.063 ; gain = 536.250
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 849.059 ; gain = 531.586
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/synth_2/design_2_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_2_wrapper_utilization_synth.rpt -pb design_2_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 855.375 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 20:32:41 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 849.426 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 22:04:27 2022...

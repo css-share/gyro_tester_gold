@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-// Date        : Tue Aug 13 23:13:30 2019
-// Host        : milssdie50 running 64-bit Red Hat Enterprise Linux Server release 6.8 (Santiago)
+// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+// Date        : Mon Mar 28 21:12:38 2022
+// Host        : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               /home/cdickinson/ccs_working/gyro_tester_zedboard_code/gyro_tester.srcs/sources_1/bd/design_2/ip/design_2_BiDirChannels_0_0/design_2_BiDirChannels_0_0_sim_netlist.v
+//               C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_BiDirChannels_0_0/design_2_BiDirChannels_0_0_sim_netlist.v
 // Design      : design_2_BiDirChannels_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -82,7 +82,7 @@ module design_2_BiDirChannels_0_0
   output HSI_DAM;
   output HSI_DAP;
   output HSI_DC;
-  output HS_Clock;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 HS_Clock CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME HS_Clock, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_2_BiDirChannels_0_0_HS_Clock" *) output HS_Clock;
   output MCK_P;
   output MCK_N;
   output SYNCK;

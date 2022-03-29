@@ -18,9 +18,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_rst_ps
 # IP: bd/design_2/ip/design_2_xlconcat_0_0/design_2_xlconcat_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_xlconcat_0_0 || ORIG_REF_NAME==design_2_xlconcat_0_0} -quiet] -quiet
 
-# IP: bd/design_2/ip/design_2_axi4_pl_interrupt_ge_0_0/design_2_axi4_pl_interrupt_ge_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_axi4_pl_interrupt_ge_0_0 || ORIG_REF_NAME==design_2_axi4_pl_interrupt_ge_0_0} -quiet] -quiet
-
 # IP: bd/design_2/ip/design_2_SPI_ip_0_0/design_2_SPI_ip_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_SPI_ip_0_0 || ORIG_REF_NAME==design_2_SPI_ip_0_0} -quiet] -quiet
 
@@ -38,9 +35,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_BiDirC
 
 # IP: bd/design_2/ip/design_2_xbar_0/design_2_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_xbar_0 || ORIG_REF_NAME==design_2_xbar_0} -quiet] -quiet
-
-# IP: bd/design_2/ip/design_2_Handler_0_0/design_2_Handler_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_Handler_0_0 || ORIG_REF_NAME==design_2_Handler_0_0} -quiet] -quiet
 
 # IP: bd/design_2/ip/design_2_axis_stream_txfifo_0_2/design_2_axis_stream_txfifo_0_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_axis_stream_txfifo_0_2 || ORIG_REF_NAME==design_2_axis_stream_txfifo_0_2} -quiet] -quiet

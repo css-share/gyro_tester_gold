@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2019 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:BiDirChannels:1.0
-// IP Revision: 108
+// IP Revision: 109
 
 (* X_CORE_INFO = "BiDirChannels_v1_0,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "design_2_BiDirChannels_0_0,BiDirChannels_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "design_2_BiDirChannels_0_0,BiDirChannels_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=BiDirChannels,x_ipVersion=1.0,x_ipCoreRevision=108,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4,C_M00_AXIS_TDATA_WIDTH=32,C_M00_AXIS_START_COUNT=32,C_S00_AXIS_TDATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "design_2_BiDirChannels_0_0,BiDirChannels_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=BiDirChannels,x_ipVersion=1.0,x_ipCoreRevision=109,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4,C_M00_AXIS_TDATA_WIDTH=32,C_M00_AXIS_START_COUNT=32,C_S00_AXIS_TDATA_WIDTH=32}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_2_BiDirChannels_0_0 (
   HSI_A0,
@@ -124,6 +124,8 @@ output wire HSI_DBP;
 output wire HSI_DAM;
 output wire HSI_DAP;
 output wire HSI_DC;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME HS_Clock, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_2_BiDirChannels_0_0_HS_Clock" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 HS_Clock CLK" *)
 output wire HS_Clock;
 output wire MCK_P;
 output wire MCK_N;

@@ -517,6 +517,91 @@
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>rstn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>rstn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RSTN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">1e+08</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN">design_2_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
   </spirit:busInterfaces>
   <spirit:memoryMaps>
     <spirit:memoryMap>
@@ -543,64 +628,6 @@
   <spirit:model>
     <spirit:views>
       <spirit:view>
-        <spirit:name>xilinx_externalfiles</spirit:name>
-        <spirit:displayName>External Files</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 25 23:46:58 UTC 2019</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:81ca8df7</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_verilogsynthesis</spirit:name>
-        <spirit:displayName>Verilog Synthesis</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
-        <spirit:modelName>SPI_ip_v1_0</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jun 20 02:35:27 UTC 2019</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:81ca8df7</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
-        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
-        <spirit:modelName>design_2_SPI_ip_0_0</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 25 23:46:25 UTC 2019</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:81ca8df7</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
         <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
         <spirit:displayName>Verilog Simulation</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
@@ -612,11 +639,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jun 20 02:35:27 UTC 2019</spirit:value>
+            <spirit:value>Tue Mar 29 04:27:36 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:a0eed70a</spirit:value>
+            <spirit:value>8:f169051e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -632,23 +659,81 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jul 25 23:46:25 UTC 2019</spirit:value>
+            <spirit:value>Tue Mar 29 04:27:36 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:a0eed70a</spirit:value>
+            <spirit:value>8:f169051e</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>SPI_ip_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Mar 29 04:27:36 UTC 2022</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>8:7c552058</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
+        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>design_2_SPI_ip_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Mar 29 04:33:39 UTC 2022</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>8:7c552058</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Mar 29 04:35:36 UTC 2022</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>8:7c552058</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
     </spirit:views>
     <spirit:ports>
       <spirit:port>
-        <spirit:name>SPI_MISO</spirit:name>
+        <spirit:name>clk</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
+              <spirit:typeName>std_logic</spirit:typeName>
               <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -656,12 +741,25 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>SPI_MOSI</spirit:name>
+        <spirit:name>rstn</spirit:name>
         <spirit:wire>
-          <spirit:direction>out</spirit:direction>
+          <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>SPI_D</spirit:name>
+        <spirit:wire>
+          <spirit:direction>inout</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
               <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -683,32 +781,6 @@
       </spirit:port>
       <spirit:port>
         <spirit:name>SPI_CS</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>FSM_START</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>FSM_DONE</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -1063,6 +1135,44 @@
   </spirit:choices>
   <spirit:fileSets>
     <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/2e00/hdl/SPI_ip_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/design_2_SPI_ip_0_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/2e00/hdl/SPI_ip_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/design_2_SPI_ip_0_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>design_2_SPI_ip_0_0.dcp</spirit:name>
@@ -1095,44 +1205,6 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>../../ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/2e00/hdl/SPI_ip_v1_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>synth/design_2_SPI_ip_0_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>../../ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/2e00/hdl/SPI_ip_v1_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>sim/design_2_SPI_ip_0_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -1200,9 +1272,11 @@
       <xilinx:coreRevision>11</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:user:SPI_ip:1.0_ARCHIVE_LOCATION">c:/Xilinx/Vivado/projects/ip_repo/SPI_ip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="xilinx.com:user:axi4_pl_SPI_ip:1.0_ARCHIVE_LOCATION">c:/Docs/ip_repo/SPI_ip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="xilinx.com:user:axi4_pl_SPI_ip:1.0_ARCHIVE_LOCATION">c:/Docs/gyro_tester_gold/ip_repo/SPI_ip_1.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>

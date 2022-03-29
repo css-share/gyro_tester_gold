@@ -6,7 +6,7 @@
 <Project Version="7" Minor="38" Path="c:/docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.tmp/bidirchannels_v1_0_project/BiDirChannels_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="fed9ab359aec4012b201cd124c5cdfd6"/>
+    <Option Name="Id" Val="4aa225308b3a4c478666901984ca323f"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

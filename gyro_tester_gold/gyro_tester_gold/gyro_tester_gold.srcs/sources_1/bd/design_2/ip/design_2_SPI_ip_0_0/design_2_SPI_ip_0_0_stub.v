@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Jun 19 19:37:45 2019
+// Date        : Mon Mar 28 21:35:36 2022
 // Host        : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top design_2_SPI_ip_0_0 -prefix
-//               design_2_SPI_ip_0_0_ design_2_SPI_ip_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_SPI_ip_0_0/design_2_SPI_ip_0_0_stub.v
 // Design      : design_2_SPI_ip_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1
@@ -14,19 +14,17 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "SPI_ip_v1_0,Vivado 2018.2" *)
-module design_2_SPI_ip_0_0(SPI_MISO, SPI_MOSI, SPI_SCK, SPI_CS, FSM_START, 
-  FSM_DONE, s00_axi_awaddr, s00_axi_awprot, s00_axi_awvalid, s00_axi_awready, s00_axi_wdata, 
-  s00_axi_wstrb, s00_axi_wvalid, s00_axi_wready, s00_axi_bresp, s00_axi_bvalid, 
-  s00_axi_bready, s00_axi_araddr, s00_axi_arprot, s00_axi_arvalid, s00_axi_arready, 
-  s00_axi_rdata, s00_axi_rresp, s00_axi_rvalid, s00_axi_rready, s00_axi_aclk, 
-  s00_axi_aresetn)
-/* synthesis syn_black_box black_box_pad_pin="SPI_MISO,SPI_MOSI,SPI_SCK,SPI_CS,FSM_START,FSM_DONE,s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn" */;
-  input SPI_MISO;
-  output SPI_MOSI;
+module design_2_SPI_ip_0_0(clk, rstn, SPI_D, SPI_SCK, SPI_CS, s00_axi_awaddr, 
+  s00_axi_awprot, s00_axi_awvalid, s00_axi_awready, s00_axi_wdata, s00_axi_wstrb, 
+  s00_axi_wvalid, s00_axi_wready, s00_axi_bresp, s00_axi_bvalid, s00_axi_bready, 
+  s00_axi_araddr, s00_axi_arprot, s00_axi_arvalid, s00_axi_arready, s00_axi_rdata, 
+  s00_axi_rresp, s00_axi_rvalid, s00_axi_rready, s00_axi_aclk, s00_axi_aresetn)
+/* synthesis syn_black_box black_box_pad_pin="clk,rstn,SPI_D,SPI_SCK,SPI_CS,s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn" */;
+  input clk;
+  input rstn;
+  inout SPI_D;
   output SPI_SCK;
   output SPI_CS;
-  output FSM_START;
-  output FSM_DONE;
   input [3:0]s00_axi_awaddr;
   input [2:0]s00_axi_awprot;
   input s00_axi_awvalid;

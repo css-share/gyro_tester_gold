@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Tue Mar 29 04:12:37 UTC 2022
+VLNV: xilinx.com:user:BiDirChannels:1.0
+SynthRuntime: 72

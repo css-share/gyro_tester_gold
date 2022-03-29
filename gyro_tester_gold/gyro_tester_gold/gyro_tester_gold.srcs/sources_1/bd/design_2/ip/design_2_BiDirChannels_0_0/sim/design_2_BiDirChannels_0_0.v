@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2019 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:BiDirChannels:1.0
-// IP Revision: 108
+// IP Revision: 109
 
 `timescale 1ns/1ps
 
@@ -123,6 +123,8 @@ output wire HSI_DBP;
 output wire HSI_DAM;
 output wire HSI_DAP;
 output wire HSI_DC;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME HS_Clock, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_2_BiDirChannels_0_0_HS_Clock" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 HS_Clock CLK" *)
 output wire HS_Clock;
 output wire MCK_P;
 output wire MCK_N;

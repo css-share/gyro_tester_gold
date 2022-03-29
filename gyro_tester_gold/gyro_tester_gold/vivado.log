@@ -11,3 +11,59 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/axis_stream_txfifo_2.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/Handler_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Docs/gyro_tester_gold/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 762.289 ; gain = 136.664
+update_compile_order -fileset sources_1
+open_bd_design {C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/design_2.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:user:axi4_pl_interrupt_generator:1.0 - axi4_pl_interrupt_ge_0
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:user:axi4_pl_SPI_ip:1.0 - SPI_ip_0
+Adding cell -- xilinx.com:user:Handler:1.0 - Handler_0
+Adding cell -- xilinx.com:user:axis_stream_fifo:1.0 - RxFIFO
+Adding cell -- xilinx.com:user:BiDirChannels:1.0 - BiDirChannels_0
+Adding cell -- user.org:user:axis_stream_txfifo:2.0 - axis_stream_txfifo_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_2> from BD file <C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/design_2.bd>
+open_bd_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 923.648 ; gain = 133.266
+ipx::edit_ip_in_project -upgrade true -name axis_stream_txfifo_v2_0_project -directory C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.tmp/axis_stream_txfifo_v2_0_project c:/Docs/gyro_tester_gold/ip_repo/axis_stream_txfifo_2.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.tmp/axis_stream_txfifo_v2_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1021.703 ; gain = 8.922
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/axis_stream_txfifo_2.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/Handler_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Docs/gyro_tester_gold/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 1035.703 ; gain = 22.922
+update_compile_order -fileset sources_1
+close_project
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/axis_stream_txfifo_2.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Docs/gyro_tester_gold/ip_repo/Handler_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Docs/gyro_tester_gold/ip_repo'.
+report_ip_status -name ip_status
+set_property LOCK_UPGRADE 0 [get_bd_cells /rst_ps7_0_100M]
+set_property LOCK_UPGRADE 0 [get_bd_cells /axi_dma_0]
+set_property LOCK_UPGRADE 0 [get_bd_cells /xlconcat_0]
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:axis_stream_txfifo:2.0 [get_ips  design_2_axis_stream_txfifo_0_2] -log ip_upgrade.log
+Upgrading 'C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/design_2.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_2_axis_stream_txfifo_0_2 from axis_stream_txfifo_v2.0 2.0 to axis_stream_txfifo_v2.0 2.0
+Wrote  : <C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/design_2.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_2_axis_stream_txfifo_0_2] -no_script -sync -force -quiet

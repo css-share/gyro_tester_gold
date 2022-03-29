@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2019 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -55,12 +55,11 @@
 (* CORE_GENERATION_INFO = "design_2_SPI_ip_0_0,SPI_ip_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=axi4_pl_SPI_ip,x_ipVersion=1.0,x_ipCoreRevision=11,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_2_SPI_ip_0_0 (
-  SPI_MISO,
-  SPI_MOSI,
+  clk,
+  rstn,
+  SPI_D,
   SPI_SCK,
   SPI_CS,
-  FSM_START,
-  FSM_DONE,
   s00_axi_awaddr,
   s00_axi_awprot,
   s00_axi_awvalid,
@@ -84,12 +83,15 @@ module design_2_SPI_ip_0_0 (
   s00_axi_aresetn
 );
 
-input wire SPI_MISO;
-output wire SPI_MOSI;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
+input wire clk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rstn, POLARITY ACTIVE_LOW" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rstn RST" *)
+input wire rstn;
+inout wire SPI_D;
 output wire SPI_SCK;
 output wire SPI_CS;
-output wire FSM_START;
-output wire FSM_DONE;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [3 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *)
@@ -141,12 +143,11 @@ input wire s00_axi_aresetn;
     .C_S00_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
     .C_S00_AXI_ADDR_WIDTH(4)  // Width of S_AXI address bus
   ) inst (
-    .SPI_MISO(SPI_MISO),
-    .SPI_MOSI(SPI_MOSI),
+    .clk(clk),
+    .rstn(rstn),
+    .SPI_D(SPI_D),
     .SPI_SCK(SPI_SCK),
     .SPI_CS(SPI_CS),
-    .FSM_START(FSM_START),
-    .FSM_DONE(FSM_DONE),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),
     .s00_axi_awvalid(s00_axi_awvalid),

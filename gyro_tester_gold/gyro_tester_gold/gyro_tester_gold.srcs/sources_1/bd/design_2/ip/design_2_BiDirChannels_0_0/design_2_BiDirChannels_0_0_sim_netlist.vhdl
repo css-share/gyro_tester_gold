@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Tue Aug 13 23:13:31 2019
--- Host        : milssdie50 running 64-bit Red Hat Enterprise Linux Server release 6.8 (Santiago)
+-- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+-- Date        : Mon Mar 28 21:12:38 2022
+-- Host        : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               /home/cdickinson/ccs_working/gyro_tester_zedboard_code/gyro_tester.srcs/sources_1/bd/design_2/ip/design_2_BiDirChannels_0_0/design_2_BiDirChannels_0_0_sim_netlist.vhdl
+--               C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_BiDirChannels_0_0/design_2_BiDirChannels_0_0_sim_netlist.vhdl
 -- Design      : design_2_BiDirChannels_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12029,8 +12029,10 @@ architecture STRUCTURE of design_2_BiDirChannels_0_0 is
   signal clk0 : STD_LOGIC;
   signal \^s00_axis_tready\ : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of m00_axis_aclk : signal is "xilinx.com:signal:clock:1.0 M00_AXIS_CLK CLK";
+  attribute X_INTERFACE_INFO of HS_Clock : signal is "xilinx.com:signal:clock:1.0 HS_Clock CLK";
   attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of HS_Clock : signal is "XIL_INTERFACENAME HS_Clock, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_2_BiDirChannels_0_0_HS_Clock";
+  attribute X_INTERFACE_INFO of m00_axis_aclk : signal is "xilinx.com:signal:clock:1.0 M00_AXIS_CLK CLK";
   attribute X_INTERFACE_PARAMETER of m00_axis_aclk : signal is "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0";
   attribute X_INTERFACE_INFO of m00_axis_aresetn : signal is "xilinx.com:signal:reset:1.0 M00_AXIS_RST RST";
   attribute X_INTERFACE_PARAMETER of m00_axis_aresetn : signal is "XIL_INTERFACENAME M00_AXIS_RST, POLARITY ACTIVE_LOW";
