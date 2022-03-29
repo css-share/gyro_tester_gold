@@ -1,5 +1,7 @@
 eclipse.preferences.version=1
-scalability.numberOfLines=50000
+org.eclipse.cdt.ui.outline.groupmembers=true
+scalability.numberOfLines=10000
+scalability.reconciler=false
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true

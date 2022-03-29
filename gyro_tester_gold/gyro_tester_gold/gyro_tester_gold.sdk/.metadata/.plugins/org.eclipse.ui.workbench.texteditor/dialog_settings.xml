@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="emitDataToBuffer" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
-		<item value="false" key="wholeword"/>
+		<item value="true" key="wholeword"/>
 		<list key="findhistory">
-			<item value="emitDataToBuffer"/>
-			<item value="fillTxPacketBuffer"/>
-			<item value="fill"/>
-			<item value="changeMCLKdivision"/>
-			<item value="NUM_RXFIFO_READS_REQUIRED"/>
-			<item value="SaveData"/>
-			<item value="numberDataSamples"/>
-			<item value="busySamplingFlag"/>
+			<item value="writeToTxFpgaSpace"/>
+			<item value="storeTxBufferDataInArray"/>
+			<item value="CMD_FILL_TX_BUFFER_CARRIER_CHAN"/>
+			<item value="fillFpgaTxBuffer"/>
+			<item value="sendTxDmaPacket"/>
+			<item value="sendDMApacket"/>
+			<item value="CMD_CLEAR_RX_FIFO_ACQUIRE_BIT"/>
+			<item value="CMD_FILL_FPGA_TX_BUFFER"/>
 		</list>
 		<list key="replacehistory">
-			<item value="CMD_GET_SPICLK_DIV"/>
-			<item value="changeMCLKdivision"/>
-			<item value="changeGyroChannelMCLKdivision"/>
-			<item value="SaveData"/>
-			<item value="reg11"/>
-			<item value="reg10"/>
-			<item value="reg9"/>
-			<item value="reg8"/>
+			<item value="TxBuffer"/>
+			<item value="TxBufferAddress"/>
+			<item value="bufIndex"/>
+			<item value="i"/>
+			<item value="numBytes"/>
+			<item value="MAX_PKT_LEN_BYTES"/>
+			<item value="storeTxBufferDataInArray"/>
+			<item value="pattern3["/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

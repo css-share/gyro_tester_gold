@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]L:\proj1\ngc\gyro\test\gyro_tester_zedboard_code\gyro_tester.sdk\zynq_fsbl\Debug\zynq_fsbl.elf
+	L:\proj1\ngc\gyro\test\gyro_tester_zedboard_code\gyro_tester.sdk\design_2_wrapper_hw_platform_2\design_2_wrapper.bit
+	L:\proj1\ngc\gyro\test\gyro_tester_zedboard_code\gyro_tester.sdk\axi4_gyro_test_0\Debug\axi4_gyro_test_0.elf
+}
