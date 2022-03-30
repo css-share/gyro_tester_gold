@@ -1,99 +1,5 @@
-21:05:51 **** Incremental Build of configuration Debug for project axi4_gyro_test_0 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:6:0:
-../../standalone_bsp_1/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../standalone_bsp_1/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../standalone_bsp_1/ps7_cortexa9_0/include/xaxidma_bd.h:120:0,
-                 from ../../standalone_bsp_1/ps7_cortexa9_0/include/xaxidma_bdring.h:87,
-                 from ../../standalone_bsp_1/ps7_cortexa9_0/include/xaxidma.h:492,
-                 from ../src/main.c:18:
-../../standalone_bsp_1/ps7_cortexa9_0/include/xil_cache.h:102:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'void'
- void Xil_DCacheEnable(void);
- ^~~~
-../src/main.c:171:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
- #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
-  ^~~~~~~
-../src/main.c: In function 'fillTxPacketBufferSineWave':
-../src/main.c:998:5: warning: unused variable 'Value' [-Wunused-variable]
-  u8 Value;
-     ^~~~~
-../src/main.c:997:12: warning: unused variable 'Value2' [-Wunused-variable]
-  u8 Value1,Value2;
-            ^~~~~~
-../src/main.c:997:5: warning: unused variable 'Value1' [-Wunused-variable]
-  u8 Value1,Value2;
-     ^~~~~~
-../src/main.c:996:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-../src/main.c: In function 'generateSineWave':
-../src/main.c:1021:26: warning: unused variable 'w' [-Wunused-variable]
-   signed short int i, v, w;
-                          ^
-../src/main.c:1021:23: warning: unused variable 'v' [-Wunused-variable]
-   signed short int i, v, w;
-                       ^
-../src/main.c:1020:25: warning: variable 'mult' set but not used [-Wunused-but-set-variable]
-   double f, x, y, base, mult;
-                         ^~~~
-../src/main.c:1020:16: warning: unused variable 'y' [-Wunused-variable]
-   double f, x, y, base, mult;
-                ^
-../src/main.c:1020:10: warning: variable 'f' set but not used [-Wunused-but-set-variable]
-   double f, x, y, base, mult;
-          ^
-../src/main.c: In function 'sendDMApacket':
-../src/main.c:25719:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-../src/main.c:25716:5: warning: variable 'Value' set but not used [-Wunused-but-set-variable]
-  u8 Value;
-     ^~~~~
-../src/main.c: In function 'SaveData':
-../src/main.c:25803:5: warning: variable 'Value' set but not used [-Wunused-but-set-variable]
-  u8 Value;
-     ^~~~~
-../src/main.c: In function 'read_uart_bytes':
-../src/main.c:26458:4: warning: implicit declaration of function 'load_sawtooth_up_data' [-Wimplicit-function-declaration]
-    load_sawtooth_up_data();
-    ^~~~~~~~~~~~~~~~~~~~~
-../src/main.c:26462:4: warning: implicit declaration of function 'load_sawtooth_down_data' [-Wimplicit-function-declaration]
-    load_sawtooth_down_data();
-    ^~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c: In function 'fill_testADC_results_array':
-../src/main.c:27022:5: warning: unused variable 'firstSetup' [-Wunused-variable]
-  u8 firstSetup = 1;
-     ^~~~~~~~~~
-At top level:
-../src/main.c:995:13: warning: 'fillTxPacketBufferSineWave' defined but not used [-Wunused-function]
- static void fillTxPacketBufferSineWave(int npoints, u8 *TxPacket){
-             ^~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:774:12: warning: 'closeDMADevice' defined but not used [-Wunused-function]
- static int closeDMADevice(){
-            ^~~~~~~~~~~~~~
-../src/main.c:489:6: warning: 'setSPIControl' defined but not used [-Wunused-function]
- void setSPIControl(Xuint32 v){
-      ^~~~~~~~~~~~~
-../src/main.c:464:5: warning: 'setGyroTxFIFOLooping' defined but not used [-Wunused-function]
- int setGyroTxFIFOLooping(){
-     ^~~~~~~~~~~~~~~~~~~~
-../src/main.c:459:5: warning: 'resetGyroTxFIFOLooping' defined but not used [-Wunused-function]
- int resetGyroTxFIFOLooping(){
-     ^~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-21:07:00 **** Auto Build of project standalone_bsp_1 ****
+23:47:11 **** Build of project standalone_bsp_0 ****
 make -k all 
-"Running Make include in ps7_cortexa9_0/libsrc/axi4_pl_interrupt_generator_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/axi4_pl_interrupt_generator_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_7/src"
 make -C ps7_cortexa9_0/libsrc/axidma_v9_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/axis_stream_fifo_v1_0/src"
@@ -116,8 +22,6 @@ make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=a
 make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
 make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/Handler_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/Handler_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
 make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
@@ -138,19 +42,10 @@ make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=
 make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make libs in ps7_cortexa9_0/libsrc/axi4_pl_interrupt_generator_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/axi4_pl_interrupt_generator_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling axi4_pl_interrupt_generator..."
-axi4_pl_interrupt_generator_selftest.c: In function 'AXI4_PL_INTERRUPT_GENERATOR_Reg_SelfTest':
-axi4_pl_interrupt_generator_selftest.c:52:76: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( AXI4_PL_INTERRUPT_GENERATOR_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                                            ^~
-axi4_pl_interrupt_generator_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
 "Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_7/src"
 make -C ps7_cortexa9_0/libsrc/axidma_v9_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling axidma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
 "Running Make libs in ps7_cortexa9_0/libsrc/axis_stream_fifo_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/axis_stream_fifo_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling axis_stream_fifo..."
@@ -202,16 +97,6 @@ make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm
 "Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
 make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling gpiops"
-"Running Make libs in ps7_cortexa9_0/libsrc/Handler_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/Handler_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling Handler..."
-Handler_selftest.c: In function 'HANDLER_Reg_SelfTest':
-Handler_selftest.c:52:56: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( HANDLER_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                        ^~
-Handler_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
 "Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
 make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling qspips"
@@ -259,222 +144,591 @@ make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling xadcps"
 'Finished building libraries'
-21:08:12 **** Auto Build of configuration Debug for project axi4_gyro_test_0 ****
+23:48:40 **** Build of configuration Debug for project gyro2_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: gyro2_firmware.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "gyro2_firmware.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gyro2_firmware.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size gyro2_firmware.elf  |tee "gyro2_firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19352	   1144	  22568	  43064	   a838	gyro2_firmware.elf
+'Finished building: gyro2_firmware.elf.size'
+' '
+23:48:42 **** Auto Build of configuration Debug for project gyro2_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+23:53:29 **** Auto Build of configuration Debug for project gyro2_firmware ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/main.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:6:0:
-../../standalone_bsp_1/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../standalone_bsp_1/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../../standalone_bsp_1/ps7_cortexa9_0/include/xaxidma_bd.h:120:0,
-                 from ../../standalone_bsp_1/ps7_cortexa9_0/include/xaxidma_bdring.h:87,
-                 from ../../standalone_bsp_1/ps7_cortexa9_0/include/xaxidma.h:492,
-                 from ../src/main.c:18:
-../../standalone_bsp_1/ps7_cortexa9_0/include/xil_cache.h:102:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'void'
- void Xil_DCacheEnable(void);
- ^~~~
-../src/main.c:171:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
- #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
-  ^~~~~~~
-../src/main.c: In function 'fillTxPacketBufferSineWave':
-../src/main.c:998:5: warning: unused variable 'Value' [-Wunused-variable]
-  u8 Value;
-     ^~~~~
-../src/main.c:997:12: warning: unused variable 'Value2' [-Wunused-variable]
-  u8 Value1,Value2;
-            ^~~~~~
-../src/main.c:997:5: warning: unused variable 'Value1' [-Wunused-variable]
-  u8 Value1,Value2;
-     ^~~~~~
-../src/main.c:996:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-../src/main.c: In function 'generateSineWave':
-../src/main.c:1021:26: warning: unused variable 'w' [-Wunused-variable]
-   signed short int i, v, w;
-                          ^
-../src/main.c:1021:23: warning: unused variable 'v' [-Wunused-variable]
-   signed short int i, v, w;
-                       ^
-../src/main.c:1020:25: warning: variable 'mult' set but not used [-Wunused-but-set-variable]
-   double f, x, y, base, mult;
-                         ^~~~
-../src/main.c:1020:16: warning: unused variable 'y' [-Wunused-variable]
-   double f, x, y, base, mult;
-                ^
-../src/main.c:1020:10: warning: variable 'f' set but not used [-Wunused-but-set-variable]
-   double f, x, y, base, mult;
-          ^
-../src/main.c: In function 'sendDMApacket':
-../src/main.c:25719:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-../src/main.c:25716:5: warning: variable 'Value' set but not used [-Wunused-but-set-variable]
-  u8 Value;
-     ^~~~~
-../src/main.c: In function 'SaveData':
-../src/main.c:25803:5: warning: variable 'Value' set but not used [-Wunused-but-set-variable]
-  u8 Value;
-     ^~~~~
-../src/main.c: In function 'read_uart_bytes':
-../src/main.c:26458:4: warning: implicit declaration of function 'load_sawtooth_up_data' [-Wimplicit-function-declaration]
-    load_sawtooth_up_data();
-    ^~~~~~~~~~~~~~~~~~~~~
-../src/main.c:26462:4: warning: implicit declaration of function 'load_sawtooth_down_data' [-Wimplicit-function-declaration]
-    load_sawtooth_down_data();
-    ^~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c: In function 'fill_testADC_results_array':
-../src/main.c:27022:5: warning: unused variable 'firstSetup' [-Wunused-variable]
-  u8 firstSetup = 1;
-     ^~~~~~~~~~
-At top level:
-../src/main.c:995:13: warning: 'fillTxPacketBufferSineWave' defined but not used [-Wunused-function]
- static void fillTxPacketBufferSineWave(int npoints, u8 *TxPacket){
-             ^~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:774:12: warning: 'closeDMADevice' defined but not used [-Wunused-function]
- static int closeDMADevice(){
-            ^~~~~~~~~~~~~~
-../src/main.c:489:6: warning: 'setSPIControl' defined but not used [-Wunused-function]
- void setSPIControl(Xuint32 v){
-      ^~~~~~~~~~~~~
-../src/main.c:464:5: warning: 'setGyroTxFIFOLooping' defined but not used [-Wunused-function]
- int setGyroTxFIFOLooping(){
-     ^~~~~~~~~~~~~~~~~~~~
-../src/main.c:459:5: warning: 'resetGyroTxFIFOLooping' defined but not used [-Wunused-function]
- int resetGyroTxFIFOLooping(){
-     ^~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-21:11:33 **** Auto Build of configuration Debug for project axi4_gyro_test_0 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 In file included from ../src/main.c:8:0:
-../../standalone_bsp_1/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
  #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
   ^~~~~~~
-../../standalone_bsp_1/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
  #warning  Please refer the Standalone BSP UG647 for further details
   ^~~~~~~
-../src/main.c:181:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+../src/main.c:234:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
  #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
   ^~~~~~~
-../src/main.c:258:17: warning: type defaults to 'int' in declaration of 'TxFifoData' [-Wimplicit-int]
- static volatile TxFifoData[WAVEFORM_DATA_ARRAY_SIZE];
-                 ^~~~~~~~~~
-../src/main.c: In function 'fillTxPacketBufferSineWave':
-../src/main.c:1032:5: warning: unused variable 'Value' [-Wunused-variable]
-  u8 Value;
-     ^~~~~
-../src/main.c:1031:12: warning: unused variable 'Value2' [-Wunused-variable]
-  u8 Value1,Value2;
-            ^~~~~~
-../src/main.c:1031:5: warning: unused variable 'Value1' [-Wunused-variable]
-  u8 Value1,Value2;
-     ^~~~~~
-../src/main.c:1030:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-../src/main.c: In function 'generateSineWave':
-../src/main.c:1055:26: warning: unused variable 'w' [-Wunused-variable]
-   signed short int i, v, w;
-                          ^
-../src/main.c:1055:23: warning: unused variable 'v' [-Wunused-variable]
-   signed short int i, v, w;
-                       ^
-../src/main.c:1054:25: warning: variable 'mult' set but not used [-Wunused-but-set-variable]
-   double f, x, y, base, mult;
-                         ^~~~
-../src/main.c:1054:16: warning: unused variable 'y' [-Wunused-variable]
-   double f, x, y, base, mult;
-                ^
-../src/main.c:1054:10: warning: variable 'f' set but not used [-Wunused-but-set-variable]
-   double f, x, y, base, mult;
-          ^
-../src/main.c: In function 'sendDMApacket':
-../src/main.c:9399:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-../src/main.c: In function 'SaveData':
-../src/main.c:9484:5: warning: variable 'Value' set but not used [-Wunused-but-set-variable]
-  u8 Value;
-     ^~~~~
+../src/main.c:296:44: error: 'XPAR_AXI4_PL_INTERRUPT_GE_0_S00_AXI_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_AXIS_STREAM_TXFIFO_0_S00_AXI_BASEADDR'?
+ Xuint32* baseaddr_p           = (Xuint32*) XPAR_AXI4_PL_INTERRUPT_GE_0_S00_AXI_BASEADDR;
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                            XPAR_AXIS_STREAM_TXFIFO_0_S00_AXI_BASEADDR
+../src/main.c:338:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ u32*   debugBaseAddress = 0x43C40000;
+                           ^~~~~~~~~~
+../src/main.c: In function 'receivePacketButton':
+../src/main.c:2175:6: warning: variable 'gyroChannelStatus' set but not used [-Wunused-but-set-variable]
+  u32 gyroChannelStatus = 0;
+      ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'captureAdcDataUntilNew':
+../src/main.c:2326:16: warning: unused variable 'num_nops' [-Wunused-variable]
+   unsigned int num_nops;
+                ^~~~~~~~
+../src/main.c:2325:7: warning: unused variable 'num_shifts' [-Wunused-variable]
+   u32 num_shifts = 0;
+       ^~~~~~~~~~
 ../src/main.c: In function 'read_test_ADC_result':
-../src/main.c:10769:15: warning: unused variable 'firstCalRegisterAddress' [-Wunused-variable]
+../src/main.c:3564:15: warning: unused variable 'firstCalRegisterAddress' [-Wunused-variable]
   unsigned int firstCalRegisterAddress = 32;
                ^~~~~~~~~~~~~~~~~~~~~~~
 ../src/main.c: In function 'fill_testADC_results_array':
-../src/main.c:10795:5: warning: unused variable 'firstSetup' [-Wunused-variable]
+../src/main.c:3590:5: warning: unused variable 'firstSetup' [-Wunused-variable]
   u8 firstSetup = 1;
      ^~~~~~~~~~
 At top level:
-../src/main.c:1028:13: warning: 'fillTxPacketBufferSineWave' defined but not used [-Wunused-function]
- static void fillTxPacketBufferSineWave(int npoints, u8 *TxPacket){
-             ^~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:807:12: warning: 'closeDMADevice' defined but not used [-Wunused-function]
+../src/main.c:3727:6: warning: 'send_Tx_data_over_UART' defined but not used [-Wunused-function]
+ void send_Tx_data_over_UART(unsigned int num_points_to_send)
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3707:6: warning: 'load_sawtooth_down_data' defined but not used [-Wunused-function]
+ void load_sawtooth_down_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3684:6: warning: 'load_sawtooth_up_data' defined but not used [-Wunused-function]
+ void load_sawtooth_up_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:2301:6: warning: 'storeTxFpgaSpaceInArray' defined but not used [-Wunused-function]
+ void storeTxFpgaSpaceInArray(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:1751:6: warning: 'SaveAdcCaptureData' defined but not used [-Wunused-function]
+ void SaveAdcCaptureData(void)
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:1528:6: warning: 'changeTxBuffer' defined but not used [-Wunused-function]
+ void changeTxBuffer(void){
+      ^~~~~~~~~~~~~~
+../src/main.c:1363:13: warning: 'fillFpgaTxBuffer' defined but not used [-Wunused-function]
+ static void fillFpgaTxBuffer(u8 *TxBuffer)
+             ^~~~~~~~~~~~~~~~
+../src/main.c:1105:12: warning: 'closeDMADevice' defined but not used [-Wunused-function]
  static int closeDMADevice(){
             ^~~~~~~~~~~~~~
-../src/main.c:522:6: warning: 'setSPIControl' defined but not used [-Wunused-function]
+../src/main.c:820:6: warning: 'setSPIControl' defined but not used [-Wunused-function]
  void setSPIControl(Xuint32 v){
       ^~~~~~~~~~~~~
-../src/main.c:497:5: warning: 'setGyroTxFIFOLooping' defined but not used [-Wunused-function]
- int setGyroTxFIFOLooping(){
-     ^~~~~~~~~~~~~~~~~~~~
-../src/main.c:492:5: warning: 'resetGyroTxFIFOLooping' defined but not used [-Wunused-function]
- int resetGyroTxFIFOLooping(){
-     ^~~~~~~~~~~~~~~~~~~~~~
-../src/main.c: In function 'generateSineWave':
-../src/main.c:1065:26: warning: 'x' may be used uninitialized in this function [-Wmaybe-uninitialized]
-     emitDataToBuffer(i, x*((AMP)*1.0)+ (AMP*1.0));
-                         ~^~~~~~~~~~~~
+../src/main.c:736:5: warning: 'readGyroTxFIFODebugData' defined but not used [-Wunused-function]
+ int readGyroTxFIFODebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:667:5: warning: 'readGyroChannelDebugData' defined but not used [-Wunused-function]
+ int readGyroChannelDebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:541:6: warning: 'readGyroChannelStatus' defined but not used [-Wunused-function]
+ void readGyroChannelStatus(){
+      ^~~~~~~~~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+23:53:36 **** Clean-only build of configuration Debug for project gyro2_firmware ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/main.o ./src/platform.o  ./src/helloworld.d ./src/main.d ./src/platform.d  gyro2_firmware.elf.size  gyro2_firmware.elf
+' '
+23:53:36 **** Auto Build of configuration Debug for project gyro2_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:8:0:
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c:234:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c:296:44: error: 'XPAR_AXI4_PL_INTERRUPT_GE_0_S00_AXI_BASEADDR' undeclared here (not in a function); did you mean 'XPAR_AXIS_STREAM_TXFIFO_0_S00_AXI_BASEADDR'?
+ Xuint32* baseaddr_p           = (Xuint32*) XPAR_AXI4_PL_INTERRUPT_GE_0_S00_AXI_BASEADDR;
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                            XPAR_AXIS_STREAM_TXFIFO_0_S00_AXI_BASEADDR
+../src/main.c:338:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ u32*   debugBaseAddress = 0x43C40000;
+                           ^~~~~~~~~~
+../src/main.c: In function 'receivePacketButton':
+../src/main.c:2175:6: warning: variable 'gyroChannelStatus' set but not used [-Wunused-but-set-variable]
+  u32 gyroChannelStatus = 0;
+      ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'captureAdcDataUntilNew':
+../src/main.c:2326:16: warning: unused variable 'num_nops' [-Wunused-variable]
+   unsigned int num_nops;
+                ^~~~~~~~
+../src/main.c:2325:7: warning: unused variable 'num_shifts' [-Wunused-variable]
+   u32 num_shifts = 0;
+       ^~~~~~~~~~
+../src/main.c: In function 'read_test_ADC_result':
+../src/main.c:3564:15: warning: unused variable 'firstCalRegisterAddress' [-Wunused-variable]
+  unsigned int firstCalRegisterAddress = 32;
+               ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'fill_testADC_results_array':
+../src/main.c:3590:5: warning: unused variable 'firstSetup' [-Wunused-variable]
+  u8 firstSetup = 1;
+     ^~~~~~~~~~
+At top level:
+../src/main.c:3727:6: warning: 'send_Tx_data_over_UART' defined but not used [-Wunused-function]
+ void send_Tx_data_over_UART(unsigned int num_points_to_send)
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3707:6: warning: 'load_sawtooth_down_data' defined but not used [-Wunused-function]
+ void load_sawtooth_down_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3684:6: warning: 'load_sawtooth_up_data' defined but not used [-Wunused-function]
+ void load_sawtooth_up_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:2301:6: warning: 'storeTxFpgaSpaceInArray' defined but not used [-Wunused-function]
+ void storeTxFpgaSpaceInArray(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:1751:6: warning: 'SaveAdcCaptureData' defined but not used [-Wunused-function]
+ void SaveAdcCaptureData(void)
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:1528:6: warning: 'changeTxBuffer' defined but not used [-Wunused-function]
+ void changeTxBuffer(void){
+      ^~~~~~~~~~~~~~
+../src/main.c:1363:13: warning: 'fillFpgaTxBuffer' defined but not used [-Wunused-function]
+ static void fillFpgaTxBuffer(u8 *TxBuffer)
+             ^~~~~~~~~~~~~~~~
+../src/main.c:1105:12: warning: 'closeDMADevice' defined but not used [-Wunused-function]
+ static int closeDMADevice(){
+            ^~~~~~~~~~~~~~
+../src/main.c:820:6: warning: 'setSPIControl' defined but not used [-Wunused-function]
+ void setSPIControl(Xuint32 v){
+      ^~~~~~~~~~~~~
+../src/main.c:736:5: warning: 'readGyroTxFIFODebugData' defined but not used [-Wunused-function]
+ int readGyroTxFIFODebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:667:5: warning: 'readGyroChannelDebugData' defined but not used [-Wunused-function]
+ int readGyroChannelDebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:541:6: warning: 'readGyroChannelStatus' defined but not used [-Wunused-function]
+ void readGyroChannelStatus(){
+      ^~~~~~~~~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+00:16:32 **** Auto Build of configuration Debug for project gyro2_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:8:0:
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c:234:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c:339:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ u32*   debugBaseAddress = 0x43C40000;
+                           ^~~~~~~~~~
+../src/main.c: In function 'receivePacketButton':
+../src/main.c:2176:6: warning: variable 'gyroChannelStatus' set but not used [-Wunused-but-set-variable]
+  u32 gyroChannelStatus = 0;
+      ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'captureAdcDataUntilNew':
+../src/main.c:2327:16: warning: unused variable 'num_nops' [-Wunused-variable]
+   unsigned int num_nops;
+                ^~~~~~~~
+../src/main.c:2326:7: warning: unused variable 'num_shifts' [-Wunused-variable]
+   u32 num_shifts = 0;
+       ^~~~~~~~~~
+../src/main.c: In function 'read_test_ADC_result':
+../src/main.c:3565:15: warning: unused variable 'firstCalRegisterAddress' [-Wunused-variable]
+  unsigned int firstCalRegisterAddress = 32;
+               ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'fill_testADC_results_array':
+../src/main.c:3591:5: warning: unused variable 'firstSetup' [-Wunused-variable]
+  u8 firstSetup = 1;
+     ^~~~~~~~~~
+At top level:
+../src/main.c:3728:6: warning: 'send_Tx_data_over_UART' defined but not used [-Wunused-function]
+ void send_Tx_data_over_UART(unsigned int num_points_to_send)
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3708:6: warning: 'load_sawtooth_down_data' defined but not used [-Wunused-function]
+ void load_sawtooth_down_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3685:6: warning: 'load_sawtooth_up_data' defined but not used [-Wunused-function]
+ void load_sawtooth_up_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:2302:6: warning: 'storeTxFpgaSpaceInArray' defined but not used [-Wunused-function]
+ void storeTxFpgaSpaceInArray(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:1752:6: warning: 'SaveAdcCaptureData' defined but not used [-Wunused-function]
+ void SaveAdcCaptureData(void)
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:1529:6: warning: 'changeTxBuffer' defined but not used [-Wunused-function]
+ void changeTxBuffer(void){
+      ^~~~~~~~~~~~~~
+../src/main.c:1364:13: warning: 'fillFpgaTxBuffer' defined but not used [-Wunused-function]
+ static void fillFpgaTxBuffer(u8 *TxBuffer)
+             ^~~~~~~~~~~~~~~~
+../src/main.c:1106:12: warning: 'closeDMADevice' defined but not used [-Wunused-function]
+ static int closeDMADevice(){
+            ^~~~~~~~~~~~~~
+../src/main.c:821:6: warning: 'setSPIControl' defined but not used [-Wunused-function]
+ void setSPIControl(Xuint32 v){
+      ^~~~~~~~~~~~~
+../src/main.c:737:5: warning: 'readGyroTxFIFODebugData' defined but not used [-Wunused-function]
+ int readGyroTxFIFODebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:668:5: warning: 'readGyroChannelDebugData' defined but not used [-Wunused-function]
+ int readGyroChannelDebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:542:6: warning: 'readGyroChannelStatus' defined but not used [-Wunused-function]
+ void readGyroChannelStatus(){
+      ^~~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
 'Building file: ../src/platform.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
 'Finished building: ../src/platform.c'
 ' '
-'Building target: axi4_gyro_test_0.elf'
+'Building target: gyro2_firmware.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_1/ps7_cortexa9_0/lib -o "axi4_gyro_test_0.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: axi4_gyro_test_0.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "gyro2_firmware.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gyro2_firmware.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size axi4_gyro_test_0.elf  |tee "axi4_gyro_test_0.elf.size"
+arm-none-eabi-size gyro2_firmware.elf  |tee "gyro2_firmware.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 322160	   4352	  35728	 362240	  58700	axi4_gyro_test_0.elf
-'Finished building: axi4_gyro_test_0.elf.size'
+  79792	   3984	 108840	 192616	  2f068	gyro2_firmware.elf
+'Finished building: gyro2_firmware.elf.size'
 ' '
-21:17:59 **** Incremental Build of configuration Debug for project axi4_gyro_test_0 ****
+00:47:36 **** Auto Build of configuration Debug for project gyro2_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:8:0:
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c:234:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c:339:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ u32*   debugBaseAddress = 0x43C40000;
+                           ^~~~~~~~~~
+../src/main.c: In function 'receivePacketButton':
+../src/main.c:2203:6: warning: variable 'gyroChannelStatus' set but not used [-Wunused-but-set-variable]
+  u32 gyroChannelStatus = 0;
+      ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'captureAdcDataUntilNew':
+../src/main.c:2354:16: warning: unused variable 'num_nops' [-Wunused-variable]
+   unsigned int num_nops;
+                ^~~~~~~~
+../src/main.c:2353:7: warning: unused variable 'num_shifts' [-Wunused-variable]
+   u32 num_shifts = 0;
+       ^~~~~~~~~~
+../src/main.c: In function 'read_test_ADC_result':
+../src/main.c:3592:15: warning: unused variable 'firstCalRegisterAddress' [-Wunused-variable]
+  unsigned int firstCalRegisterAddress = 32;
+               ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'fill_testADC_results_array':
+../src/main.c:3618:5: warning: unused variable 'firstSetup' [-Wunused-variable]
+  u8 firstSetup = 1;
+     ^~~~~~~~~~
+At top level:
+../src/main.c:3755:6: warning: 'send_Tx_data_over_UART' defined but not used [-Wunused-function]
+ void send_Tx_data_over_UART(unsigned int num_points_to_send)
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3735:6: warning: 'load_sawtooth_down_data' defined but not used [-Wunused-function]
+ void load_sawtooth_down_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3712:6: warning: 'load_sawtooth_up_data' defined but not used [-Wunused-function]
+ void load_sawtooth_up_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:2329:6: warning: 'storeTxFpgaSpaceInArray' defined but not used [-Wunused-function]
+ void storeTxFpgaSpaceInArray(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:1779:6: warning: 'SaveAdcCaptureData' defined but not used [-Wunused-function]
+ void SaveAdcCaptureData(void)
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:1556:6: warning: 'changeTxBuffer' defined but not used [-Wunused-function]
+ void changeTxBuffer(void){
+      ^~~~~~~~~~~~~~
+../src/main.c:1391:13: warning: 'fillFpgaTxBuffer' defined but not used [-Wunused-function]
+ static void fillFpgaTxBuffer(u8 *TxBuffer)
+             ^~~~~~~~~~~~~~~~
+../src/main.c:1133:12: warning: 'closeDMADevice' defined but not used [-Wunused-function]
+ static int closeDMADevice(){
+            ^~~~~~~~~~~~~~
+../src/main.c:821:6: warning: 'setSPIControl' defined but not used [-Wunused-function]
+ void setSPIControl(Xuint32 v){
+      ^~~~~~~~~~~~~
+../src/main.c:737:5: warning: 'readGyroTxFIFODebugData' defined but not used [-Wunused-function]
+ int readGyroTxFIFODebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:668:5: warning: 'readGyroChannelDebugData' defined but not used [-Wunused-function]
+ int readGyroChannelDebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:542:6: warning: 'readGyroChannelStatus' defined but not used [-Wunused-function]
+ void readGyroChannelStatus(){
+      ^~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gyro2_firmware.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "gyro2_firmware.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gyro2_firmware.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size gyro2_firmware.elf  |tee "gyro2_firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79984	   3984	 108840	 192808	  2f128	gyro2_firmware.elf
+'Finished building: gyro2_firmware.elf.size'
+' '
+01:00:47 **** Incremental Build of configuration Debug for project gyro2_firmware ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-21:23:28 **** Incremental Build of configuration Debug for project axi4_gyro_test_0 ****
+01:02:03 **** Incremental Build of configuration Debug for project gyro2_firmware ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-21:26:07 **** Incremental Build of configuration Debug for project axi4_gyro_test_0 ****
+01:03:33 **** Incremental Build of configuration Debug for project gyro2_firmware ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-21:27:43 **** Incremental Build of configuration Debug for project axi4_gyro_test_0 ****
+01:29:38 **** Auto Build of configuration Debug for project gyro2_firmware ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for `main-build'.
-21:37:34 **** Incremental Build of configuration Debug for project axi4_gyro_test_0 ****
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:8:0:
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c:234:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c:339:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ u32*   debugBaseAddress = 0x43C40000;
+                           ^~~~~~~~~~
+../src/main.c: In function 'isr0':
+../src/main.c:1022:7: error: 'baseaddr_p' undeclared (first use in this function); did you mean 'baseaddr_spi'?
+     *(baseaddr_p+0) = 0x00000000;
+       ^~~~~~~~~~
+       baseaddr_spi
+../src/main.c:1022:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'isr1':
+../src/main.c:1028:7: error: 'baseaddr_p' undeclared (first use in this function); did you mean 'baseaddr_spi'?
+     *(baseaddr_p+1) = 0x00000000;
+       ^~~~~~~~~~
+       baseaddr_spi
+../src/main.c: In function 'isr2':
+../src/main.c:1034:7: error: 'baseaddr_p' undeclared (first use in this function); did you mean 'baseaddr_spi'?
+     *(baseaddr_p+2) = 0x00000000;
+       ^~~~~~~~~~
+       baseaddr_spi
+../src/main.c: In function 'setup_interrupt_system':
+../src/main.c:1061:42: error: 'baseaddr_p' undeclared (first use in this function); did you mean 'baseaddr_spi'?
+     xil_printf("slv_reg3: 0x%08x\n\r", *(baseaddr_p+3));
+                                          ^~~~~~~~~~
+                                          baseaddr_spi
+../src/main.c: In function 'receivePacketButton':
+../src/main.c:2203:6: warning: variable 'gyroChannelStatus' set but not used [-Wunused-but-set-variable]
+  u32 gyroChannelStatus = 0;
+      ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'captureAdcDataUntilNew':
+../src/main.c:2354:16: warning: unused variable 'num_nops' [-Wunused-variable]
+   unsigned int num_nops;
+                ^~~~~~~~
+../src/main.c:2353:7: warning: unused variable 'num_shifts' [-Wunused-variable]
+   u32 num_shifts = 0;
+       ^~~~~~~~~~
+../src/main.c: In function 'read_test_ADC_result':
+../src/main.c:3592:15: warning: unused variable 'firstCalRegisterAddress' [-Wunused-variable]
+  unsigned int firstCalRegisterAddress = 32;
+               ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'fill_testADC_results_array':
+../src/main.c:3618:5: warning: unused variable 'firstSetup' [-Wunused-variable]
+  u8 firstSetup = 1;
+     ^~~~~~~~~~
+At top level:
+../src/main.c:3755:6: warning: 'send_Tx_data_over_UART' defined but not used [-Wunused-function]
+ void send_Tx_data_over_UART(unsigned int num_points_to_send)
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3735:6: warning: 'load_sawtooth_down_data' defined but not used [-Wunused-function]
+ void load_sawtooth_down_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3712:6: warning: 'load_sawtooth_up_data' defined but not used [-Wunused-function]
+ void load_sawtooth_up_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:2329:6: warning: 'storeTxFpgaSpaceInArray' defined but not used [-Wunused-function]
+ void storeTxFpgaSpaceInArray(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:1779:6: warning: 'SaveAdcCaptureData' defined but not used [-Wunused-function]
+ void SaveAdcCaptureData(void)
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:1556:6: warning: 'changeTxBuffer' defined but not used [-Wunused-function]
+ void changeTxBuffer(void){
+      ^~~~~~~~~~~~~~
+../src/main.c:1391:13: warning: 'fillFpgaTxBuffer' defined but not used [-Wunused-function]
+ static void fillFpgaTxBuffer(u8 *TxBuffer)
+             ^~~~~~~~~~~~~~~~
+../src/main.c:1133:12: warning: 'closeDMADevice' defined but not used [-Wunused-function]
+ static int closeDMADevice(){
+            ^~~~~~~~~~~~~~
+../src/main.c:821:6: warning: 'setSPIControl' defined but not used [-Wunused-function]
+ void setSPIControl(Xuint32 v){
+      ^~~~~~~~~~~~~
+../src/main.c:737:5: warning: 'readGyroTxFIFODebugData' defined but not used [-Wunused-function]
+ int readGyroTxFIFODebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:668:5: warning: 'readGyroChannelDebugData' defined but not used [-Wunused-function]
+ int readGyroChannelDebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:542:6: warning: 'readGyroChannelStatus' defined but not used [-Wunused-function]
+ void readGyroChannelStatus(){
+      ^~~~~~~~~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+01:30:29 **** Auto Build of configuration Debug for project gyro2_firmware ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:8:0:
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../standalone_bsp_0/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c:234:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c:339:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ u32*   debugBaseAddress = 0x43C40000;
+                           ^~~~~~~~~~
+../src/main.c: In function 'receivePacketButton':
+../src/main.c:2206:6: warning: variable 'gyroChannelStatus' set but not used [-Wunused-but-set-variable]
+  u32 gyroChannelStatus = 0;
+      ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'captureAdcDataUntilNew':
+../src/main.c:2357:16: warning: unused variable 'num_nops' [-Wunused-variable]
+   unsigned int num_nops;
+                ^~~~~~~~
+../src/main.c:2356:7: warning: unused variable 'num_shifts' [-Wunused-variable]
+   u32 num_shifts = 0;
+       ^~~~~~~~~~
+../src/main.c: In function 'read_test_ADC_result':
+../src/main.c:3595:15: warning: unused variable 'firstCalRegisterAddress' [-Wunused-variable]
+  unsigned int firstCalRegisterAddress = 32;
+               ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'fill_testADC_results_array':
+../src/main.c:3621:5: warning: unused variable 'firstSetup' [-Wunused-variable]
+  u8 firstSetup = 1;
+     ^~~~~~~~~~
+At top level:
+../src/main.c:3758:6: warning: 'send_Tx_data_over_UART' defined but not used [-Wunused-function]
+ void send_Tx_data_over_UART(unsigned int num_points_to_send)
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3738:6: warning: 'load_sawtooth_down_data' defined but not used [-Wunused-function]
+ void load_sawtooth_down_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:3715:6: warning: 'load_sawtooth_up_data' defined but not used [-Wunused-function]
+ void load_sawtooth_up_data(void)
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:2332:6: warning: 'storeTxFpgaSpaceInArray' defined but not used [-Wunused-function]
+ void storeTxFpgaSpaceInArray(void)
+      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:1782:6: warning: 'SaveAdcCaptureData' defined but not used [-Wunused-function]
+ void SaveAdcCaptureData(void)
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:1559:6: warning: 'changeTxBuffer' defined but not used [-Wunused-function]
+ void changeTxBuffer(void){
+      ^~~~~~~~~~~~~~
+../src/main.c:1394:13: warning: 'fillFpgaTxBuffer' defined but not used [-Wunused-function]
+ static void fillFpgaTxBuffer(u8 *TxBuffer)
+             ^~~~~~~~~~~~~~~~
+../src/main.c:1136:12: warning: 'closeDMADevice' defined but not used [-Wunused-function]
+ static int closeDMADevice(){
+            ^~~~~~~~~~~~~~
+../src/main.c:821:6: warning: 'setSPIControl' defined but not used [-Wunused-function]
+ void setSPIControl(Xuint32 v){
+      ^~~~~~~~~~~~~
+../src/main.c:737:5: warning: 'readGyroTxFIFODebugData' defined but not used [-Wunused-function]
+ int readGyroTxFIFODebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:668:5: warning: 'readGyroChannelDebugData' defined but not used [-Wunused-function]
+ int readGyroChannelDebugData(){
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:542:6: warning: 'readGyroChannelStatus' defined but not used [-Wunused-function]
+ void readGyroChannelStatus(){
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:293:16: warning: 'intc' defined but not used [-Wunused-variable]
+ static XScuGic intc;
+                ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gyro2_firmware.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "gyro2_firmware.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gyro2_firmware.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size gyro2_firmware.elf  |tee "gyro2_firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78980	   3976	 108840	 191796	  2ed34	gyro2_firmware.elf
+'Finished building: gyro2_firmware.elf.size'
+' '
+01:30:46 **** Incremental Build of configuration Debug for project gyro2_firmware ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '

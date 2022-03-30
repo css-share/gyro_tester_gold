@@ -31,24 +31,13 @@
  
  
 /******************************************************************/
-/* Definitions for driver AXI4_PL_INTERRUPT_GENERATOR */
-#define XPAR_AXI4_PL_INTERRUPT_GENERATOR_NUM_INSTANCES 1
+/* Definitions for driver BIDIRCHANNELS */
+#define XPAR_BIDIRCHANNELS_NUM_INSTANCES 1
 
-/* Definitions for peripheral AXI4_PL_INTERRUPT_GE_0 */
-#define XPAR_AXI4_PL_INTERRUPT_GE_0_DEVICE_ID 0
-#define XPAR_AXI4_PL_INTERRUPT_GE_0_S00_AXI_BASEADDR 0x43C00000
-#define XPAR_AXI4_PL_INTERRUPT_GE_0_S00_AXI_HIGHADDR 0x43C0FFFF
-
-
-/******************************************************************/
-
-/* Definitions for driver AXI_GYRO_HSI */
-#define XPAR_AXI_GYRO_HSI_NUM_INSTANCES 1
-
-/* Definitions for peripheral AXI_GYRO_HSI_0 */
-#define XPAR_AXI_GYRO_HSI_0_DEVICE_ID 0
-#define XPAR_AXI_GYRO_HSI_0_S00_AXI_BASEADDR 0x43C20000
-#define XPAR_AXI_GYRO_HSI_0_S00_AXI_HIGHADDR 0x43C2FFFF
+/* Definitions for peripheral BIDIRCHANNELS_0 */
+#define XPAR_BIDIRCHANNELS_0_DEVICE_ID 0
+#define XPAR_BIDIRCHANNELS_0_S00_AXI_BASEADDR 0x43C20000
+#define XPAR_BIDIRCHANNELS_0_S00_AXI_HIGHADDR 0x43C2FFFF
 
 
 /******************************************************************/
@@ -106,10 +95,21 @@
 /* Definitions for driver AXIS_STREAM_FIFO */
 #define XPAR_AXIS_STREAM_FIFO_NUM_INSTANCES 1
 
-/* Definitions for peripheral AXIS_STREAM_FIFO_0 */
-#define XPAR_AXIS_STREAM_FIFO_0_DEVICE_ID 0
-#define XPAR_AXIS_STREAM_FIFO_0_S00_AXI_BASEADDR 0x43C30000
-#define XPAR_AXIS_STREAM_FIFO_0_S00_AXI_HIGHADDR 0x43C3FFFF
+/* Definitions for peripheral RXFIFO */
+#define XPAR_RXFIFO_DEVICE_ID 0
+#define XPAR_RXFIFO_S00_AXI_BASEADDR 0x43C30000
+#define XPAR_RXFIFO_S00_AXI_HIGHADDR 0x43C3FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver AXIS_STREAM_TXFIFO */
+#define XPAR_AXIS_STREAM_TXFIFO_NUM_INSTANCES 1
+
+/* Definitions for peripheral AXIS_STREAM_TXFIFO_0 */
+#define XPAR_AXIS_STREAM_TXFIFO_0_DEVICE_ID 0
+#define XPAR_AXIS_STREAM_TXFIFO_0_S00_AXI_BASEADDR 0x43C40000
+#define XPAR_AXIS_STREAM_TXFIFO_0_S00_AXI_HIGHADDR 0x43C4FFFF
 
 
 /******************************************************************/
@@ -352,8 +352,8 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR 64U
-#define XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR 65U
+#define XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR 61U
+#define XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR 62U
 
 /******************************************************************/
 
