@@ -48,6 +48,7 @@ extern void xil_printf(const char *format, ...);
 
 #define CMD_READ_REGISTER				0x41	// read 16-bit contents of gyro ic register
 #define CMD_WRITE_REGISTER				0x42	// write 16-bit value to gyro ic register
+#define CMD_WRITE_FPGA_REGISTER			0x43	// write 32-bit value to FPGA register
 #define CMD_READ_DATA					0x61	// read data from tester - should be followed by
 												// 4 bytes(unsigned int) for num words to be
 												// sent (msbyte first)
@@ -117,6 +118,7 @@ extern void xil_printf(const char *format, ...);
 #define CMD_READ_FPGA_TX_CTRL_WORDS 	0xEC	// read the 32-bit control words in fpga Tx section
 #define CMD_READ_FPGA_RX_CTRL_WORDS 	0xED	// read the 32-bit control words in fpga Rx section
 #define CMD_READ_FPGA_CONTROL_WORDS		0xEE	// read the 32-bit control words in fpga logic section
+#define CMD_READ_FPGA_SPI_CTRL_WORDS    0xEF	// read the 32-bit control words in fpga SPI section
 #define CMD_ENABLE_HSI_SIGNALS 			0xF0	// enable the HSI signal outputs on the fpga
 #define CMD_DISABLE_HSI_SIGNALS 		0xF1	// disable the HSI signal outputs on the fpga
 #define CMD_ENABLE_GYRO_CHANNEL 		0xF2	// enable the gyro channel outputs on the fpga
@@ -301,12 +303,21 @@ Xuint32* baseaddr_channel     = (Xuint32*) XPAR_BIDIRCHANNELS_0_S00_AXI_BASEADDR
 Xuint32* baseaddr_rx_fifo     = (Xuint32*) XPAR_RXFIFO_S00_AXI_BASEADDR;
 Xuint32* baseaddr_tx_fifo     = (Xuint32*) XPAR_AXIS_STREAM_TXFIFO_0_S00_AXI_BASEADDR;
 
-Xuint32  fpgaControlWords[4]   = {0,0,0,0};
-Xuint32  fpgaRxControlWords[4] = {0,0,0,0};
-Xuint32  fpgaTxControlWords[4] = {0,0,0,0};
+Xuint32* fpgaBaseAddress;
+Xuint32	 fpgaDataToWrite;
+Xuint16	 fpgaAddressOffset;
+
+Xuint32  fpgaSpiControlWords[4] =	{0,0,0,0};
+Xuint32  fpgaControlWords[4]   = 	{0,0,0,0};
+Xuint32  fpgaRxControlWords[4] = 	{0,0,0,0};
+Xuint32  fpgaTxControlWords[4] = 	{0,0,0,0};
+
+Xuint32* debugWordAddr = XPAR_SPI_IP_0_S00_AXI_BASEADDR;	//change this depending on where you want to write
+Xuint32  debugWordData = 0x00000000;						//change this depending on what you want to write
 
 
-volatile unsigned char debugType = 4;
+
+volatile unsigned char debugType = 7;
 
 Xuint32 u32debugWords[MAX_PKT_LEN_BYTES/4];
 Xuint32	TxBufferData[MAX_PKT_LEN_BYTES];
@@ -444,6 +455,7 @@ static void changeTxBuffer(void);
 static void storeFpgaTxControlWords(void);
 static void storeFpgaRxControlWords(void);
 static void storeFpgaControlWords(void);
+static void storeFpgaSpiControlWords(void);
 
 static unsigned char checkForNewAdcData(void);
 static void initADCdataBuffers(void);
@@ -810,6 +822,15 @@ int initSPI(){
 }
 
 // -------------------------------------------------------------------
+void storeFpgaSpiControlWords(void){
+
+	fpgaSpiControlWords[0] = *(baseaddr_spi+0);
+	fpgaSpiControlWords[1] = *(baseaddr_spi+1);
+	fpgaSpiControlWords[2] = *(baseaddr_spi+2);
+	fpgaSpiControlWords[3] = *(baseaddr_spi+3);
+}
+
+// -------------------------------------------------------------------
 void readSPIStatus(){
     xil_printf("baseaddr_spi+0: 0x%08x\n", *(baseaddr_spi+0));
     xil_printf("baseaddr_spi+1: 0x%08x\n", *(baseaddr_spi+1));
@@ -826,8 +847,8 @@ void setSPIControl(Xuint32 v){
  void setSPIClockDivision(unsigned int v){
    Xuint32 x;
 
-   x = (Xuint32)(v & 0x00000007);
-   *(baseaddr_spi+3) = x;
+   x = (Xuint32)((v<<2) & 0x0000000C);
+   *(baseaddr_spi) = x;
 }
 
  // -------------------------------------------------------------------
@@ -985,7 +1006,7 @@ void disableSPI(){
 
 // -------------------------------------------------------------------
 void enableSPI(){
-    *(baseaddr_spi+2) = 0x00000001;
+//    *(baseaddr_spi+2) = 0x00000001;
 }
 // -------------------------------------------------------------------
 void modify_register(unsigned int *data, unsigned int address, unsigned int newVal)
@@ -2605,7 +2626,7 @@ int SetupUartPs(XScuGic *IntcInstPtr, XUartPs *UartInstPtr,
 	 * Increase the time out value if baud rate is high, decrease it if
 	 * baud rate is low.
 	 */
-	XUartPs_SetRecvTimeout(UartInstPtr, 8);
+	XUartPs_SetRecvTimeout(UartInstPtr, 16);
 
 	return XST_SUCCESS;
 }
@@ -2772,6 +2793,22 @@ void read_uart_bytes(void)
 			writeSPI_non_blocking(regAddr,regData);
 			break;
 
+		case (CMD_WRITE_FPGA_REGISTER):
+
+			//should get command byte, 2 bytes for address base, 1 byte for address offset
+			// and 4 bytes for 32-bit data to write
+			if (numBytesReceived<8)return;
+
+			// only receiving 8 bytes for some reason so just hard code in the
+			// 0x43000000 part of the address since it's always the same
+			fpgaBaseAddress = (Xuint32*)( ((u32)(UartRxData[1]<<24)) + ((u32)UartRxData[2]<<16));
+			fpgaAddressOffset = UartRxData[3];
+			fpgaDataToWrite = (Xuint32)( (UartRxData[4]<<24) + ((u32)(UartRxData[5]<<16)) +
+								((u32)(UartRxData[6]<<8)) + (u32)UartRxData[7] );
+
+			*(fpgaBaseAddress + fpgaAddressOffset) = fpgaDataToWrite;
+			break;
+
 		case (CMD_READ_OTP_DATA):
 			otpBytes = readOTP32bits();
 
@@ -2926,6 +2963,12 @@ void read_uart_bytes(void)
 			storeFpgaControlWords();
 			// send 16 bytes (the four 32-bit words read from fpga space)
 			send_data_over_UART(16,(u8*)&fpgaControlWords[0]);
+			break;
+
+		case (CMD_READ_FPGA_SPI_CTRL_WORDS):
+			storeFpgaSpiControlWords();
+			// send 16 bytes (the four 32-bit words read from fpga space)
+			send_data_over_UART(16,(u8*)&fpgaSpiControlWords[0]);
 			break;
 
 		case (CMD_READ_PACKETS):
@@ -3099,9 +3142,12 @@ void read_uart_bytes(void)
 			}
 
 			// second byte received has the division setting
+			// function below sets the internal variable that
+			// contains spi clock division setting
 			changeSPIclockDivision(UartRxData[1]);
 
 			// use new variable in call to configuration function
+			// that will change register setting in FPGA
 			setSPIClockDivision(SPI_clock_division_setting);
 			break;
 
@@ -3110,7 +3156,7 @@ void read_uart_bytes(void)
 			break;
 
 		case (CMD_SET_PACKET_SIZE):
-			//verify packet size setting byte was received after command byte
+			//verify byte for packet size setting was received after command byte
 			if (numBytesReceived<2)
 			{
 				return;
@@ -3234,7 +3280,20 @@ void read_uart_bytes(void)
 					debugWord32[i] = *(debugBaseAddress+debugOffset+i);
 				}
 			}
-
+			if (debugType == 6)
+			{
+				// make changes in debugger to below variables to write desired
+				// value to the desired FPGA address space
+				*(debugWordAddr) = debugWordData;
+			}
+			break;
+			if (debugType == 7)
+			{
+			    *(baseaddr_spi+0) = 0xabcd1234;
+			    *(baseaddr_spi+1) = 0xaa55aa55;
+			    *(baseaddr_spi+2) = 0x87654321;
+			    *(baseaddr_spi+3) = 0x12345678;
+			}
 			break;
 
 	}
@@ -4218,11 +4277,11 @@ int main() {
     changeMuxSelection(dmm_mux_setting);	// set initial setting
 
     // clear SPI registers
-    initSPI();
+    //initSPI();
 //    enableSPI();
 
 
-    setSPIClockDivision(SPI_clock_division_setting); // needs to be 1 , 2 or 3
+//    setSPIClockDivision(SPI_clock_division_setting); // needs to be 0,1,2 or 3
     readSPIStatus();
 /*
     // set interrupt_0/1 of AXI PL interrupt generator to 0
@@ -4284,7 +4343,7 @@ int main() {
 
     // initial state is disabled so fpga is not driving unpowered IC pins
     // if power supply is not turned on when code is initially executed
-    disableSPI();
+//    disableSPI();
 	disableGyroChannel();
 	disableHSIGyroChannel();
 	FPGA_outputs_state = 2;		// 1=on, 2=off
