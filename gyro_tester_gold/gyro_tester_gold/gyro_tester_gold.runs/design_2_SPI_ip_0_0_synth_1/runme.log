@@ -1,150 +1,92 @@
+To monitor the LSF job for this run, please use any of the following commands in a new terminal window:
+bjobs -J /home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/design_2_SPI_ip_0_0_synth_1/runme.sh
+bhist -l -J /home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/design_2_SPI_ip_0_0_synth_1/runme.sh
 
 *** Running vivado
     with args -log design_2_SPI_ip_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_2_SPI_ip_0_0.tcl
 
 
-****** Vivado v2018.2 (64-bit)
-  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source design_2_SPI_ip_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/cdickins/reuse/gyro_tester_gold-master/ip_repo/axis_stream_txfifo_2.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/cdickins/reuse/gyro_tester_gold-master/ip_repo/Handler_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/cdickins/reuse/gyro_tester_gold-master/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/proj/xbuilds/SWIP/2021.2_1021_0703/installs/lin64/Vivado/2021.2/data/ip'.
 Command: synth_design -top design_2_SPI_ip_0_0 -part xc7z020clg484-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11624 
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26124
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 388.445 ; gain = 98.969
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2934.117 ; gain = 0.000 ; free physical = 28111 ; free virtual = 161885
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_2_SPI_ip_0_0' [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_SPI_ip_0_0/synth/design_2_SPI_ip_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'SPI_ip_v1_0' [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:11]
-	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-	Parameter IDLE bound to: 2'b00 
-	Parameter LOAD bound to: 2'b01 
-	Parameter SHIFT bound to: 2'b10 
-	Parameter READ bound to: 2'b11 
-INFO: [Synth 8-6157] synthesizing module 'SPI_ip_v1_0_S00_AXI' [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:4]
-	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-	Parameter ADDR_LSB bound to: 2 - type: integer 
-	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:235]
-INFO: [Synth 8-226] default block is never used [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:376]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:230]
-INFO: [Synth 8-6155] done synthesizing module 'SPI_ip_v1_0_S00_AXI' (1#1) [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:4]
-ERROR: [Synth 8-439] module 'dff' not found [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:144]
-ERROR: [Synth 8-6156] failed synthesizing module 'SPI_ip_v1_0' [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:11]
-ERROR: [Synth 8-6156] failed synthesizing module 'design_2_SPI_ip_0_0' [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_SPI_ip_0_0/synth/design_2_SPI_ip_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_2_SPI_ip_0_0' [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_SPI_ip_0_0/synth/design_2_SPI_ip_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'SPI_ip_v1_0' [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:26]
+INFO: [Synth 8-6157] synthesizing module 'SPI_ip_v1_0_S00_AXI' [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:235]
+INFO: [Synth 8-226] default block is never used [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:376]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:230]
+INFO: [Synth 8-6155] done synthesizing module 'SPI_ip_v1_0_S00_AXI' (1#1) [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dff' [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dff' (2#1) [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:5]
+INFO: [Synth 8-226] default block is never used [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:199]
+INFO: [Synth 8-6155] done synthesizing module 'SPI_ip_v1_0' (3#1) [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_SPI_ip_0_0' (4#1) [/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_SPI_ip_0_0/synth/design_2_SPI_ip_0_0.v:57]
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module SPI_ip_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module SPI_ip_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module SPI_ip_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module SPI_ip_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module SPI_ip_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module SPI_ip_v1_0_S00_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 443.176 ; gain = 153.699
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2934.125 ; gain = 0.008 ; free physical = 27924 ; free virtual = 161704
 ---------------------------------------------------------------------------------
-RTL Elaboration failed
-INFO: [Common 17-83] Releasing license: Synthesis
-8 Infos, 1 Warnings, 0 Critical Warnings and 4 Errors encountered.
-synth_design failed
-ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 21:11:08 2022...
-
-*** Running vivado
-    with args -log design_2_SPI_ip_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_2_SPI_ip_0_0.tcl
-
-
-****** Vivado v2018.2 (64-bit)
-  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-source design_2_SPI_ip_0_0.tcl -notrace
-Command: synth_design -top design_2_SPI_ip_0_0 -part xc7z020clg484-1 -mode out_of_context
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5572 
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 388.355 ; gain = 98.457
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_2_SPI_ip_0_0' [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_SPI_ip_0_0/synth/design_2_SPI_ip_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'SPI_ip_v1_0' [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:26]
-	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-	Parameter IDLE bound to: 2'b00 
-	Parameter LOAD bound to: 2'b01 
-	Parameter SHIFT bound to: 2'b10 
-	Parameter READ bound to: 2'b11 
-INFO: [Synth 8-6157] synthesizing module 'SPI_ip_v1_0_S00_AXI' [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:4]
-	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-	Parameter ADDR_LSB bound to: 2 - type: integer 
-	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:235]
-INFO: [Synth 8-226] default block is never used [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:376]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:230]
-INFO: [Synth 8-6155] done synthesizing module 'SPI_ip_v1_0_S00_AXI' (1#1) [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6157] synthesizing module 'dff' [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'dff' (2#1) [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:5]
-INFO: [Synth 8-226] default block is never used [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:199]
-INFO: [Synth 8-6155] done synthesizing module 'SPI_ip_v1_0' (3#1) [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ipshared/2e00/hdl/SPI_ip_v1_0.v:26]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_SPI_ip_0_0' (4#1) [c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_SPI_ip_0_0/synth/design_2_SPI_ip_0_0.v:57]
-WARNING: [Synth 8-3331] design SPI_ip_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
-WARNING: [Synth 8-3331] design SPI_ip_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
-WARNING: [Synth 8-3331] design SPI_ip_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
-WARNING: [Synth 8-3331] design SPI_ip_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
-WARNING: [Synth 8-3331] design SPI_ip_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
-WARNING: [Synth 8-3331] design SPI_ip_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 443.332 ; gain = 153.434
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 443.332 ; gain = 153.434
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2934.125 ; gain = 0.008 ; free physical = 28620 ; free virtual = 162400
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 443.332 ; gain = 153.434
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2934.125 ; gain = 0.008 ; free physical = 28618 ; free virtual = 162399
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2934.125 ; gain = 0.000 ; free physical = 28605 ; free virtual = 162387
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2960.051 ; gain = 0.000 ; free physical = 27312 ; free virtual = 161105
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.132 . Memory (MB): peak = 784.262 ; gain = 1.418
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2960.055 ; gain = 0.004 ; free physical = 27241 ; free virtual = 161036
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 784.262 ; gain = 494.363
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2960.055 ; gain = 25.938 ; free physical = 26590 ; free virtual = 160385
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 784.262 ; gain = 494.363
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2960.055 ; gain = 25.938 ; free physical = 26588 ; free virtual = 160384
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 784.262 ; gain = 494.363
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2960.055 ; gain = 25.938 ; free physical = 26584 ; free virtual = 160379
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'SPI_ip_v1_0'
-INFO: [Synth 8-5544] ROM "spi_rdata" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -155,21 +97,15 @@ INFO: [Synth 8-5544] ROM "nxt_state" won't be mapped to Block RAM because addres
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'cur_state_reg' using encoding 'sequential' in module 'SPI_ip_v1_0'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 784.262 ; gain = 494.363
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 26464 ; free virtual = 160266
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 4     
 	               24 Bit    Registers := 1     
@@ -179,56 +115,16 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 12    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 3     
-	   4 Input     32 Bit        Muxes := 4     
-	   2 Input     24 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 13    
+	   2 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 4     
+	   2 Input   24 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 13    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module SPI_ip_v1_0_S00_AXI 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 4     
-	                4 Bit    Registers := 2     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 3     
-	   4 Input     32 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 5     
-Module dff 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-Module SPI_ip_v1_0 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 1     
-+---Registers : 
-	               24 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                5 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     24 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 8     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Part Resource Summary
@@ -242,62 +138,34 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design design_2_SPI_ip_0_0 has unconnected port s00_axi_awprot[2]
-WARNING: [Synth 8-3331] design design_2_SPI_ip_0_0 has unconnected port s00_axi_awprot[1]
-WARNING: [Synth 8-3331] design design_2_SPI_ip_0_0 has unconnected port s00_axi_awprot[0]
-WARNING: [Synth 8-3331] design design_2_SPI_ip_0_0 has unconnected port s00_axi_arprot[2]
-WARNING: [Synth 8-3331] design design_2_SPI_ip_0_0 has unconnected port s00_axi_arprot[1]
-WARNING: [Synth 8-3331] design design_2_SPI_ip_0_0 has unconnected port s00_axi_arprot[0]
-INFO: [Synth 8-3886] merging instance 'inst/SPI_ip_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/SPI_ip_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/SPI_ip_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'inst/SPI_ip_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/SPI_ip_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/SPI_ip_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3332] Sequential element (inst/SPI_ip_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module design_2_SPI_ip_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/SPI_ip_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module design_2_SPI_ip_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/SPI_ip_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module design_2_SPI_ip_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/SPI_ip_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module design_2_SPI_ip_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/SPI_ip_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module design_2_SPI_ip_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/SPI_ip_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module design_2_SPI_ip_0_0.
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module design_2_SPI_ip_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module design_2_SPI_ip_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module design_2_SPI_ip_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module design_2_SPI_ip_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module design_2_SPI_ip_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module design_2_SPI_ip_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 784.262 ; gain = 494.363
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 26976 ; free virtual = 160790
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 793.246 ; gain = 503.348
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 26046 ; free virtual = 159868
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 793.469 ; gain = 503.570
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 26026 ; free virtual = 159848
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 813.668 ; gain = 523.770
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 26017 ; free virtual = 159839
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -313,52 +181,38 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_0' to logic
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 813.668 ; gain = 523.770
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 25155 ; free virtual = 158977
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 813.668 ; gain = 523.770
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 25155 ; free virtual = 158977
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 813.668 ; gain = 523.770
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 25153 ; free virtual = 158975
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 813.668 ; gain = 523.770
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 25152 ; free virtual = 158975
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 813.668 ; gain = 523.770
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 25152 ; free virtual = 158975
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 813.668 ; gain = 523.770
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 25152 ; free virtual = 158974
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -385,41 +239,28 @@ Report Cell Usage:
 |9     |FDRE |   137|
 |10    |FDSE |     1|
 +------+-----+------+
-
-Report Instance Areas: 
-+------+-----------------------------+--------------------+------+
-|      |Instance                     |Module              |Cells |
-+------+-----------------------------+--------------------+------+
-|1     |top                          |                    |   302|
-|2     |  inst                       |SPI_ip_v1_0         |   302|
-|3     |    SPI_ip_v1_0_S00_AXI_inst |SPI_ip_v1_0_S00_AXI |   227|
-|4     |    u_clkdiv16               |dff                 |     3|
-|5     |    u_clkdiv2                |dff_0               |     2|
-|6     |    u_clkdiv4                |dff_1               |     2|
-|7     |    u_clkdiv8                |dff_2               |     2|
-+------+-----------------------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 813.668 ; gain = 523.770
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 25152 ; free virtual = 158974
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 813.668 ; gain = 182.840
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 813.668 ; gain = 523.770
+Synthesis finished with 0 errors, 1 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2960.062 ; gain = 0.016 ; free physical = 25187 ; free virtual = 159010
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2960.062 ; gain = 25.945 ; free physical = 25186 ; free virtual = 159008
 INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2960.062 ; gain = 0.000 ; free physical = 25709 ; free virtual = 159532
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2960.062 ; gain = 0.000 ; free physical = 25518 ; free virtual = 159343
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+Synth Design complete, checksum: b1cd9bb0
 INFO: [Common 17-83] Releasing license: Synthesis
-34 Infos, 14 Warnings, 1 Critical Warnings and 0 Errors encountered.
+28 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 819.664 ; gain = 538.023
-WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/design_2_SPI_ip_0_0_synth_1/design_2_SPI_ip_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_SPI_ip_0_0/design_2_SPI_ip_0_0.xci
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 2960.062 ; gain = 32.074 ; free physical = 25656 ; free virtual = 159481
+INFO: [Common 17-1381] The checkpoint '/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/design_2_SPI_ip_0_0_synth_1/design_2_SPI_ip_0_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
-WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/design_2_SPI_ip_0_0_synth_1/design_2_SPI_ip_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.runs/design_2_SPI_ip_0_0_synth_1/design_2_SPI_ip_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_2_SPI_ip_0_0_utilization_synth.rpt -pb design_2_SPI_ip_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 819.664 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 21:35:36 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  1 13:26:26 2022...

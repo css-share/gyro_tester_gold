@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<board_part board_name="adm-pcie-7v3" board_revision="1.0" board_part="part0" schema_version="1.0" vendor="alpha-data.com" version="1.0">
+  <part_info part_name="xc7vx690tffg1157-2" jtag_position="1" silicon_version="1.0" />
+  <board_info description="Alpha-Data Virtex-7 ADM-PCIE-7V3 PCIe Platform" display_name="Alpha-Data ADM-PCIE-7V3" url="http://www.alpha-data.com/products.php?product=adm-pcie-7v3" />
+  <interfaces>
+    <interface mode="master" name="ddr3_sdram_socket_j7" type="xilinx.com:interface:ddrx_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="CS_N" physical_port="ddr_memory_cs_n_j7" />
+      </port_maps>
+      <preset_file name="mig_j7.prj" />
+    </interface>
+    <interface mode="master" name="ddr3_sdram_socket_j7_j8" type="xilinx.com:interface:ddrx_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="CS_N" physical_port="ddr_memory_cs_n_j7_j8_c1" />
+        <port_map logical_port="CAS_N" physical_port="ddr_memory_cas_n_j7_j8_c2" />
+      </port_maps>
+      <preset_file name="mig_j7_j8.prj" />
+    </interface>
+    <interface mode="master" name="ddr3_sdram_socket_j8" type="xilinx.com:interface:ddrx_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="CAS_N" physical_port="ddr_memory_cas_n_j8" />
+      </port_maps>
+      <preset_file name="mig_j8.prj" />
+    </interface>
+    <!--
+    <interface mode="master" name="iic_main" type="xilinx.com:interface:iic_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="SDA_I" physical_port="iic_main_sda_i"/>
+        <port_map logical_port="SDA_O" physical_port="iic_main_sda_o"/>
+        <port_map logical_port="SDA_T" physical_port="iic_main_sda_t"/>
+        <port_map logical_port="SCL_I" physical_port="iic_main_scl_i"/>
+        <port_map logical_port="SCL_O" physical_port="iic_main_scl_o"/>
+        <port_map logical_port="SCL_T" physical_port="iic_main_scl_t"/>
+      </port_maps>
+    </interface>
+-->
+    <interface mode="master" name="led_6bits" type="xilinx.com:interface:gpio_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="TRI_O" physical_port="leds_6bits_tri_o" />
+      </port_maps>
+    </interface>
+    <interface mode="master" name="linear_flash" type="xilinx.com:interface:emc_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="ADDR" physical_port="linear_flash_addr" />
+        <port_map logical_port="DQ_I" physical_port="linear_flash_dq_i" />
+        <port_map logical_port="DQ_O" physical_port="linear_flash_dq_o" />
+        <port_map logical_port="DQ_T" physical_port="linear_flash_dq_t" />
+        <port_map logical_port="ADV_LDN" physical_port="linear_flash_adv_ldn" />
+        <port_map logical_port="OEN" physical_port="linear_flash_oen" />
+        <port_map logical_port="WEN" physical_port="linear_flash_wen" />
+        <port_map logical_port="CE_N" physical_port="linear_flash_ce_n" />
+      </port_maps>
+    </interface>
+    <interface mode="slave" name="reset" type="xilinx.com:signal:reset_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="RST" physical_port="reset" />
+      </port_maps>
+      <parameters>
+        <parameter name="RST_POLARITY" value="1" />
+      </parameters>
+    </interface>
+    <interface mode="master" name="rs232_uart_NOT_CONNECTED_ON_BOARD" type="xilinx.com:interface:uart_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="TxD" physical_port="rs232_uart_txd" />
+        <port_map logical_port="RxD" physical_port="rs232_uart_rxd" />
+      </port_maps>
+    </interface>
+    <interface mode="master" name="sfp1_top" type="xilinx.com:interface:sfp_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="TXN" physical_port="sfp1_txn" />
+        <port_map logical_port="TXP" physical_port="sfp1_txp" />
+        <port_map logical_port="RXN" physical_port="sfp1_rxn" />
+        <port_map logical_port="RXP" physical_port="sfp1_rxp" />
+      </port_maps>
+      <parameters>
+        <parameter name="GT_LOC" value="GTHE2_CHANNEL_X1Y24" />
+      </parameters>
+    </interface>
+    <interface mode="master" name="sfp2_bottom" type="xilinx.com:interface:sfp_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="TXN" physical_port="sfp2_txn" />
+        <port_map logical_port="TXP" physical_port="sfp2_txp" />
+        <port_map logical_port="RXN" physical_port="sfp2_rxn" />
+        <port_map logical_port="RXP" physical_port="sfp2_rxp" />
+      </port_maps>
+      <parameters>
+        <parameter name="GT_LOC" value="GTHE2_CHANNEL_X1Y25" />
+      </parameters>
+    </interface>
+    <interface mode="slave" name="sfp_mgt_clk" type="xilinx.com:interface:diff_clock_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="CLK_P" physical_port="sfp_mgt_clkp" />
+        <port_map logical_port="CLK_N" physical_port="sfp_mgt_clkn" />
+      </port_maps>
+      <parameters>
+        <parameter name="TYPE" value="ETH_MGT_CLK" />
+        <parameter name="frequency" value="156250000" />
+      </parameters>
+    </interface>
+    <interface mode="master" name="sfp_sgmii1_top" type="xilinx.com:interface:sgmii_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="TXN" physical_port="sfp_sgmii1_txn" />
+        <port_map logical_port="TXP" physical_port="sfp_sgmii1_txp" />
+        <port_map logical_port="RXN" physical_port="sfp_sgmii1_rxn" />
+        <port_map logical_port="RXP" physical_port="sfp_sgmii1_rxp" />
+      </port_maps>
+      <parameters>
+        <parameter name="GT_LOC" value="GTHE2_CHANNEL_X1Y24" />
+      </parameters>
+    </interface>
+    <interface mode="master" name="sfp_sgmii2_bottom" type="xilinx.com:interface:sgmii_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="TXN" physical_port="sfp_sgmii2_txn" />
+        <port_map logical_port="TXP" physical_port="sfp_sgmii2_txp" />
+        <port_map logical_port="RXN" physical_port="sfp_sgmii2_rxn" />
+        <port_map logical_port="RXP" physical_port="sfp_sgmii2_rxp" />
+      </port_maps>
+      <parameters>
+        <parameter name="GT_LOC" value="GTHE2_CHANNEL_X1Y25" />
+      </parameters>
+    </interface>
+    <interface mode="slave" name="sma_mgt_clk" type="xilinx.com:interface:diff_clock_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="CLK_P" physical_port="sma_mgt_clkp" />
+        <port_map logical_port="CLK_N" physical_port="sma_mgt_clkn" />
+      </port_maps>
+      <parameters>
+        <parameter name="TYPE" value="ETH_MGT_CLK" />
+        <parameter name="frequency" value="156250000" />
+      </parameters>
+    </interface>
+    <interface mode="slave" name="sys_diff_clock" type="xilinx.com:interface:diff_clock_rtl:1.0">
+      <port_maps>
+        <port_map logical_port="CLK_P" physical_port="clk_p" />
+        <port_map logical_port="CLK_N" physical_port="clk_n" />
+      </port_maps>
+      <parameters>
+        <parameter name="frequency" value="100000000" />
+      </parameters>
+    </interface>
+  </interfaces>
+  <ports>
+    <port dir="in" name="clk_n">
+      <pins>
+        <pin iostandard="LVDS" loc="AF31" />
+      </pins>
+    </port>
+    <port dir="in" name="clk_p">
+      <pins>
+        <pin iostandard="LVDS" loc="AE31" />
+      </pins>
+    </port>
+    <port dir="out" left="5" name="leds_6bits_tri_o" right="0">
+      <pins>
+        <pin index="0" iostandard="LVCMOS18" loc="AC33" />
+        <pin index="1" iostandard="LVCMOS18" loc="V32" />
+        <pin index="2" iostandard="LVCMOS18" loc="V33" />
+        <pin index="3" iostandard="LVCMOS18" loc="AB31" />
+        <pin index="4" iostandard="LVCMOS18" loc="AB32" />
+        <pin index="5" iostandard="LVCMOS18" loc="U30" />
+      </pins>
+    </port>
+    <port dir="out" left="26" name="linear_flash_addr" right="1">
+      <pins>
+        <pin index="1" iostandard="LVCMOS18" loc="AP27" />
+        <pin index="2" iostandard="LVCMOS18" loc="AN27" />
+        <pin index="3" iostandard="LVCMOS18" loc="AP26" />
+        <pin index="4" iostandard="LVCMOS18" loc="AP25" />
+        <pin index="5" iostandard="LVCMOS18" loc="AN28" />
+        <pin index="6" iostandard="LVCMOS18" loc="AM28" />
+        <pin index="7" iostandard="LVCMOS18" loc="AN25" />
+        <pin index="8" iostandard="LVCMOS18" loc="AP29" />
+        <pin index="9" iostandard="LVCMOS18" loc="AN29" />
+        <pin index="10" iostandard="LVCMOS18" loc="AM27" />
+        <pin index="11" iostandard="LVCMOS18" loc="AM26" />
+        <pin index="12" iostandard="LVCMOS18" loc="AL26" />
+        <pin index="13" iostandard="LVCMOS18" loc="AL25" />
+        <pin index="14" iostandard="LVCMOS18" loc="AJ25" />
+        <pin index="15" iostandard="LVCMOS18" loc="AH24" />
+        <pin index="16" iostandard="LVCMOS18" loc="AH25" />
+        <pin index="17" iostandard="LVCMOS18" loc="AE24" />
+        <pin index="18" iostandard="LVCMOS18" loc="AE23" />
+        <pin index="19" iostandard="LVCMOS18" loc="AF26" />
+        <pin index="20" iostandard="LVCMOS18" loc="AG27" />
+        <pin index="21" iostandard="LVCMOS18" loc="AG26" />
+        <pin index="22" iostandard="LVCMOS18" loc="AD27" />
+        <pin index="23" iostandard="LVCMOS18" loc="AD26" />
+        <pin index="24" iostandard="LVCMOS18" loc="AH28" />
+        <pin index="25" iostandard="LVCMOS18" loc="AD24" />
+        <pin index="26" iostandard="LVCMOS18" loc="AC23" />
+      </pins>
+    </port>
+    <port dir="inout" name="linear_flash_adv_ldn">
+      <pins>
+        <pin iostandard="LVCMOS18" loc="AC29" />
+      </pins>
+    </port>
+    <port dir="inout" name="linear_flash_ce_n">
+      <pins>
+        <pin iostandard="LVCMOS18" loc="AL33" />
+      </pins>
+    </port>
+    <port dir="in" left="15" name="linear_flash_dq_i" right="0">
+      <pins>
+        <pin index="0" iostandard="LVCMOS18" loc="AN33" />
+        <pin index="1" iostandard="LVCMOS18" loc="AN34" />
+        <pin index="2" iostandard="LVCMOS18" loc="AK34" />
+        <pin index="3" iostandard="LVCMOS18" loc="AL34" />
+        <pin index="4" iostandard="LVCMOS18" loc="AK32" />
+        <pin index="5" iostandard="LVCMOS18" loc="AK33" />
+        <pin index="6" iostandard="LVCMOS18" loc="AM32" />
+        <pin index="7" iostandard="LVCMOS18" loc="AN32" />
+        <pin index="8" iostandard="LVCMOS18" loc="AM33" />
+        <pin index="9" iostandard="LVCMOS18" loc="AP30" />
+        <pin index="10" iostandard="LVCMOS18" loc="AP31" />
+        <pin index="11" iostandard="LVCMOS18" loc="AJ30" />
+        <pin index="12" iostandard="LVCMOS18" loc="AK31" />
+        <pin index="13" iostandard="LVCMOS18" loc="AN30" />
+        <pin index="14" iostandard="LVCMOS18" loc="AJ29" />
+        <pin index="15" iostandard="LVCMOS18" loc="AK29" />
+      </pins>
+    </port>
+    <port dir="out" left="15" name="linear_flash_dq_o" right="0">
+      <pins>
+        <pin index="0" iostandard="LVCMOS18" loc="AN33" />
+        <pin index="1" iostandard="LVCMOS18" loc="AN34" />
+        <pin index="2" iostandard="LVCMOS18" loc="AK34" />
+        <pin index="3" iostandard="LVCMOS18" loc="AL34" />
+        <pin index="4" iostandard="LVCMOS18" loc="AK32" />
+        <pin index="5" iostandard="LVCMOS18" loc="AK33" />
+        <pin index="6" iostandard="LVCMOS18" loc="AM32" />
+        <pin index="7" iostandard="LVCMOS18" loc="AN32" />
+        <pin index="8" iostandard="LVCMOS18" loc="AM33" />
+        <pin index="9" iostandard="LVCMOS18" loc="AP30" />
+        <pin index="10" iostandard="LVCMOS18" loc="AP31" />
+        <pin index="11" iostandard="LVCMOS18" loc="AJ30" />
+        <pin index="12" iostandard="LVCMOS18" loc="AK31" />
+        <pin index="13" iostandard="LVCMOS18" loc="AN30" />
+        <pin index="14" iostandard="LVCMOS18" loc="AJ29" />
+        <pin index="15" iostandard="LVCMOS18" loc="AK29" />
+      </pins>
+    </port>
+    <port dir="out" left="15" name="linear_flash_dq_t" right="0">
+      <pins>
+        <pin index="0" iostandard="LVCMOS18" loc="AN33" />
+        <pin index="1" iostandard="LVCMOS18" loc="AN34" />
+        <pin index="2" iostandard="LVCMOS18" loc="AK34" />
+        <pin index="3" iostandard="LVCMOS18" loc="AL34" />
+        <pin index="4" iostandard="LVCMOS18" loc="AK32" />
+        <pin index="5" iostandard="LVCMOS18" loc="AK33" />
+        <pin index="6" iostandard="LVCMOS18" loc="AM32" />
+        <pin index="7" iostandard="LVCMOS18" loc="AN32" />
+        <pin index="8" iostandard="LVCMOS18" loc="AM33" />
+        <pin index="9" iostandard="LVCMOS18" loc="AP30" />
+        <pin index="10" iostandard="LVCMOS18" loc="AP31" />
+        <pin index="11" iostandard="LVCMOS18" loc="AJ30" />
+        <pin index="12" iostandard="LVCMOS18" loc="AK31" />
+        <pin index="13" iostandard="LVCMOS18" loc="AN30" />
+        <pin index="14" iostandard="LVCMOS18" loc="AJ29" />
+        <pin index="15" iostandard="LVCMOS18" loc="AK29" />
+      </pins>
+    </port>
+    <port dir="inout" name="linear_flash_oen">
+      <pins>
+        <pin iostandard="LVCMOS18" loc="AC25" />
+      </pins>
+    </port>
+    <port dir="inout" name="linear_flash_wen">
+      <pins>
+        <pin iostandard="LVCMOS18" loc="AD25" />
+      </pins>
+    </port>
+    <port dir="in" name="reset">
+      <pins>
+        <pin iostandard="LVCMOS18" loc="AB30" />
+      </pins>
+    </port>
+    <port dir="in" name="rs232_uart_rxd">
+      <pins>
+        <pin iostandard="LVCMOS18" loc="AA30" />
+      </pins>
+    </port>
+    <port dir="out" name="rs232_uart_txd">
+      <pins>
+        <pin iostandard="LVCMOS18" loc="V30" />
+      </pins>
+    </port>
+    <!--SFP Interfaces are SATA interfaces; Starts here. -->
+    <port dir="in" name="sfp1_rxn">
+      <pins>
+        <pin loc="AA3" />
+      </pins>
+    </port>
+    <port dir="in" name="sfp1_rxp">
+      <pins>
+        <pin loc="AA4" />
+      </pins>
+    </port>
+    <port dir="out" name="sfp1_txn">
+      <pins>
+        <pin loc="Y1" />
+      </pins>
+    </port>
+    <port dir="out" name="sfp1_txp">
+      <pins>
+        <pin loc="Y2" />
+      </pins>
+    </port>
+    <port dir="in" name="sfp2_rxn">
+      <pins>
+        <pin loc="W3" />
+      </pins>
+    </port>
+    <port dir="in" name="sfp2_rxp">
+      <pins>
+        <pin loc="W4" />
+      </pins>
+    </port>
+    <port dir="out" name="sfp2_txn">
+      <pins>
+        <pin loc="V1" />
+      </pins>
+    </port>
+    <port dir="out" name="sfp2_txp">
+      <pins>
+        <pin loc="V2" />
+      </pins>
+    </port>
+    <port dir="in" name="sfp_mgt_clkn">
+      <pins>
+        <pin loc="T5" />
+      </pins>
+    </port>
+    <port dir="in" name="sfp_mgt_clkp">
+      <pins>
+        <pin loc="T6" />
+      </pins>
+    </port>
+    <!--SFP_SGMII interfaces are the Ethernet Interfaces - Start here-->
+    <port dir="in" name="sfp_sgmii1_rxn">
+      <pins>
+        <pin loc="U3" />
+      </pins>
+    </port>
+    <port dir="in" name="sfp_sgmii1_rxp">
+      <pins>
+        <pin loc="U4" />
+      </pins>
+    </port>
+    <port dir="out" name="sfp_sgmii1_txn">
+      <pins>
+        <pin loc="T1" />
+      </pins>
+    </port>
+    <port dir="out" name="sfp_sgmii1_txp">
+      <pins>
+        <pin loc="T2" />
+      </pins>
+    </port>
+    <port dir="in" name="sfp_sgmii2_rxn">
+      <pins>
+        <pin loc="R3" />
+      </pins>
+    </port>
+    <port dir="in" name="sfp_sgmii2_rxp">
+      <pins>
+        <pin loc="R4" />
+      </pins>
+    </port>
+    <port dir="out" name="sfp_sgmii2_txn">
+      <pins>
+        <pin loc="P1" />
+      </pins>
+    </port>
+    <port dir="out" name="sfp_sgmii2_txp">
+      <pins>
+        <pin loc="P2" />
+      </pins>
+    </port>
+    <port dir="in" name="sma_mgt_clkn">
+      <pins>
+        <pin loc="T5" />
+      </pins>
+    </port>
+    <port dir="in" name="sma_mgt_clkp">
+      <pins>
+        <pin loc="T6" />
+      </pins>
+    </port>
+    <!-- Added some ports only for mutual exclusion. Acutal pin numbers are part of the MIG PRJ -->
+    <port dir="out" name="ddr_memory_cs_n_j7">
+      <pins>
+        <pin loc="H28" />
+      </pins>
+    </port>
+    <port dir="out" name="ddr_memory_cs_n_j7_j8_c1">
+      <pins>
+        <pin loc="H28" />
+      </pins>
+    </port>
+    <port dir="out" name="ddr_memory_cas_n_j7_j8_c2">
+      <pins>
+        <pin loc="AH17" />
+      </pins>
+    </port>
+    <port dir="out" name="ddr_memory_cas_n_j8">
+      <pins>
+        <pin loc="AH17" />
+      </pins>
+    </port>
+  </ports>
+</board_part>

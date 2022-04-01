@@ -49,7 +49,6 @@ extern void xil_printf(const char *format, ...);
 #define CMD_READ_REGISTER				0x41	// read 16-bit contents of gyro ic register
 #define CMD_WRITE_REGISTER				0x42	// write 16-bit value to gyro ic register
 #define CMD_WRITE_FPGA_REGISTER			0x43	// write 32-bit value to FPGA register
-#define CMD_READ_FPGA_REGISTER			0x44	// read 32-bit value from FPGA register
 #define CMD_READ_DATA					0x61	// read data from tester - should be followed by
 												// 4 bytes(unsigned int) for num words to be
 												// sent (msbyte first)
@@ -305,9 +304,8 @@ Xuint32* baseaddr_rx_fifo     = (Xuint32*) XPAR_RXFIFO_S00_AXI_BASEADDR;
 Xuint32* baseaddr_tx_fifo     = (Xuint32*) XPAR_AXIS_STREAM_TXFIFO_0_S00_AXI_BASEADDR;
 
 Xuint32* fpgaBaseAddress;
-Xuint16	 fpgaAddressOffset;
 Xuint32	 fpgaDataToWrite;
-Xuint32  fpgaDataReadFromFpga;
+Xuint16	 fpgaAddressOffset;
 
 Xuint32  fpgaSpiControlWords[4] =	{0,0,0,0};
 Xuint32  fpgaControlWords[4]   = 	{0,0,0,0};
@@ -2793,18 +2791,6 @@ void read_uart_bytes(void)
 			regAddr = (unsigned int)UartRxData[1];
 			regData = (UartRxData[2]<<8) | UartRxData[3];
 			writeSPI_non_blocking(regAddr,regData);
-			break;
-
-		case (CMD_READ_FPGA_REGISTER):
-
-			//should get command byte, 2 bytes for address base, 1 byte for address offset
-			if (numBytesReceived<4)return;
-
-			fpgaBaseAddress = (Xuint32*)( ((u32)(UartRxData[1]<<24)) + ((u32)UartRxData[2]<<16));
-			fpgaAddressOffset = UartRxData[3];
-
-		    fpgaDataReadFromFpga = *(fpgaBaseAddress + fpgaAddressOffset);
-		    send_data_over_UART(4,(u8*)&fpgaDataReadFromFpga);
 			break;
 
 		case (CMD_WRITE_FPGA_REGISTER):

@@ -1,8 +1,8 @@
-//Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Mon Mar 28 21:27:35 2022
-//Host        : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+//Date        : Fri Apr  1 13:43:42 2022
+//Host        : xsjcdickins40x running 64-bit CentOS Linux release 7.4.1708 (Core)
 //Command     : generate_target design_2_wrapper.bd
 //Design      : design_2_wrapper
 //Purpose     : IP block netlist
@@ -25,20 +25,15 @@ module design_2_wrapper
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
+    DRX,
+    DSYNC,
+    DTX,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    HSICK,
-    HSI_A0,
-    HSI_A1,
-    HSI_DAM,
-    HSI_DAP,
-    HSI_DBM,
-    HSI_DBP,
-    HSI_DC,
     MCK_N,
     MCK_P,
     SPI_CS,
@@ -60,20 +55,15 @@ module design_2_wrapper
   inout DDR_ras_n;
   inout DDR_reset_n;
   inout DDR_we_n;
+  input DRX;
+  output DSYNC;
+  output DTX;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output HSICK;
-  input HSI_A0;
-  input HSI_A1;
-  output HSI_DAM;
-  output HSI_DAP;
-  output HSI_DBM;
-  output HSI_DBP;
-  output HSI_DC;
   output MCK_N;
   output MCK_P;
   output SPI_CS;
@@ -96,20 +86,15 @@ module design_2_wrapper
   wire DDR_ras_n;
   wire DDR_reset_n;
   wire DDR_we_n;
+  wire DRX;
+  wire DSYNC;
+  wire DTX;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
   wire [53:0]FIXED_IO_mio;
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire HSICK;
-  wire HSI_A0;
-  wire HSI_A1;
-  wire HSI_DAM;
-  wire HSI_DAP;
-  wire HSI_DBM;
-  wire HSI_DBP;
-  wire HSI_DC;
   wire MCK_N;
   wire MCK_P;
   wire SPI_CS;
@@ -133,20 +118,15 @@ module design_2_wrapper
         .DDR_ras_n(DDR_ras_n),
         .DDR_reset_n(DDR_reset_n),
         .DDR_we_n(DDR_we_n),
+        .DRX(DRX),
+        .DSYNC(DSYNC),
+        .DTX(DTX),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
         .FIXED_IO_mio(FIXED_IO_mio),
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .HSICK(HSICK),
-        .HSI_A0(HSI_A0),
-        .HSI_A1(HSI_A1),
-        .HSI_DAM(HSI_DAM),
-        .HSI_DAP(HSI_DAP),
-        .HSI_DBM(HSI_DBM),
-        .HSI_DBP(HSI_DBP),
-        .HSI_DC(HSI_DC),
         .MCK_N(MCK_N),
         .MCK_P(MCK_P),
         .SPI_CS(SPI_CS),

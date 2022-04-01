@@ -1,10 +1,10 @@
-// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Mon Mar 28 21:10:35 2022
-// Host        : LAPTOP-FM91H59Q running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+// Date        : Fri Apr  1 13:46:20 2022
+// Host        : xsjl210013 running 64-bit CentOS Linux release 7.4.1708 (Core)
 // Command     : write_verilog -force -mode synth_stub
-//               C:/Docs/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0_stub.v
+//               /home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0_stub.v
 // Design      : design_2_axi_dma_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* x_core_info = "axi_dma,Vivado 2018.2" *)
+(* x_core_info = "axi_dma,Vivado 2021.2" *)
 module design_2_axi_dma_0_0(s_axi_lite_aclk, m_axi_sg_aclk, 
   m_axi_mm2s_aclk, m_axi_s2mm_aclk, axi_resetn, s_axi_lite_awvalid, s_axi_lite_awready, 
   s_axi_lite_awaddr, s_axi_lite_wvalid, s_axi_lite_wready, s_axi_lite_wdata, 

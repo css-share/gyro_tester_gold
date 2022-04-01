@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<myplatforms>
+  <platform name="xilinx" value="">
+    <board name="Alpha-Data" display_name="Alpha-Data ADM-PCIE-7V3" family="virtex7" part="xc7vx690tffg1157-2"  device="xc7vx690t" package="ffg1157" speedgrade="-2" vendor="alpha-data.com" />
+    <board name="KU_Alphadata" display_name="Kintex-Ultrascale Alphadata board" family="kintexu" part="xcku060-ffva1156-2-e"  device="xcku060" package="-ffva1156" speedgrade="-2-e" vendor="alpha-data.com" />
+    <board name="Xilinx_ZedBoard" display_name="ZedBoard Zynq Evaluation and Development Kit" family="zynq" part="xc7z020clg484-1"  device="xc7z020" package="clg484" speedgrade="-1" vendor="em.avnet.com" />
+    <board name="Xilinx_AC701" display_name="Artix-7 AC701 Evaluation Platform" family="artix7" part="xc7a200tfbg676-2"  device="xc7a200t" package="fbg676" speedgrade="-2" vendor="xilinx.com" />
+    <board name="Xilinx_KC705" display_name="Kintex-7 KC705 Evaluation Platform" family="kintex7" part="xc7k325tffg900-2"  device="xc7k325t" package="ffg900" speedgrade="-2" vendor="xilinx.com" />
+    <board name="Xilinx_KCU105" display_name="Kintex UltraScale KCU105 Evaluation Platform" family="kintexu" part="xcku040-ffva1156-2-e"  device="xcku040" package="-ffva1156" speedgrade="-2-e" vendor="xilinx.com" />
+    <board name="Xilinx_KCU116" display_name="Kintex UltraScale+ KCU116 Evaluation Platform" family="kintexuplus" part="xcku5p-ffvb676-2-e"  device="xcku5p" package="-ffvb676" speedgrade="-2-e" vendor="xilinx.com" />
+    <board name="Xilinx_KCU1500" display_name="Kintex UltraScale KCU1500 Acceleration Development Board" family="kintexu" part="xcku115-flvb2104-2-e"  device="xcku115" package="-flvb2104" speedgrade="-2-e" vendor="xilinx.com" />
+    <board name="Xilinx_VC707" display_name="Virtex-7 VC707 Evaluation Platform" family="virtex7" part="xc7vx485tffg1761-2"  device="xc7vx485t" package="ffg1761" speedgrade="-2" vendor="xilinx.com" />
+    <board name="Xilinx_VC709" display_name="Virtex-7 VC709 Evaluation Platform" family="virtex7" part="xc7vx690tffg1761-2"  device="xc7vx690t" package="ffg1761" speedgrade="-2" vendor="xilinx.com" />
+    <board name="Xilinx_VCU108" display_name="Virtex UltraScale VCU108 Evaluation Platform" family="virtexu" part="xcvu095-ffva2104-2-e"  device="xcvu095" package="-ffva2104" speedgrade="-2-e" vendor="xilinx.com" />
+    <board name="Xilinx_VCU110" display_name="Virtex UltraScale VCU110 Evaluation Platform" family="virtexu" part="xcvu190-flgc2104-2-e"  device="xcvu190" package="-flgc2104" speedgrade="-2-e" vendor="xilinx.com" />
+    <board name="Xilinx_VCU118" display_name="Virtex UltraScale+ VCU118-ES1 Evaluation Platform" family="virtexuplus" part="xcvu9p-flga2104-2L-e-es1"  device="xcvu9p" package="-flga2104" speedgrade="-2L-e-es1" vendor="xilinx.com" />
+    <board name="Xilinx_ZC702" display_name="ZYNQ-7 ZC702 Evaluation Board" family="zynq" part="xc7z020clg484-1"  device="xc7z020" package="clg484" speedgrade="-1" vendor="xilinx.com" />
+    <board name="Xilinx_ZC706" display_name="ZYNQ-7 ZC706 Evaluation Board" family="zynq" part="xc7z045ffg900-2"  device="xc7z045" package="ffg900" speedgrade="-2" vendor="xilinx.com" />
+    <board name="Xilinx_ZCU102" display_name="ZYNQ UltraScale+ ZCU102 Evaluation Platform" family="zynquplus" part="xczu9eg-ffvb1156-2-i"  device="xczu9eg" package="-ffvb1156" speedgrade="-2-i" vendor="xilinx.com" />
+    <board name="Xilinx_ZCU106" display_name="ZYNQ UltraScale+ ZCU106-ES2 Evaluation Platform" family="zynquplus" part="xczu7ev-ffvc1156-2-i-es2"  device="xczu7ev" package="-ffvc1156" speedgrade="-2-i-es2" vendor="xilinx.com" />
+  </platform>
+</myplatforms>
