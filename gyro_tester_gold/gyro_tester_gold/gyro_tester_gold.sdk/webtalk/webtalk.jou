@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# 
+# Start of session at: Sat Apr  2 19:32:07 2022
+# Process ID: 50416
+# Current directory: C:/css/ngc/gyro2/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/css/ngc/gyro2/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.sdk/webtalk/webtalk.log
+# Journal file: C:/css/ngc/gyro2/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

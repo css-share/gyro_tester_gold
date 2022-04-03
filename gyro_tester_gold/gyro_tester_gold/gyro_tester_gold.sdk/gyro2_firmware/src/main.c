@@ -425,6 +425,9 @@ static void setSPIControl(Xuint32 v);
 static void disableSPI();
 static void enableSPI();
 
+unsigned int writeGyroRegister(unsigned int address, unsigned int data);
+unsigned int readGyroRegister(unsigned char address);
+
 void modify_register(unsigned int *data, unsigned int address,
 					unsigned int newVal);
 
@@ -1000,6 +1003,35 @@ int writeSPI(unsigned int address, unsigned int data){
     *(baseaddr_spi+0) = 0x00000000;
     return 0;
 }
+
+// -------------------------------------------------------------------
+unsigned int writeGyroRegister(unsigned int address, unsigned int data){
+	Xuint32 clkSelBits;
+
+	clkSelBits = *(baseaddr_spi+0) & 0xC;			// store clock select bits[3:2]
+	*(baseaddr_spi+0) = clkSelBits & ~0x03;			// clear direction and start bits[1:0]
+	*(baseaddr_spi+1) = address & 0x7F;				// set address
+	*(baseaddr_spi+2) = data & 0xFFFF;				// set data
+	*(baseaddr_spi+0) = clkSelBits | 0x1;			// set start bit to initiate transfer
+
+	return 0;
+}
+
+// -------------------------------------------------------------------
+unsigned int readGyroRegister(unsigned char address){
+	Xuint32 		clkSelBits;
+	unsigned int 	registerReadData;
+
+	clkSelBits = *(baseaddr_spi+0) & 0xC;			// store clock select bits[3:2]
+	*(baseaddr_spi+0) = (clkSelBits | 0x2) & ~0x01;	// set read bit[1], clear start bit[0]
+	*(baseaddr_spi+1) = address & 0x7F;				// set address
+	*(baseaddr_spi+0) = clkSelBits | 0x3;			// set start bit[0] to initiate transfer
+	nops(10000);										// wait for data clocked in
+	registerReadData = *(baseaddr_spi+3) & 0xFFFF;
+
+	return registerReadData; // read data is in 16 lsbs
+}
+
 
 // -------------------------------------------------------------------
 void disableSPI(){
@@ -2779,7 +2811,7 @@ void read_uart_bytes(void)
 				return;
 			}
 			regAddr = (unsigned int)UartRxData[1];
-			readSPI(&regData,regAddr);
+			regData = readGyroRegister(regAddr);
 			char *c = (char*)&regData;
 			xil_printf("%c%c",*(c+1),*c); //send high byte first
 			break;
@@ -2792,7 +2824,7 @@ void read_uart_bytes(void)
 			}
 			regAddr = (unsigned int)UartRxData[1];
 			regData = (UartRxData[2]<<8) | UartRxData[3];
-			writeSPI_non_blocking(regAddr,regData);
+			writeGyroRegister(regAddr,regData);
 			break;
 
 		case (CMD_READ_FPGA_REGISTER):
