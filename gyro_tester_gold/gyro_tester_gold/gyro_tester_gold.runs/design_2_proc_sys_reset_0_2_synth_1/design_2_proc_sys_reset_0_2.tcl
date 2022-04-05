@@ -85,6 +85,7 @@ set_property parent.project_path C:/fromCharles/gyro_tester_gold/gyro_tester_gol
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property board_part digilentinc.com:zedboard:part0:1.0 [current_project]
 set_property ip_repo_paths {
   c:/fromCharles/gyro_tester_gold/ip_repo/axis_stream_txfifo_2.0
   c:/fromCharles/gyro_tester_gold/ip_repo/Handler_1.0

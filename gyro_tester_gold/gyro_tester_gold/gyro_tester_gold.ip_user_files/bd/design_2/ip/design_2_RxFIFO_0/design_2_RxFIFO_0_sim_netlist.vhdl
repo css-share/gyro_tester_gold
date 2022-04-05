@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Fri Apr  1 13:26:35 2022
--- Host        : xsjl210013 running 64-bit CentOS Linux release 7.4.1708 (Core)
+-- Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+-- Date        : Mon Apr  4 22:34:25 2022
+-- Host        : AsusP8 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               /home/cdickins/reuse/gyro_tester_gold-master/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_RxFIFO_0/design_2_RxFIFO_0_sim_netlist.vhdl
+--               c:/fromCharles/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_RxFIFO_0/design_2_RxFIFO_0_sim_netlist.vhdl
 -- Design      : design_2_RxFIFO_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,44 +17,64 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_2_RxFIFO_0_axis_stream_fifo_v1_0_S00_AXI is
   port (
     s00_axi_awready : out STD_LOGIC;
-    rst_n_0 : out STD_LOGIC;
+    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_wready : out STD_LOGIC;
     s00_axi_arready : out STD_LOGIC;
     s00_axi_bvalid : out STD_LOGIC;
     s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 12 downto 0 );
     clk : in STD_LOGIC;
-    s00_axi_arvalid : in STD_LOGIC;
+    write_pointer : in STD_LOGIC_VECTOR ( 12 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
+    s00_axi_arvalid : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC;
-    rst_n : in STD_LOGIC
+    rst_n : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_2_RxFIFO_0_axis_stream_fifo_v1_0_S00_AXI : entity is "axis_stream_fifo_v1_0_S00_AXI";
 end design_2_RxFIFO_0_axis_stream_fifo_v1_0_S00_AXI;
 
 architecture STRUCTURE of design_2_RxFIFO_0_axis_stream_fifo_v1_0_S00_AXI is
+  signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal aw_en_i_1_n_0 : STD_LOGIC;
   signal aw_en_reg_n_0 : STD_LOGIC;
+  signal axi_araddr : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \axi_araddr[2]_i_1_n_0\ : STD_LOGIC;
+  signal \axi_araddr[3]_i_1_n_0\ : STD_LOGIC;
   signal axi_arready0 : STD_LOGIC;
   signal \axi_awready0__0\ : STD_LOGIC;
   signal axi_bvalid_i_1_n_0 : STD_LOGIC;
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal \axi_wready0__0\ : STD_LOGIC;
-  signal \^rst_n_0\ : STD_LOGIC;
+  signal reg_data_out : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal \^s00_axi_arready\ : STD_LOGIC;
   signal \^s00_axi_awready\ : STD_LOGIC;
   signal \^s00_axi_bvalid\ : STD_LOGIC;
   signal \^s00_axi_rvalid\ : STD_LOGIC;
   signal \^s00_axi_wready\ : STD_LOGIC;
+  signal \slv_reg_rden__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of axi_awready0 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \axi_rdata[0]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \axi_rdata[10]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \axi_rdata[11]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \axi_rdata[1]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \axi_rdata[2]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \axi_rdata[3]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \axi_rdata[4]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \axi_rdata[5]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \axi_rdata[6]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \axi_rdata[7]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \axi_rdata[8]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \axi_rdata[9]_i_1\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of axi_wready0 : label is "soft_lutpair1";
 begin
-  rst_n_0 <= \^rst_n_0\;
+  SR(0) <= \^sr\(0);
   s00_axi_arready <= \^s00_axi_arready\;
   s00_axi_awready <= \^s00_axi_awready\;
   s00_axi_bvalid <= \^s00_axi_bvalid\;
@@ -79,7 +99,45 @@ aw_en_reg: unisim.vcomponents.FDSE
       CE => '1',
       D => aw_en_i_1_n_0,
       Q => aw_en_reg_n_0,
-      S => \^rst_n_0\
+      S => \^sr\(0)
+    );
+\axi_araddr[2]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => s00_axi_araddr(0),
+      I1 => s00_axi_arvalid,
+      I2 => \^s00_axi_arready\,
+      I3 => axi_araddr(2),
+      O => \axi_araddr[2]_i_1_n_0\
+    );
+\axi_araddr[3]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FB08"
+    )
+        port map (
+      I0 => s00_axi_araddr(1),
+      I1 => s00_axi_arvalid,
+      I2 => \^s00_axi_arready\,
+      I3 => axi_araddr(3),
+      O => \axi_araddr[3]_i_1_n_0\
+    );
+\axi_araddr_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \axi_araddr[2]_i_1_n_0\,
+      Q => axi_araddr(2),
+      R => \^sr\(0)
+    );
+\axi_araddr_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \axi_araddr[3]_i_1_n_0\,
+      Q => axi_araddr(3),
+      R => \^sr\(0)
     );
 axi_arready_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -96,7 +154,7 @@ axi_arready_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_arready0,
       Q => \^s00_axi_arready\,
-      R => \^rst_n_0\
+      R => \^sr\(0)
     );
 axi_awready0: unisim.vcomponents.LUT4
     generic map(
@@ -115,7 +173,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
     )
         port map (
       I0 => rst_n,
-      O => \^rst_n_0\
+      O => \^sr\(0)
     );
 axi_awready_reg: unisim.vcomponents.FDRE
      port map (
@@ -123,7 +181,7 @@ axi_awready_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \axi_awready0__0\,
       Q => \^s00_axi_awready\,
-      R => \^rst_n_0\
+      R => \^sr\(0)
     );
 axi_bvalid_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -144,7 +202,241 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_bvalid_i_1_n_0,
       Q => \^s00_axi_bvalid\,
-      R => \^rst_n_0\
+      R => \^sr\(0)
+    );
+\axi_rdata[0]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(0),
+      O => reg_data_out(0)
+    );
+\axi_rdata[10]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(10),
+      O => reg_data_out(10)
+    );
+\axi_rdata[11]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(11),
+      O => reg_data_out(11)
+    );
+\axi_rdata[12]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(12),
+      O => reg_data_out(12)
+    );
+\axi_rdata[1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(1),
+      O => reg_data_out(1)
+    );
+\axi_rdata[2]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(2),
+      O => reg_data_out(2)
+    );
+\axi_rdata[3]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(3),
+      O => reg_data_out(3)
+    );
+\axi_rdata[4]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(4),
+      O => reg_data_out(4)
+    );
+\axi_rdata[5]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(5),
+      O => reg_data_out(5)
+    );
+\axi_rdata[6]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(6),
+      O => reg_data_out(6)
+    );
+\axi_rdata[7]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(7),
+      O => reg_data_out(7)
+    );
+\axi_rdata[8]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(8),
+      O => reg_data_out(8)
+    );
+\axi_rdata[9]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => axi_araddr(3),
+      I1 => axi_araddr(2),
+      I2 => write_pointer(9),
+      O => reg_data_out(9)
+    );
+\axi_rdata_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(0),
+      Q => s00_axi_rdata(0),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(10),
+      Q => s00_axi_rdata(10),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(11),
+      Q => s00_axi_rdata(11),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(12),
+      Q => s00_axi_rdata(12),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(1),
+      Q => s00_axi_rdata(1),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(2),
+      Q => s00_axi_rdata(2),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(3),
+      Q => s00_axi_rdata(3),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(4),
+      Q => s00_axi_rdata(4),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(5),
+      Q => s00_axi_rdata(5),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(6),
+      Q => s00_axi_rdata(6),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(7),
+      Q => s00_axi_rdata(7),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(8),
+      Q => s00_axi_rdata(8),
+      R => \^sr\(0)
+    );
+\axi_rdata_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \slv_reg_rden__0\,
+      D => reg_data_out(9),
+      Q => s00_axi_rdata(9),
+      R => \^sr\(0)
     );
 axi_rvalid_i_1: unisim.vcomponents.LUT4
     generic map(
@@ -163,7 +455,7 @@ axi_rvalid_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_rvalid_i_1_n_0,
       Q => \^s00_axi_rvalid\,
-      R => \^rst_n_0\
+      R => \^sr\(0)
     );
 axi_wready0: unisim.vcomponents.LUT4
     generic map(
@@ -182,7 +474,17 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \axi_wready0__0\,
       Q => \^s00_axi_wready\,
-      R => \^rst_n_0\
+      R => \^sr\(0)
+    );
+slv_reg_rden: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"20"
+    )
+        port map (
+      I0 => s00_axi_arvalid,
+      I1 => \^s00_axi_rvalid\,
+      I2 => \^s00_axi_arready\,
+      O => \slv_reg_rden__0\
     );
 end STRUCTURE;
 library IEEE;
@@ -191,6 +493,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_2_RxFIFO_0_axis_stream_txfifo_v2_0_S00_AXIS is
   port (
+    write_pointer : out STD_LOGIC_VECTOR ( 12 downto 0 );
     clear : out STD_LOGIC;
     rx_fifo_push : out STD_LOGIC;
     mst_exec_state_reg_0 : out STD_LOGIC;
@@ -210,6 +513,7 @@ architecture STRUCTURE of design_2_RxFIFO_0_axis_stream_txfifo_v2_0_S00_AXIS is
   signal mst_exec_state_i_1_n_0 : STD_LOGIC;
   signal \^mst_exec_state_reg_0\ : STD_LOGIC;
   signal \^rx_fifo_push\ : STD_LOGIC;
+  signal \^write_pointer\ : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal \write_pointer[0]_i_2_n_0\ : STD_LOGIC;
   signal \write_pointer_reg[0]_i_1_n_0\ : STD_LOGIC;
   signal \write_pointer_reg[0]_i_1_n_1\ : STD_LOGIC;
@@ -236,19 +540,6 @@ architecture STRUCTURE of design_2_RxFIFO_0_axis_stream_txfifo_v2_0_S00_AXIS is
   signal \write_pointer_reg[8]_i_1_n_5\ : STD_LOGIC;
   signal \write_pointer_reg[8]_i_1_n_6\ : STD_LOGIC;
   signal \write_pointer_reg[8]_i_1_n_7\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[0]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[10]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[11]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[12]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[1]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[2]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[3]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[4]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[5]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[6]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[7]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[8]\ : STD_LOGIC;
-  signal \write_pointer_reg_n_0_[9]\ : STD_LOGIC;
   signal writes_done : STD_LOGIC;
   signal writes_done_i_1_n_0 : STD_LOGIC;
   signal writes_done_i_2_n_0 : STD_LOGIC;
@@ -257,8 +548,8 @@ architecture STRUCTURE of design_2_RxFIFO_0_axis_stream_txfifo_v2_0_S00_AXIS is
   signal \NLW_write_pointer_reg[12]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_write_pointer_reg[12]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of mst_exec_state_i_1 : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of qfull_i_3 : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of mst_exec_state_i_1 : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of qfull_i_3 : label is "soft_lutpair33";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \write_pointer_reg[0]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \write_pointer_reg[12]_i_1\ : label is 11;
@@ -268,6 +559,7 @@ begin
   clear <= \^clear\;
   mst_exec_state_reg_0 <= \^mst_exec_state_reg_0\;
   rx_fifo_push <= \^rx_fifo_push\;
+  write_pointer(12 downto 0) <= \^write_pointer\(12 downto 0);
 mst_exec_state_i_1: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2E00"
@@ -319,7 +611,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       INIT => X"1"
     )
         port map (
-      I0 => \write_pointer_reg_n_0_[0]\,
+      I0 => \^write_pointer\(0),
       O => \write_pointer[0]_i_2_n_0\
     );
 \write_pointer_reg[0]\: unisim.vcomponents.FDRE
@@ -327,7 +619,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[0]_i_1_n_7\,
-      Q => \write_pointer_reg_n_0_[0]\,
+      Q => \^write_pointer\(0),
       R => \^clear\
     );
 \write_pointer_reg[0]_i_1\: unisim.vcomponents.CARRY4
@@ -343,9 +635,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       O(2) => \write_pointer_reg[0]_i_1_n_5\,
       O(1) => \write_pointer_reg[0]_i_1_n_6\,
       O(0) => \write_pointer_reg[0]_i_1_n_7\,
-      S(3) => \write_pointer_reg_n_0_[3]\,
-      S(2) => \write_pointer_reg_n_0_[2]\,
-      S(1) => \write_pointer_reg_n_0_[1]\,
+      S(3 downto 1) => \^write_pointer\(3 downto 1),
       S(0) => \write_pointer[0]_i_2_n_0\
     );
 \write_pointer_reg[10]\: unisim.vcomponents.FDRE
@@ -353,7 +643,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[8]_i_1_n_5\,
-      Q => \write_pointer_reg_n_0_[10]\,
+      Q => \^write_pointer\(10),
       R => \^clear\
     );
 \write_pointer_reg[11]\: unisim.vcomponents.FDRE
@@ -361,7 +651,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[8]_i_1_n_4\,
-      Q => \write_pointer_reg_n_0_[11]\,
+      Q => \^write_pointer\(11),
       R => \^clear\
     );
 \write_pointer_reg[12]\: unisim.vcomponents.FDRE
@@ -369,7 +659,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[12]_i_1_n_7\,
-      Q => \write_pointer_reg_n_0_[12]\,
+      Q => \^write_pointer\(12),
       R => \^clear\
     );
 \write_pointer_reg[12]_i_1\: unisim.vcomponents.CARRY4
@@ -381,14 +671,14 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       O(3 downto 1) => \NLW_write_pointer_reg[12]_i_1_O_UNCONNECTED\(3 downto 1),
       O(0) => \write_pointer_reg[12]_i_1_n_7\,
       S(3 downto 1) => B"000",
-      S(0) => \write_pointer_reg_n_0_[12]\
+      S(0) => \^write_pointer\(12)
     );
 \write_pointer_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[0]_i_1_n_6\,
-      Q => \write_pointer_reg_n_0_[1]\,
+      Q => \^write_pointer\(1),
       R => \^clear\
     );
 \write_pointer_reg[2]\: unisim.vcomponents.FDRE
@@ -396,7 +686,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[0]_i_1_n_5\,
-      Q => \write_pointer_reg_n_0_[2]\,
+      Q => \^write_pointer\(2),
       R => \^clear\
     );
 \write_pointer_reg[3]\: unisim.vcomponents.FDRE
@@ -404,7 +694,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[0]_i_1_n_4\,
-      Q => \write_pointer_reg_n_0_[3]\,
+      Q => \^write_pointer\(3),
       R => \^clear\
     );
 \write_pointer_reg[4]\: unisim.vcomponents.FDRE
@@ -412,7 +702,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[4]_i_1_n_7\,
-      Q => \write_pointer_reg_n_0_[4]\,
+      Q => \^write_pointer\(4),
       R => \^clear\
     );
 \write_pointer_reg[4]_i_1\: unisim.vcomponents.CARRY4
@@ -428,17 +718,14 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       O(2) => \write_pointer_reg[4]_i_1_n_5\,
       O(1) => \write_pointer_reg[4]_i_1_n_6\,
       O(0) => \write_pointer_reg[4]_i_1_n_7\,
-      S(3) => \write_pointer_reg_n_0_[7]\,
-      S(2) => \write_pointer_reg_n_0_[6]\,
-      S(1) => \write_pointer_reg_n_0_[5]\,
-      S(0) => \write_pointer_reg_n_0_[4]\
+      S(3 downto 0) => \^write_pointer\(7 downto 4)
     );
 \write_pointer_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[4]_i_1_n_6\,
-      Q => \write_pointer_reg_n_0_[5]\,
+      Q => \^write_pointer\(5),
       R => \^clear\
     );
 \write_pointer_reg[6]\: unisim.vcomponents.FDRE
@@ -446,7 +733,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[4]_i_1_n_5\,
-      Q => \write_pointer_reg_n_0_[6]\,
+      Q => \^write_pointer\(6),
       R => \^clear\
     );
 \write_pointer_reg[7]\: unisim.vcomponents.FDRE
@@ -454,7 +741,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[4]_i_1_n_4\,
-      Q => \write_pointer_reg_n_0_[7]\,
+      Q => \^write_pointer\(7),
       R => \^clear\
     );
 \write_pointer_reg[8]\: unisim.vcomponents.FDRE
@@ -462,7 +749,7 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[8]_i_1_n_7\,
-      Q => \write_pointer_reg_n_0_[8]\,
+      Q => \^write_pointer\(8),
       R => \^clear\
     );
 \write_pointer_reg[8]_i_1\: unisim.vcomponents.CARRY4
@@ -478,17 +765,14 @@ rgfile_reg_3_i_1: unisim.vcomponents.LUT2
       O(2) => \write_pointer_reg[8]_i_1_n_5\,
       O(1) => \write_pointer_reg[8]_i_1_n_6\,
       O(0) => \write_pointer_reg[8]_i_1_n_7\,
-      S(3) => \write_pointer_reg_n_0_[11]\,
-      S(2) => \write_pointer_reg_n_0_[10]\,
-      S(1) => \write_pointer_reg_n_0_[9]\,
-      S(0) => \write_pointer_reg_n_0_[8]\
+      S(3 downto 0) => \^write_pointer\(11 downto 8)
     );
 \write_pointer_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => txclk,
       CE => \^rx_fifo_push\,
       D => \write_pointer_reg[8]_i_1_n_6\,
-      Q => \write_pointer_reg_n_0_[9]\,
+      Q => \^write_pointer\(9),
       R => \^clear\
     );
 writes_done_i_1: unisim.vcomponents.LUT6
@@ -509,7 +793,7 @@ writes_done_i_2: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => \write_pointer_reg_n_0_[0]\,
+      I0 => \^write_pointer\(0),
       I1 => writes_done_i_3_n_0,
       I2 => writes_done_i_4_n_0,
       O => writes_done_i_2_n_0
@@ -519,12 +803,12 @@ writes_done_i_3: unisim.vcomponents.LUT6
       INIT => X"8000000000000000"
     )
         port map (
-      I0 => \write_pointer_reg_n_0_[9]\,
-      I1 => \write_pointer_reg_n_0_[10]\,
-      I2 => \write_pointer_reg_n_0_[7]\,
-      I3 => \write_pointer_reg_n_0_[8]\,
-      I4 => \write_pointer_reg_n_0_[12]\,
-      I5 => \write_pointer_reg_n_0_[11]\,
+      I0 => \^write_pointer\(9),
+      I1 => \^write_pointer\(10),
+      I2 => \^write_pointer\(7),
+      I3 => \^write_pointer\(8),
+      I4 => \^write_pointer\(12),
+      I5 => \^write_pointer\(11),
       O => writes_done_i_3_n_0
     );
 writes_done_i_4: unisim.vcomponents.LUT6
@@ -532,12 +816,12 @@ writes_done_i_4: unisim.vcomponents.LUT6
       INIT => X"8000000000000000"
     )
         port map (
-      I0 => \write_pointer_reg_n_0_[3]\,
-      I1 => \write_pointer_reg_n_0_[4]\,
-      I2 => \write_pointer_reg_n_0_[1]\,
-      I3 => \write_pointer_reg_n_0_[2]\,
-      I4 => \write_pointer_reg_n_0_[6]\,
-      I5 => \write_pointer_reg_n_0_[5]\,
+      I0 => \^write_pointer\(3),
+      I1 => \^write_pointer\(4),
+      I2 => \^write_pointer\(1),
+      I3 => \^write_pointer\(2),
+      I4 => \^write_pointer\(6),
+      I5 => \^write_pointer\(5),
       O => writes_done_i_4_n_0
     );
 writes_done_reg: unisim.vcomponents.FDRE
@@ -592,8 +876,8 @@ architecture STRUCTURE of design_2_RxFIFO_0_syncr is
   signal \sync_2stg_reg_n_0_[8]\ : STD_LOGIC;
   signal \sync_2stg_reg_n_0_[9]\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \last_sampled_rd_ptr[10]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \last_sampled_rd_ptr[11]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \last_sampled_rd_ptr[10]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \last_sampled_rd_ptr[11]_i_1\ : label is "soft_lutpair8";
   attribute ASYNC_REG_boolean : boolean;
   attribute ASYNC_REG_boolean of \sync_1stg_reg[0]\ : label is std.standard.true;
   attribute KEEP : string;
@@ -1270,16 +1554,16 @@ architecture STRUCTURE of design_2_RxFIFO_0_syncr_0 is
   signal \sync_2stg_reg_n_0_[9]\ : STD_LOGIC;
   signal \^wptr_s_bin\ : STD_LOGIC_VECTOR ( 13 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[10]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[11]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[12]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[2]_i_2\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[3]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[4]_i_2\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[5]_i_2\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[6]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[7]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[9]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[10]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[11]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[12]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[2]_i_2\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[3]_i_2\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[4]_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[5]_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[6]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[7]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \last_sampled_wr_ptr[9]_i_1\ : label is "soft_lutpair11";
   attribute ASYNC_REG_boolean : boolean;
   attribute ASYNC_REG_boolean of \sync_1stg_reg[0]\ : label is std.standard.true;
   attribute KEEP : string;
@@ -2338,7 +2622,7 @@ entity \design_2_RxFIFO_0_syncr__parameterized0_1\ is
     rst_n_0 : out STD_LOGIC;
     tx_rstn : in STD_LOGIC;
     clk : in STD_LOGIC;
-    \sync_2stg_reg[0]_0\ : in STD_LOGIC;
+    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     rst_n : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -2368,7 +2652,7 @@ begin
      port map (
       C => clk,
       CE => '1',
-      CLR => \sync_2stg_reg[0]_0\,
+      CLR => SR(0),
       D => tx_rstn,
       Q => sync_1stg
     );
@@ -2376,7 +2660,7 @@ begin
      port map (
       C => clk,
       CE => '1',
-      CLR => \sync_2stg_reg[0]_0\,
+      CLR => SR(0),
       D => sync_1stg,
       Q => wrstn_s
     );
@@ -2395,7 +2679,7 @@ entity design_2_RxFIFO_0_gen_async_que is
     clear : in STD_LOGIC;
     tx_rstn : in STD_LOGIC;
     clk : in STD_LOGIC;
-    \sync_2stg_reg[0]\ : in STD_LOGIC;
+    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     \wptr_reg[0]_0\ : in STD_LOGIC;
     s00_axis_tvalid : in STD_LOGIC;
     qfull_reg_0 : in STD_LOGIC;
@@ -2749,7 +3033,7 @@ architecture STRUCTURE of design_2_RxFIFO_0_gen_async_que is
   signal \NLW_w_bnext_q_reg[12]_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_w_bnext_q_reg[12]_i_2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \fill_rd[11]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \fill_rd[11]_i_1\ : label is "soft_lutpair16";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of fill_rd_nxt0_carry : label is 35;
   attribute ADDER_THRESHOLD of \fill_rd_nxt0_carry__0\ : label is 35;
@@ -2771,7 +3055,7 @@ architecture STRUCTURE of design_2_RxFIFO_0_gen_async_que is
   attribute ADDER_THRESHOLD of \fill_wr_reg[13]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \fill_wr_reg[3]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \fill_wr_reg[7]_i_2\ : label is 35;
-  attribute SOFT_HLUTNM of m00_axis_tvalid_INST_0 : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of m00_axis_tvalid_INST_0 : label is "soft_lutpair16";
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ : string;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of rgfile_reg_0 : label is "p0_d4";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ : string;
@@ -2828,14 +3112,14 @@ architecture STRUCTURE of design_2_RxFIFO_0_gen_async_que is
   attribute ram_slice_begin of rgfile_reg_3 : label is 12;
   attribute ram_slice_end of rgfile_reg_3 : label is 15;
   attribute ADDER_THRESHOLD of rgfile_reg_3_i_2 : label is 35;
-  attribute SOFT_HLUTNM of rgfile_reg_3_i_21 : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of rgfile_reg_3_i_22 : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of rgfile_reg_3_i_23 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of rgfile_reg_3_i_24 : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of rgfile_reg_3_i_25 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of rgfile_reg_3_i_27 : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of rgfile_reg_3_i_28 : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of rgfile_reg_3_i_29 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of rgfile_reg_3_i_21 : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of rgfile_reg_3_i_22 : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of rgfile_reg_3_i_23 : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of rgfile_reg_3_i_24 : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of rgfile_reg_3_i_25 : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of rgfile_reg_3_i_27 : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of rgfile_reg_3_i_28 : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of rgfile_reg_3_i_29 : label is "soft_lutpair15";
   attribute ADDER_THRESHOLD of rgfile_reg_3_i_3 : label is 35;
   attribute ADDER_THRESHOLD of rgfile_reg_3_i_4 : label is 35;
   attribute ADDER_THRESHOLD of rgfile_reg_3_i_5 : label is 35;
@@ -2850,38 +3134,38 @@ architecture STRUCTURE of design_2_RxFIFO_0_gen_async_que is
   attribute ram_offset of rgfile_reg_4 : label is 0;
   attribute ram_slice_begin of rgfile_reg_4 : label is 16;
   attribute ram_slice_end of rgfile_reg_4 : label is 16;
-  attribute SOFT_HLUTNM of \rptr[10]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \rptr[11]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \rptr[12]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \rptr[1]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \rptr[2]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \rptr[3]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \rptr[4]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \rptr[5]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \rptr[6]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \rptr[7]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \rptr[8]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \rptr[9]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \w_bnext_q[3]_i_9\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \w_bnext_q[7]_i_6\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \w_bnext_q[7]_i_7\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \w_bnext_q[7]_i_9\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \rptr[10]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \rptr[11]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \rptr[12]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \rptr[1]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \rptr[2]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \rptr[3]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \rptr[4]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \rptr[5]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \rptr[6]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \rptr[7]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \rptr[8]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \rptr[9]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \w_bnext_q[3]_i_9\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \w_bnext_q[7]_i_6\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \w_bnext_q[7]_i_7\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \w_bnext_q[7]_i_9\ : label is "soft_lutpair19";
   attribute ADDER_THRESHOLD of \w_bnext_q_reg[11]_i_1\ : label is 35;
   attribute ADDER_THRESHOLD of \w_bnext_q_reg[12]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \w_bnext_q_reg[3]_i_1\ : label is 35;
   attribute ADDER_THRESHOLD of \w_bnext_q_reg[7]_i_1\ : label is 35;
-  attribute SOFT_HLUTNM of \wptr[10]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \wptr[11]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \wptr[12]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \wptr[1]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \wptr[2]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \wptr[3]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \wptr[4]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \wptr[5]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \wptr[6]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \wptr[7]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \wptr[8]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \wptr[9]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \wptr[10]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \wptr[11]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \wptr[12]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \wptr[1]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \wptr[2]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \wptr[3]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \wptr[4]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \wptr[5]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \wptr[6]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \wptr[7]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \wptr[8]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \wptr[9]_i_1\ : label is "soft_lutpair22";
 begin
   qfull <= \^qfull\;
 \fill_rd[0]_i_1\: unisim.vcomponents.LUT4
@@ -6151,10 +6435,10 @@ wr_2_rd_syncr: entity work.design_2_RxFIFO_0_syncr_0
     );
 wrstn_syncr: entity work.\design_2_RxFIFO_0_syncr__parameterized0_1\
      port map (
+      SR(0) => SR(0),
       clk => clk,
       rst_n => rst_n,
       rst_n_0 => wrstn_syncr_n_0,
-      \sync_2stg_reg[0]_0\ => \sync_2stg_reg[0]\,
       tx_rstn => tx_rstn
     );
 end STRUCTURE;
@@ -6169,18 +6453,20 @@ entity design_2_RxFIFO_0_axis_stream_fifo_v1_0 is
     s00_axi_awready : out STD_LOGIC;
     s00_axi_wready : out STD_LOGIC;
     s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
     m00_axis_tvalid : out STD_LOGIC;
     s00_axi_bvalid : out STD_LOGIC;
-    s00_axi_rvalid : out STD_LOGIC;
     s00_axis_tvalid : in STD_LOGIC;
     rst_n : in STD_LOGIC;
     tx_rstn : in STD_LOGIC;
     txclk : in STD_LOGIC;
     clk : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_arvalid : in STD_LOGIC;
     m00_axis_tready : in STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
@@ -6195,39 +6481,43 @@ architecture STRUCTURE of design_2_RxFIFO_0_axis_stream_fifo_v1_0 is
   signal \^mst_exec_state_reg\ : STD_LOGIC;
   signal qfull : STD_LOGIC;
   signal rx_fifo_push : STD_LOGIC;
-  signal u_txfifo_wr_chn_n_3 : STD_LOGIC;
+  signal u_txfifo_wr_chn_n_16 : STD_LOGIC;
+  signal write_pointer : STD_LOGIC_VECTOR ( 12 downto 0 );
 begin
   mst_exec_state_reg <= \^mst_exec_state_reg\;
 axis_stream_fifo_v1_0_S00_AXI_inst: entity work.design_2_RxFIFO_0_axis_stream_fifo_v1_0_S00_AXI
      port map (
+      SR(0) => axis_stream_fifo_v1_0_S00_AXI_inst_n_1,
       clk => clk,
       rst_n => rst_n,
-      rst_n_0 => axis_stream_fifo_v1_0_S00_AXI_inst_n_1,
+      s00_axi_araddr(1 downto 0) => s00_axi_araddr(1 downto 0),
       s00_axi_arready => s00_axi_arready,
       s00_axi_arvalid => s00_axi_arvalid,
       s00_axi_awready => s00_axi_awready,
       s00_axi_awvalid => s00_axi_awvalid,
       s00_axi_bready => s00_axi_bready,
       s00_axi_bvalid => s00_axi_bvalid,
+      s00_axi_rdata(12 downto 0) => s00_axi_rdata(12 downto 0),
       s00_axi_rready => s00_axi_rready,
       s00_axi_rvalid => s00_axi_rvalid,
       s00_axi_wready => s00_axi_wready,
-      s00_axi_wvalid => s00_axi_wvalid
+      s00_axi_wvalid => s00_axi_wvalid,
+      write_pointer(12 downto 0) => write_pointer(12 downto 0)
     );
 u_rx_async_stream_fifo: entity work.design_2_RxFIFO_0_gen_async_que
      port map (
+      SR(0) => axis_stream_fifo_v1_0_S00_AXI_inst_n_1,
       clear => clear,
       clk => clk,
       din(16 downto 0) => din(16 downto 0),
       m00_axis_tready => m00_axis_tready,
       m00_axis_tvalid => m00_axis_tvalid,
       qfull => qfull,
-      qfull_reg_0 => u_txfifo_wr_chn_n_3,
+      qfull_reg_0 => u_txfifo_wr_chn_n_16,
       qout(16 downto 0) => qout(16 downto 0),
       rst_n => rst_n,
       rx_fifo_push => rx_fifo_push,
       s00_axis_tvalid => s00_axis_tvalid,
-      \sync_2stg_reg[0]\ => axis_stream_fifo_v1_0_S00_AXI_inst_n_1,
       tx_rstn => tx_rstn,
       txclk => txclk,
       \wptr_reg[0]_0\ => \^mst_exec_state_reg\
@@ -6237,12 +6527,13 @@ u_txfifo_wr_chn: entity work.design_2_RxFIFO_0_axis_stream_txfifo_v2_0_S00_AXIS
       clear => clear,
       din(0) => din(16),
       mst_exec_state_reg_0 => \^mst_exec_state_reg\,
-      mst_exec_state_reg_1 => u_txfifo_wr_chn_n_3,
+      mst_exec_state_reg_1 => u_txfifo_wr_chn_n_16,
       qfull => qfull,
       rx_fifo_push => rx_fifo_push,
       s00_axis_tvalid => s00_axis_tvalid,
       tx_rstn => tx_rstn,
-      txclk => txclk
+      txclk => txclk,
+      write_pointer(12 downto 0) => write_pointer(12 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -6274,16 +6565,16 @@ entity design_2_RxFIFO_0 is
     s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
     s00_axi_rready : in STD_LOGIC;
-    m00_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m00_axis_tlast : out STD_LOGIC;
-    m00_axis_tvalid : out STD_LOGIC;
-    m00_axis_tready : in STD_LOGIC;
     s00_axis_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s00_axis_tstrb : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s00_axis_tlast : in STD_LOGIC;
     s00_axis_tvalid : in STD_LOGIC;
-    s00_axis_tready : out STD_LOGIC
+    s00_axis_tready : out STD_LOGIC;
+    s00_axis_tlast : in STD_LOGIC;
+    m00_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m00_axis_tvalid : out STD_LOGIC;
+    m00_axis_tready : in STD_LOGIC;
+    m00_axis_tlast : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_2_RxFIFO_0 : entity is true;
@@ -6299,13 +6590,14 @@ architecture STRUCTURE of design_2_RxFIFO_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \^m00_axis_tdata\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \^s00_axi_rdata\ : STD_LOGIC_VECTOR ( 12 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF M00_AXIS:S00_AXI, ASSOCIATED_RESET rst_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m00_axis_tlast : signal is "xilinx.com:interface:axis:1.0 M00_AXIS TLAST";
+  attribute X_INTERFACE_PARAMETER of m00_axis_tlast : signal is "XIL_INTERFACENAME M00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m00_axis_tready : signal is "xilinx.com:interface:axis:1.0 M00_AXIS TREADY";
-  attribute X_INTERFACE_PARAMETER of m00_axis_tready : signal is "XIL_INTERFACENAME M00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m00_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 M00_AXIS TVALID";
   attribute X_INTERFACE_INFO of rst_n : signal is "xilinx.com:signal:reset:1.0 rst_n RST";
   attribute X_INTERFACE_PARAMETER of rst_n : signal is "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0";
@@ -6321,8 +6613,8 @@ architecture STRUCTURE of design_2_RxFIFO_0 is
   attribute X_INTERFACE_INFO of s00_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WREADY";
   attribute X_INTERFACE_INFO of s00_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WVALID";
   attribute X_INTERFACE_INFO of s00_axis_tlast : signal is "xilinx.com:interface:axis:1.0 S00_AXIS TLAST";
+  attribute X_INTERFACE_PARAMETER of s00_axis_tlast : signal is "XIL_INTERFACENAME S00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN design_2_BiDirChannels_0_0_txclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axis_tready : signal is "xilinx.com:interface:axis:1.0 S00_AXIS TREADY";
-  attribute X_INTERFACE_PARAMETER of s00_axis_tready : signal is "XIL_INTERFACENAME S00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN design_2_BiDirChannels_0_0_txclk, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s00_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 S00_AXIS TVALID";
   attribute X_INTERFACE_INFO of tx_rstn : signal is "xilinx.com:signal:reset:1.0 tx_rstn RST";
   attribute X_INTERFACE_PARAMETER of tx_rstn : signal is "XIL_INTERFACENAME tx_rstn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
@@ -6384,19 +6676,7 @@ begin
   s00_axi_rdata(15) <= \<const0>\;
   s00_axi_rdata(14) <= \<const0>\;
   s00_axi_rdata(13) <= \<const0>\;
-  s00_axi_rdata(12) <= \<const0>\;
-  s00_axi_rdata(11) <= \<const0>\;
-  s00_axi_rdata(10) <= \<const0>\;
-  s00_axi_rdata(9) <= \<const0>\;
-  s00_axi_rdata(8) <= \<const0>\;
-  s00_axi_rdata(7) <= \<const0>\;
-  s00_axi_rdata(6) <= \<const0>\;
-  s00_axi_rdata(5) <= \<const0>\;
-  s00_axi_rdata(4) <= \<const0>\;
-  s00_axi_rdata(3) <= \<const0>\;
-  s00_axi_rdata(2) <= \<const0>\;
-  s00_axi_rdata(1) <= \<const0>\;
-  s00_axi_rdata(0) <= \<const0>\;
+  s00_axi_rdata(12 downto 0) <= \^s00_axi_rdata\(12 downto 0);
   s00_axi_rresp(1) <= \<const0>\;
   s00_axi_rresp(0) <= \<const0>\;
 GND: unisim.vcomponents.GND
@@ -6418,12 +6698,14 @@ inst: entity work.design_2_RxFIFO_0_axis_stream_fifo_v1_0
       qout(16) => m00_axis_tlast,
       qout(15 downto 0) => \^m00_axis_tdata\(15 downto 0),
       rst_n => rst_n,
+      s00_axi_araddr(1 downto 0) => s00_axi_araddr(3 downto 2),
       s00_axi_arready => s00_axi_arready,
       s00_axi_arvalid => s00_axi_arvalid,
       s00_axi_awready => s00_axi_awready,
       s00_axi_awvalid => s00_axi_awvalid,
       s00_axi_bready => s00_axi_bready,
       s00_axi_bvalid => s00_axi_bvalid,
+      s00_axi_rdata(12 downto 0) => \^s00_axi_rdata\(12 downto 0),
       s00_axi_rready => s00_axi_rready,
       s00_axi_rvalid => s00_axi_rvalid,
       s00_axi_wready => s00_axi_wready,

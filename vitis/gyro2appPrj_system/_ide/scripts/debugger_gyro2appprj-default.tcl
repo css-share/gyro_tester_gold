@@ -13,10 +13,10 @@ connect -url tcp:127.0.0.1:3121
 targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
-targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA3C5B" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA3C5B-23727093-0"}
-fpga -file C:/fromCharles/gyro_tester_gold/vitis/gyro2appPrj/_ide/bitstream/design_2_wrapper.bit
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA59A3" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA59A3-23727093-0"}
+fpga -file C:/fromCharles/gyro_tester_gold/vitis/gyro2appPrj/_ide/bitstream/design_3_wrapper.bit
 targets -set -nocase -filter {name =~"APU*"}
-loadhw -hw C:/fromCharles/gyro_tester_gold/vitis/gyro2ptfmPrj/export/gyro2ptfmPrj/hw/design_2_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+loadhw -hw C:/fromCharles/gyro_tester_gold/vitis/gyro2ptfmPrj/export/gyro2ptfmPrj/hw/design_3_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
 configparams force-mem-access 1
 targets -set -nocase -filter {name =~"APU*"}
 source C:/fromCharles/gyro_tester_gold/vitis/gyro2appPrj/_ide/psinit/ps7_init.tcl

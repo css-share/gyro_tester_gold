@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF330AE39FF9D5E84",
+      "boundary_crc": "0x19BCA175E0D4233A",
       "device": "xc7z020clg484-1",
       "name": "design_2",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -10,7 +10,6 @@
       "validated": "true"
     },
     "design_tree": {
-      "SPI_ip_0": "",
       "AXI_Register_Demux": {
         "xbar": "",
         "s00_couplers": {
@@ -34,15 +33,16 @@
         },
         "m06_couplers": {}
       },
-      "RxFIFO": "",
-      "BiDirChannels_0": "",
-      "TxFIFO": "",
       "xlconcat_1": "",
       "axi_dma_0": "",
+      "SPI_ip_0": "",
       "txclk_reset_domain": "",
       "clk_reset_domain": "",
       "processing_system7_0": "",
-      "axi_smc": ""
+      "axi_smc": "",
+      "RxFIFO": "",
+      "TxFIFO": "",
+      "BiDirChannels_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -123,7 +123,7 @@
           }
         }
       },
-      "SPI_CS": {
+      "SPI_CSN": {
         "type": "data",
         "direction": "O",
         "parameters": {
@@ -253,12 +253,6 @@
       }
     },
     "components": {
-      "SPI_ip_0": {
-        "vlnv": "xilinx.com:user:axi4_pl_SPI_ip:1.0",
-        "xci_name": "design_2_SPI_ip_0_0",
-        "xci_path": "ip\\design_2_SPI_ip_0_0\\design_2_SPI_ip_0_0.xci",
-        "inst_hier_path": "SPI_ip_0"
-      },
       "AXI_Register_Demux": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
         "xci_path": "ip\\design_2_ps7_0_axi_periph_0\\design_2_ps7_0_axi_periph_0.xci",
@@ -1431,29 +1425,6 @@
           }
         }
       },
-      "RxFIFO": {
-        "vlnv": "xilinx.com:user:axis_stream_fifo:1.0",
-        "xci_name": "design_2_RxFIFO_0",
-        "xci_path": "ip\\design_2_RxFIFO_0\\design_2_RxFIFO_0.xci",
-        "inst_hier_path": "RxFIFO"
-      },
-      "BiDirChannels_0": {
-        "vlnv": "xilinx.com:user:BiDirChannels:1.0",
-        "xci_name": "design_2_BiDirChannels_0_0",
-        "xci_path": "ip\\design_2_BiDirChannels_0_0\\design_2_BiDirChannels_0_0.xci",
-        "inst_hier_path": "BiDirChannels_0"
-      },
-      "TxFIFO": {
-        "vlnv": "user.org:user:axis_stream_txfifo:2.0",
-        "xci_name": "design_2_axis_stream_txfifo_0_2",
-        "xci_path": "ip\\design_2_axis_stream_txfifo_0_2\\design_2_axis_stream_txfifo_0_2.xci",
-        "inst_hier_path": "TxFIFO",
-        "parameters": {
-          "ADDR_WIDTH": {
-            "value": "11"
-          }
-        }
-      },
       "xlconcat_1": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "design_2_xlconcat_1_0",
@@ -1533,6 +1504,12 @@
             }
           }
         }
+      },
+      "SPI_ip_0": {
+        "vlnv": "xilinx.com:user:axi4_pl_SPI_ip:1.0",
+        "xci_name": "design_2_SPI_ip_0_0",
+        "xci_path": "ip\\design_2_SPI_ip_0_0\\design_2_SPI_ip_0_0.xci",
+        "inst_hier_path": "SPI_ip_0"
       },
       "txclk_reset_domain": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
@@ -3448,6 +3425,29 @@
             }
           }
         }
+      },
+      "RxFIFO": {
+        "vlnv": "xilinx.com:user:axis_stream_fifo:1.0",
+        "xci_name": "design_2_RxFIFO_0",
+        "xci_path": "ip\\design_2_RxFIFO_0\\design_2_RxFIFO_0.xci",
+        "inst_hier_path": "RxFIFO"
+      },
+      "TxFIFO": {
+        "vlnv": "user.org:user:axis_stream_txfifo:2.0",
+        "xci_name": "design_2_axis_stream_txfifo_0_2",
+        "xci_path": "ip\\design_2_axis_stream_txfifo_0_2\\design_2_axis_stream_txfifo_0_2.xci",
+        "inst_hier_path": "TxFIFO",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "11"
+          }
+        }
+      },
+      "BiDirChannels_0": {
+        "vlnv": "xilinx.com:user:BiDirChannels:1.0",
+        "xci_name": "design_2_BiDirChannels_0_0",
+        "xci_path": "ip\\design_2_BiDirChannels_0_0\\design_2_BiDirChannels_0_0.xci",
+        "inst_hier_path": "BiDirChannels_0"
       }
     },
     "interface_nets": {
@@ -3594,9 +3594,9 @@
       "BiDirChannels_0_txclk": {
         "ports": [
           "BiDirChannels_0/txclk",
+          "txclk_reset_domain/slowest_sync_clk",
           "RxFIFO/txclk",
-          "TxFIFO/txclk",
-          "txclk_reset_domain/slowest_sync_clk"
+          "TxFIFO/txclk"
         ]
       },
       "HSI_A0_1": {
@@ -3614,7 +3614,7 @@
       "SPI_ip_0_SPI_CS": {
         "ports": [
           "SPI_ip_0/SPI_CS",
-          "SPI_CS"
+          "SPI_CSN"
         ]
       },
       "SPI_ip_0_SPI_SCK": {
@@ -3644,8 +3644,6 @@
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
-          "SPI_ip_0/clk",
-          "SPI_ip_0/s00_axi_aclk",
           "AXI_Register_Demux/ACLK",
           "AXI_Register_Demux/S00_ACLK",
           "AXI_Register_Demux/M00_ACLK",
@@ -3655,17 +3653,18 @@
           "AXI_Register_Demux/M04_ACLK",
           "AXI_Register_Demux/M05_ACLK",
           "AXI_Register_Demux/M06_ACLK",
-          "RxFIFO/clk",
-          "BiDirChannels_0/clk",
-          "TxFIFO/clk",
           "axi_dma_0/s_axi_lite_aclk",
           "axi_dma_0/m_axi_sg_aclk",
           "axi_dma_0/m_axi_mm2s_aclk",
           "axi_dma_0/m_axi_s2mm_aclk",
+          "SPI_ip_0/clk",
           "clk_reset_domain/slowest_sync_clk",
           "processing_system7_0/M_AXI_GP0_ACLK",
           "processing_system7_0/S_AXI_HP0_ACLK",
-          "axi_smc/aclk"
+          "axi_smc/aclk",
+          "RxFIFO/clk",
+          "TxFIFO/clk",
+          "BiDirChannels_0/clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -3678,8 +3677,6 @@
       "rst_ps7_0_100M_peripheral_aresetn": {
         "ports": [
           "clk_reset_domain/peripheral_aresetn",
-          "SPI_ip_0/rstn",
-          "SPI_ip_0/s00_axi_aresetn",
           "AXI_Register_Demux/S00_ARESETN",
           "AXI_Register_Demux/M00_ARESETN",
           "AXI_Register_Demux/M01_ARESETN",
@@ -3688,19 +3685,20 @@
           "AXI_Register_Demux/M04_ARESETN",
           "AXI_Register_Demux/M05_ARESETN",
           "AXI_Register_Demux/M06_ARESETN",
-          "RxFIFO/rst_n",
-          "BiDirChannels_0/rst_n",
-          "TxFIFO/rstn",
           "axi_dma_0/axi_resetn",
-          "axi_smc/aresetn"
+          "SPI_ip_0/rstn",
+          "axi_smc/aresetn",
+          "RxFIFO/rst_n",
+          "TxFIFO/rstn",
+          "BiDirChannels_0/rst_n"
         ]
       },
       "txclk_reset_domain_peripheral_aresetn": {
         "ports": [
           "txclk_reset_domain/peripheral_aresetn",
           "RxFIFO/tx_rstn",
-          "BiDirChannels_0/tx_rstn",
-          "TxFIFO/tx_rstn"
+          "TxFIFO/tx_rstn",
+          "BiDirChannels_0/tx_rstn"
         ]
       },
       "xlconcat_1_dout": {

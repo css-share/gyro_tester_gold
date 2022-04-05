@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_4" LaunchPart="xc7z020clg484-1" LaunchTime="1648934687">
+<GenRun Id="impl_4" LaunchPart="xc7z020clg484-1" LaunchTime="1649137349">
   <File Type="ROUTE-PWR" Name="design_2_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="design_2_wrapper.tcl"/>
   <File Type="BITSTR-MMI" Name="design_2_wrapper.mmi"/>
@@ -130,7 +130,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -141,13 +143,13 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_2_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_BiDirChannels_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_SPI_ip_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_2_axis_stream_txfifo_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_2_RxFIFO_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_proc_sys_reset_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_proc_sys_reset_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_2_proc_sys_reset_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_RxFIFO_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axis_stream_txfifo_0_2"/>
 </GenRun>

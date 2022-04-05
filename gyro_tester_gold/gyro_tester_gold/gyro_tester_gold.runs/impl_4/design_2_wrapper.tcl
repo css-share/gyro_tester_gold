@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_4" END { }
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Synth 8-5799}  -string {{CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_0' to logic}}  -suppress 
 
 OPTRACE "impl_4" START { ROLLUP_1 }
@@ -123,9 +124,10 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 1
+  set_param chipscope.maxJobs 2
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
+  set_property board_part digilentinc.com:zedboard:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }

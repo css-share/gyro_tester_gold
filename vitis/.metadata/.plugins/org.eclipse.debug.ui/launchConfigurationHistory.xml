@@ -26,13 +26,13 @@
         </mruHistory>
         <favorites/>
     </launchGroup>
-    <launchGroup id="org.eclipse.debug.ui.launchGroup.run">
+    <launchGroup id="com.xilinx.ide.launchGroup.embocl.run">
         <mruHistory>
             <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/gyro2appPrj/_ide/launch/Debugger_gyro2appPrj-Default.launch&quot;/&gt;&#13;&#10;"/>
         </mruHistory>
         <favorites/>
     </launchGroup>
-    <launchGroup id="com.xilinx.ide.launchGroup.embocl.run">
+    <launchGroup id="org.eclipse.debug.ui.launchGroup.run">
         <mruHistory>
             <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/gyro2appPrj/_ide/launch/Debugger_gyro2appPrj-Default.launch&quot;/&gt;&#13;&#10;"/>
         </mruHistory>
@@ -46,10 +46,6 @@
         <mruHistory/>
         <favorites/>
     </launchGroup>
-    <launchGroup id="org.eclipse.debug.ui.launchGroup.profile">
-        <mruHistory/>
-        <favorites/>
-    </launchGroup>
     <launchGroup id="com.xilinx.ide.launchGroup.embocl.debug">
         <mruHistory>
             <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/gyro2appPrj/_ide/launch/Debugger_gyro2appPrj-Default.launch&quot;/&gt;&#13;&#10;"/>
@@ -57,6 +53,10 @@
         <favorites/>
     </launchGroup>
     <launchGroup id="com.xilinx.ide.launchGroup.system.debug">
+        <mruHistory/>
+        <favorites/>
+    </launchGroup>
+    <launchGroup id="org.eclipse.debug.ui.launchGroup.profile">
         <mruHistory/>
         <favorites/>
     </launchGroup>
@@ -78,13 +78,13 @@
         </mruHistory>
         <favorites/>
     </launchGroup>
-    <launchGroup id="org.eclipse.debug.ui.launchGroup.debug">
+    <launchGroup id="com.xilinx.ide.launchGroup.bm.vppdebug">
         <mruHistory>
             <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/gyro2appPrj/_ide/launch/Debugger_gyro2appPrj-Default.launch&quot;/&gt;&#13;&#10;"/>
         </mruHistory>
         <favorites/>
     </launchGroup>
-    <launchGroup id="com.xilinx.ide.launchGroup.bm.vppdebug">
+    <launchGroup id="org.eclipse.debug.ui.launchGroup.debug">
         <mruHistory>
             <launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;false&quot; path=&quot;/gyro2appPrj/_ide/launch/Debugger_gyro2appPrj-Default.launch&quot;/&gt;&#13;&#10;"/>
         </mruHistory>

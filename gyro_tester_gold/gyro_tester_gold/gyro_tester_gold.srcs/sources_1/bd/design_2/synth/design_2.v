@@ -1,8 +1,8 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-//Date        : Sat Apr  2 12:42:45 2022
-//Host        : DESKTOP-H59M9G7 running 64-bit major release  (build 9200)
+//Date        : Mon Apr  4 22:42:12 2022
+//Host        : AsusP8 running 64-bit major release  (build 9200)
 //Command     : generate_target design_2.bd
 //Design      : design_2
 //Purpose     : IP block netlist
@@ -37,7 +37,7 @@ module design_2
     FIXED_IO_ps_srstb,
     MCK_N,
     MCK_P,
-    SPI_CS,
+    SPI_CSN,
     SPI_D,
     SPI_SCK,
     SYNC_CK);
@@ -67,7 +67,7 @@ module design_2
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MCK_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MCK_N, CLK_DOMAIN design_2_BiDirChannels_0_0_MCK_N, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output MCK_N;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MCK_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MCK_P, CLK_DOMAIN design_2_BiDirChannels_0_0_MCK_P, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output MCK_P;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.SPI_CS DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.SPI_CS, LAYERED_METADATA undef" *) output SPI_CS;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.SPI_CSN DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.SPI_CSN, LAYERED_METADATA undef" *) output SPI_CSN;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.SPI_D DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.SPI_D, LAYERED_METADATA undef" *) inout SPI_D;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.SPI_SCK DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.SPI_SCK, LAYERED_METADATA undef" *) output SPI_SCK;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYNC_CK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYNC_CK, CLK_DOMAIN design_2_BiDirChannels_0_0_SYNCK, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output SYNC_CK;
@@ -366,7 +366,7 @@ module design_2
   assign HSI_A0_1 = DRX;
   assign MCK_N = BiDirChannels_0_MCK_N;
   assign MCK_P = BiDirChannels_0_MCK_P;
-  assign SPI_CS = SPI_ip_0_SPI_CS;
+  assign SPI_CSN = SPI_ip_0_SPI_CS;
   assign SPI_SCK = SPI_ip_0_SPI_SCK;
   assign SYNC_CK = BiDirChannels_0_SYNCK;
   design_2_ps7_0_axi_periph_0 AXI_Register_Demux
@@ -629,9 +629,7 @@ module design_2
         .SPI_SCK(SPI_ip_0_SPI_SCK),
         .clk(processing_system7_0_FCLK_CLK0),
         .rstn(rst_ps7_0_100M_peripheral_aresetn),
-        .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[3:0]),
-        .s00_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s00_axi_arprot(ps7_0_axi_periph_M01_AXI_ARPROT),
         .s00_axi_arready(ps7_0_axi_periph_M01_AXI_ARREADY),
         .s00_axi_arvalid(ps7_0_axi_periph_M01_AXI_ARVALID),

@@ -1,0 +1,12 @@
+21:37:13 **** Incremental Build of configuration Debug for project gyro2appPrj_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 2091 C:/fromCharles/gyro_tester_gold/vitis/gyro2ptfmPrj/export/gyro2ptfmPrj/gyro2ptfmPrj.xpfm standalone_domain C:/fromCharles/gyro_tester_gold/vitis/gyro2appPrj_system/Debug/system.bif
+sdcard_gen --xpfm C:/fromCharles/gyro_tester_gold/vitis/gyro2ptfmPrj/export/gyro2ptfmPrj/gyro2ptfmPrj.xpfm --sys_config gyro2ptfmPrj --bif C:/fromCharles/gyro_tester_gold/vitis/gyro2appPrj_system/Debug/system.bif --bitstream C:/fromCharles/gyro_tester_gold/vitis/gyro2appPrj/_ide/bitstream/design_3_wrapper.bit --elf C:/fromCharles/gyro_tester_gold/vitis/gyro2appPrj/Debug/gyro2appPrj.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/fromCharles/gyro_tester_gold/vitis/gyro2appPrj/_ide/bitstream/design_3_wrapper.bit
+Error: platform file not found: C:/fromCharles/gyro_tester_gold/vitis/gyro2ptfmPrj/export/gyro2ptfmPrj/sw/gyro2ptfmPrj/boot/fsbl.elf
+Running C:/Xilinx/Vitis/2021.2/bin/bootgen  -image C:/fromCharles/gyro_tester_gold/vitis/gyro2appPrj_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+[ERROR]  : Cannot read file - C:/fromCharles/gyro_tester_gold/vitis/gyro2ptfmPrj/export/gyro2ptfmPrj/sw/gyro2ptfmPrj/boot/fsbl.elf
+
+21:37:19 Build Finished (took 5s.597ms)
+

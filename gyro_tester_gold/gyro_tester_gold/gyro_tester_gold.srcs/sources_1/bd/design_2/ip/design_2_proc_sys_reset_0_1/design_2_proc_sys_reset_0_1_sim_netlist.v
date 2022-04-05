@@ -1,8 +1,8 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-// Date        : Sat Apr  2 12:45:04 2022
-// Host        : DESKTOP-H59M9G7 running 64-bit major release  (build 9200)
+// Date        : Mon Apr  4 20:28:51 2022
+// Host        : AsusP8 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/fromCharles/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold/gyro_tester_gold.srcs/sources_1/bd/design_2/ip/design_2_proc_sys_reset_0_1/design_2_proc_sys_reset_0_1_sim_netlist.v
 // Design      : design_2_proc_sys_reset_0_1

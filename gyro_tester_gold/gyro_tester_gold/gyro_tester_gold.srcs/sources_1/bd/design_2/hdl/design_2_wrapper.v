@@ -1,8 +1,8 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-//Date        : Sat Apr  2 12:42:45 2022
-//Host        : DESKTOP-H59M9G7 running 64-bit major release  (build 9200)
+//Date        : Mon Apr  4 22:42:12 2022
+//Host        : AsusP8 running 64-bit major release  (build 9200)
 //Command     : generate_target design_2_wrapper.bd
 //Design      : design_2_wrapper
 //Purpose     : IP block netlist
@@ -36,7 +36,7 @@ module design_2_wrapper
     FIXED_IO_ps_srstb,
     MCK_N,
     MCK_P,
-    SPI_CS,
+    SPI_CSN,
     SPI_D,
     SPI_SCK,
     SYNC_CK);
@@ -66,7 +66,7 @@ module design_2_wrapper
   inout FIXED_IO_ps_srstb;
   output MCK_N;
   output MCK_P;
-  output SPI_CS;
+  output SPI_CSN;
   inout SPI_D;
   output SPI_SCK;
   output SYNC_CK;
@@ -97,7 +97,7 @@ module design_2_wrapper
   wire FIXED_IO_ps_srstb;
   wire MCK_N;
   wire MCK_P;
-  wire SPI_CS;
+  wire SPI_CSN;
   wire SPI_D;
   wire SPI_SCK;
   wire SYNC_CK;
@@ -129,7 +129,7 @@ module design_2_wrapper
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .MCK_N(MCK_N),
         .MCK_P(MCK_P),
-        .SPI_CS(SPI_CS),
+        .SPI_CSN(SPI_CSN),
         .SPI_D(SPI_D),
         .SPI_SCK(SPI_SCK),
         .SYNC_CK(SYNC_CK));
